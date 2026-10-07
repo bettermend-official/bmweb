@@ -29,10 +29,13 @@ import {
   Compass,
   Smartphone,
   ShieldAlert,
+  HeartHandshake,
+  LayoutGrid,
 } from "lucide-react";
 
 export default function AboutPage() {
   const [toast, setToast] = useState(null);
+  const [activeProblemId, setActiveProblemId] = useState("p1");
 
   const problems = [
     {
@@ -40,68 +43,39 @@ export default function AboutPage() {
       icon: Smartphone,
       title: "Fragmented Consumer Experience",
       desc: "Multiple disjointed apps for everyday needs with zero unified hyperlocal platform.",
-      friction: "App Overload & Friction",
+      image: "/ecosystem_user_app.jpg",
     },
     {
       id: "p2",
       icon: Car,
       title: "Fragmented Mobility Ecosystem",
       desc: "Disconnected ride, rental, and premium transport services create inefficiencies and higher costs.",
-      friction: "Surge & Disconnected Fleets",
+      image: "/ecosystem_control_room.jpg",
     },
     {
       id: "p3",
       icon: ShoppingBag,
       title: "Inefficient Hyperlocal Delivery",
       desc: "Dark-store dominance reduces efficiency, increases costs, and hurts local neighborhood businesses.",
-      friction: "Hurts Local Retailers",
+      image: "/ecosystem_delivery_rider.jpg",
     },
     {
       id: "p4",
       icon: ShieldAlert,
       title: "Trust & Quality Gap in Services",
       desc: "Unverified providers and inconsistent service quality severely reduce customer trust.",
-      friction: "Zero Quality Assurance",
+      image: "/ecosystem_merchant_pos.jpg",
     },
     {
       id: "p5",
       icon: Users,
       title: "Limited Market Access for Workers",
       desc: "Skilled local workers struggle to access nearby demand directly and affordably.",
-      friction: "High Intermediary Cuts",
+      image: "/ecosystem_local_community.jpg",
     },
   ];
 
-  const solutions = [
-    {
-      num: "01",
-      icon: Globe,
-      title: "Local Empowerment & Sustainability",
-      desc: "Enabling local communities to access more work opportunities within their homeland while reducing environmental impact.",
-      benefit: "Empowering Local Workforce",
-    },
-    {
-      num: "02",
-      icon: Layers,
-      title: "Unified Hyperlocal Platform",
-      desc: "A single super app connecting customers with nearby shops, service providers, and transport options seamlessly.",
-      benefit: "Single Super App Gateway",
-    },
-    {
-      num: "03",
-      icon: TrendingUp,
-      title: "Regional Economic Growth",
-      desc: "Strengthening regional economies by enabling sustainable consumption and localized trade at scale.",
-      benefit: "Retaining Regional Capital",
-    },
-    {
-      num: "04",
-      icon: ShieldCheck,
-      title: "Trusted & Reliable Services",
-      desc: "Delivering trustworthy, fresh, reliable, and standardized fast services to every household.",
-      benefit: "Guaranteed SLA & Trust",
-    },
-  ];
+  const activeProblem = problems.find((p) => p.id === activeProblemId) || problems[0];
 
   const handleConnectClick = () => {
     setToast({
@@ -241,14 +215,6 @@ export default function AboutPage() {
             {/* Left Column: 5 Systemic Problems (Clean Muted Slate with Amber Accents) */}
             <div className="lg:col-span-6 flex flex-col justify-between p-6 sm:p-8 rounded-[24px] sm:rounded-[30px] bg-slate-50/70 border border-slate-200/70 space-y-6">
               <div className="space-y-1">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-extrabold uppercase tracking-widest text-slate-500">
-                    CURRENT STATE
-                  </span>
-                  <span className="px-2.5 py-0.5 rounded-md bg-rose-100/70 text-rose-800 text-[10px] font-black tracking-wider uppercase">
-                    5 Friction Points
-                  </span>
-                </div>
                 <h3 className="text-xl sm:text-2xl font-black uppercase font-heading text-slate-950">
                   The Broken Hyperlocal Model
                 </h3>
@@ -260,24 +226,35 @@ export default function AboutPage() {
               <div className="space-y-3">
                 {problems.map((prob) => {
                   const Icon = prob.icon;
+                  const isActive = activeProblemId === prob.id;
                   return (
                     <div
                       key={prob.id}
-                      className="p-4 rounded-2xl bg-white border border-slate-200/60 shadow-xs hover:border-rose-300 hover:shadow-sm transition-all text-left group"
+                      onClick={() => setActiveProblemId(prob.id)}
+                      className={`p-4 rounded-2xl border transition-all text-left group cursor-pointer ${
+                        isActive
+                          ? "bg-white border-[#030C54] shadow-md ring-2 ring-[#030C54]/15"
+                          : "bg-white/80 border-slate-200/60 hover:bg-white hover:border-slate-300 hover:shadow-xs"
+                      }`}
                     >
                       <div className="flex items-start gap-3.5">
-                        <div className="w-9 h-9 rounded-xl bg-slate-100 group-hover:bg-rose-50 text-slate-700 group-hover:text-rose-600 flex items-center justify-center shrink-0 transition-colors">
+                        <div
+                          className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+                            isActive
+                              ? "bg-[#030C54] text-white shadow-xs"
+                              : "bg-slate-100 text-slate-700 group-hover:bg-slate-200"
+                          }`}
+                        >
                           <Icon size={17} />
                         </div>
                         <div className="space-y-1 flex-1">
-                          <div className="flex items-center justify-between gap-2 flex-wrap">
-                            <h4 className="text-xs sm:text-sm font-black text-slate-900 font-heading">
-                              {prob.title}
-                            </h4>
-                            <span className="text-[9.5px] font-mono font-bold text-slate-400 bg-slate-100 px-2 py-0.5 rounded">
-                              {prob.friction}
-                            </span>
-                          </div>
+                          <h4
+                            className={`text-xs sm:text-sm font-black font-heading transition-colors ${
+                              isActive ? "text-[#030C54]" : "text-slate-900"
+                            }`}
+                          >
+                            {prob.title}
+                          </h4>
                           <p className="text-[11.5px] text-slate-600 leading-relaxed font-sans">
                             {prob.desc}
                           </p>
@@ -289,65 +266,16 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Right Column: 4 Core Solutions (Deep Navy BetterMend Flagship Styling) */}
-            <div className="lg:col-span-6 flex flex-col justify-between p-6 sm:p-8 rounded-[24px] sm:rounded-[30px] bg-[#030C54] text-white shadow-xl relative overflow-hidden space-y-6">
-              
-              {/* Subtle ambient glow */}
-              <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-blue-400/10 filter blur-2xl pointer-events-none" />
-
-              <div className="relative z-10 space-y-1">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-extrabold uppercase tracking-widest text-blue-200">
-                    THE RESOLUTION
-                  </span>
-                  <span className="px-2.5 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 text-[10px] font-black tracking-wider uppercase border border-emerald-400/30">
-                    BetterMend Super App
-                  </span>
-                </div>
-                <h3 className="text-xl sm:text-2xl font-black uppercase font-heading text-white">
-                  A Unified Hyperlocal Ecosystem
-                </h3>
-                <p className="text-xs text-white/80">
-                  Four structural pillars engineered for regional sustainability and scale:
-                </p>
-              </div>
-
-              <div className="relative z-10 space-y-3.5">
-                {solutions.map((sol) => {
-                  const Icon = sol.icon;
-                  return (
-                    <div
-                      key={sol.num}
-                      className="p-4.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 hover:bg-white/15 hover:border-white/30 transition-all text-left group"
-                    >
-                      <div className="flex items-start gap-3.5">
-                        <div className="w-10 h-10 rounded-xl bg-white/15 border border-white/20 text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                          <Icon size={18} className="text-blue-200" />
-                        </div>
-                        <div className="space-y-1 flex-1">
-                          <div className="flex items-center justify-between gap-2 flex-wrap">
-                            <div className="flex items-center gap-2">
-                              <span className="text-[10px] font-mono font-black text-blue-900 bg-white px-2 py-0.5 rounded-md">
-                                {sol.num}
-                              </span>
-                              <h4 className="text-xs sm:text-sm font-black text-white font-heading">
-                                {sol.title}
-                              </h4>
-                            </div>
-                            <span className="text-[9.5px] font-mono font-bold text-emerald-300 bg-emerald-950/40 border border-emerald-500/30 px-2 py-0.5 rounded">
-                              {sol.benefit}
-                            </span>
-                          </div>
-                          <p className="text-[11.5px] text-white/80 leading-relaxed font-sans">
-                            {sol.desc}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
+            {/* Right Column: Full-Bleed Dynamic Image */}
+            <div className="lg:col-span-6 relative w-full min-h-[380px] sm:min-h-[460px] lg:min-h-full rounded-[24px] sm:rounded-[30px] overflow-hidden shadow-lg group border border-slate-200/80">
+              <Image
+                key={activeProblem.id}
+                src={activeProblem.image}
+                alt={activeProblem.title}
+                fill
+                priority
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+              />
             </div>
 
           </div>
