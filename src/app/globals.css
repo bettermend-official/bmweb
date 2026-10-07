@@ -40,6 +40,16 @@
   h6 {
     font-family: var(--font-outfit), system-ui, sans-serif;
   }
+
+  ::selection {
+    background-color: #030C54 !important;
+    color: #ffffff !important;
+  }
+
+  ::-moz-selection {
+    background-color: #030C54 !important;
+    color: #ffffff !important;
+  }
 }
 
 /* Custom Scrollbar */
