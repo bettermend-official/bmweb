@@ -3,162 +3,131 @@ import { useState } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import {
-  ChevronDown,
-  ArrowRight,
-} from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 export default function FaqPage() {
-  const [selectedCategory, setSelectedCategory] = useState("general");
+  const [selectedCategory, setSelectedCategory] = useState("all");
   const [openIndex, setOpenIndex] = useState(0); // open first question by default
 
   const categories = [
-    { id: "general", label: "GENERAL" },
-    { id: "services", label: "SERVICES" },
-    { id: "orders", label: "ORDERS" },
-    { id: "delivery", label: "DELIVERY" },
-    { id: "payments", label: "PAYMENTS" },
-    { id: "partners", label: "PARTNERS" },
+    { id: "all", label: "ALL QUESTIONS" },
+    { id: "ecosystem", label: "ECOSYSTEM & VISION" },
+    { id: "services", label: "SERVICES & COVERAGE" },
+    { id: "community", label: "BUSINESSES & WORKERS" },
+    { id: "orders", label: "ORDERS & ACCOUNT" },
   ];
 
   const categoryHeaders = {
-    general: {
-      title: "GENERAL INQUIRIES",
-      subtitle: "Need answers about how BetterMend works? Read through our common inquiries below.",
+    all: {
+      title: "ALL QUESTIONS & ANSWERS",
+      subtitle: "Comprehensive answers to common questions about BetterMend's super app and services.",
+    },
+    ecosystem: {
+      title: "ECOSYSTEM & PLATFORM VISION",
+      subtitle: "Understand how the BetterMend ecosystem connects people, businesses, and essential services.",
     },
     services: {
-      title: "SERVICES & BOOKINGS",
-      subtitle: "Learn about taxi hailing, master technicians, home repairs, and civic utility desks.",
+      title: "SERVICES & COVERAGE",
+      subtitle: "Explore our transportation, delivery, skilled workers, and E Services network.",
+    },
+    community: {
+      title: "LOCAL BUSINESSES & WORKERS",
+      subtitle: "Learn how we empower local merchants, neighborhood trade, and skilled professionals.",
     },
     orders: {
-      title: "ORDERS & MULTI-SHOP CART",
-      subtitle: "Details on combining multiple neighborhood shops into a single order and checkout.",
-    },
-    delivery: {
-      title: "DELIVERY & GPS TRACKING",
-      subtitle: "Information on regional dispatch times, route optimization, and live courier telemetry.",
-    },
-    payments: {
-      title: "PAYMENTS, REFUNDS & ESCROW",
-      subtitle: "Transparent fixed pricing, digital receipts, escrow protection, and refund policies.",
-    },
-    partners: {
-      title: "PARTNER & MERCHANT ONBOARDING",
-      subtitle: "Join as a local merchant, certified technician, or delivery fleet partner.",
+      title: "ORDERS, CARTS & ACCOUNT",
+      subtitle: "Details on multi-shop cart delivery and managing your data requests.",
     },
   };
 
   const allFaqs = [
-    // 1. General
     {
-      category: "general",
-      q: "WHAT IS BETTERMEND?",
-      a: "BetterMend is a unified hyper-local urban super app and regional platform built in Kerala. It combines intra-city taxi hailing, multi-store neighborhood shopping, verified home technician dispatches, and digital citizen utilities into a single, cohesive ecosystem.",
+      id: "faq-1",
+      category: "ecosystem",
+      q: "WHAT IS THE BETTERMEND ECOSYSTEM?",
+      a: "The BetterMend ecosystem connects customers, local businesses, skilled professionals, transportation providers, and essential services through one digital platform.",
     },
     {
-      category: "general",
-      q: "HOW DOES BETTERMEND WORK?",
-      a: "BetterMend utilizes decentralized regional server nodes. When you place an order or book a service, our smart localized matching algorithm connects you to the nearest verified merchant, driver, or technician with zero middleman price gouging and instant GPS telemetry.",
-    },
-    {
-      category: "general",
-      q: "WHICH LOCATIONS ARE SUPPORTED?",
-      a: "BetterMend is currently operational across 14+ key urban sectors in Kerala, including Kochi, Thiruvananthapuram, Kozhikode, Thrissur, and neighboring municipal zones. We are actively expanding to new sectors every month.",
-    },
-    {
-      category: "general",
-      q: "CAN I USE MULTIPLE SERVICES THROUGH ONE ACCOUNT?",
-      a: "Yes! A single BetterMend account gives you instant access to all offerings: ordering from local merchants, booking cabs and passenger vans, scheduling master plumbers/electricians, and paying utility bills without creating separate logins.",
-    },
-
-    // 2. Services
-    {
+      id: "faq-2",
       category: "services",
-      q: "HOW ARE TECHNICIANS AND DRIVERS VERIFIED?",
-      a: "Every service professional undergoes strict background verification, local police clearance checks, trade skill testing, and Sector Admin onboarding before accepting jobs on the platform.",
+      q: "HOW IS BETTERMEND DIFFERENT FROM A DELIVERY APP?",
+      a: "Delivery is only one part of BetterMend. The platform is designed as a broader super app covering transportation, delivery, skilled workers, and E Services.",
     },
     {
+      id: "faq-3",
+      category: "ecosystem",
+      q: "WHO IS PART OF THE BETTERMEND ECOSYSTEM?",
+      a: "Customers, local businesses, skilled professionals, transportation providers, and essential service providers can all form part of the BetterMend ecosystem.",
+    },
+    {
+      id: "faq-4",
+      category: "community",
+      q: "HOW DOES BETTERMEND SUPPORT LOCAL BUSINESSES?",
+      a: "BetterMend aims to help local businesses build digital connections with nearby customers and participate in a connected regional service ecosystem.",
+    },
+    {
+      id: "faq-5",
+      category: "community",
+      q: "HOW DOES BETTERMEND SUPPORT SKILLED WORKERS?",
+      a: "BetterMend connects skilled professionals with customers looking for services, helping create greater access to local demand.",
+    },
+    {
+      id: "faq-6",
       category: "services",
-      q: "WHAT IF A REPAIR OR SERVICE JOB IS UNSATISFACTORY?",
-      a: "All home repairs booked through BetterMend come with a 30-day post-service guarantee. If an issue reoccurs within this period, our sector manager arranges a free follow-up inspection or rectification.",
+      q: "IS BETTERMEND AVAILABLE EVERYWHERE IN INDIA?",
+      a: "Availability depends on location. BetterMend is expanding progressively, beginning with regional markets before moving toward wider coverage.",
     },
     {
+      id: "faq-7",
       category: "services",
-      q: "CAN I SCHEDULE SERVICES OR CABS IN ADVANCE?",
-      a: "Yes, you can choose immediate 15-minute dispatch or pre-schedule rides and technician visits for any specific date and time slot within the upcoming 7 days.",
+      q: "WHAT SERVICES DOES BETTERMEND PROVIDE?",
+      a: "BetterMend brings transportation, delivery, skilled workers, and E Services together on one platform. Service availability can vary by location.",
     },
-
-    // 3. Orders
     {
+      id: "faq-8",
+      category: "ecosystem",
+      q: "WHAT IS THE VISION OF BETTERMEND?",
+      a: "BetterMend aims to make everyday life simpler by connecting people, businesses, professionals, transportation providers, and essential services through one platform.",
+    },
+    {
+      id: "faq-9",
+      category: "ecosystem",
+      q: "WHERE WAS BETTERMEND CREATED?",
+      a: "BetterMend was created in Kerala, India, with a vision to build technology for regional communities and eventually serve wider markets.",
+    },
+    {
+      id: "faq-10",
+      category: "ecosystem",
+      q: "WHO CAN USE BETTERMEND?",
+      a: "Customers can use BetterMend to discover and access everyday services. Businesses, professionals, and transportation providers can participate in the wider BetterMend ecosystem subject to applicable onboarding and service requirements.",
+    },
+    {
+      id: "faq-11",
       category: "orders",
-      q: "HOW DOES MULTI-SHOP CART DELIVERY WORK?",
-      a: "Our revolutionary multi-vendor feature allows you to add items from up to 3 different neighborhood shops (e.g. bakery, grocery, and pharmacy) into a single checkout cart. A single delivery rider is routed to collect all items sequentially and deliver them to your door in one trip.",
+      q: "HOW DOES MULTI SHOP CART DELIVERY WORK?",
+      a: "When you add items from multiple shops in a single checkout, the app coordinates the pickup sequence. A single delivery partner receives the route, stops at the respective locations in sequence, and delivers everything in one batch.",
     },
     {
+      id: "faq-12",
+      category: "community",
+      q: "CAN I REGISTER AS A MERCHANT ON THE PLATFORM?",
+      a: "Yes! You can download the Vendor App or visit our Ecosystem overview to learn more about setting up your storefront. Local Sector Admins will review and approve your storefront.",
+      link: { text: "Explore Ecosystem →", href: "/ecosystem" },
+    },
+    {
+      id: "faq-13",
       category: "orders",
-      q: "ARE THERE ADDITIONAL FEES FOR MULTI-SHOP ORDERS?",
-      a: "Only minimal flat stop charges apply (₹10 for 2 shops, ₹20 for 3 shops) to fairly compensate the courier partner for waiting and pickup times. Base delivery remains transparent and fair.",
-    },
-    {
-      category: "orders",
-      q: "CAN I MODIFY OR CANCEL MY ORDER AFTER PLACING IT?",
-      a: "You can modify or cancel your order free of charge before the merchant accepts and starts packing items. Once the courier is dispatched, real-time live chat is available directly with the courier.",
-    },
-
-    // 4. Delivery
-    {
-      category: "delivery",
-      q: "WHAT ARE THE EXACT DELIVERY CHARGES?",
-      a: "BetterMend uses transparent distance-based pricing: a base fare of ₹30 for distances up to 3.5 km, and ₹5 per additional kilometer thereafter. 100% of the delivery fee is transferred directly to the delivery partner.",
-    },
-    {
-      category: "delivery",
-      q: "HOW FAST IS THE AVERAGE DELIVERY TIME?",
-      a: "Because couriers operate within designated local sector clusters, average delivery times range from 15 to 30 minutes for single-store deliveries and under 40 minutes for multi-store batches.",
-    },
-    {
-      category: "delivery",
-      q: "HOW DOES LIVE GPS TRACKING WORK?",
-      a: "Once an order is picked up, high-precision GPS telemetry updates every 3 seconds on your mobile app, providing turn-by-turn vehicle tracking and accurate arrival estimates.",
-    },
-
-    // 5. Payments
-    {
-      category: "payments",
-      q: "WHAT PAYMENT MODES ARE SUPPORTED?",
-      a: "We support UPI (Google Pay, PhonePe, Paytm), Credit & Debit Cards, Net Banking, and Cash on Delivery (COD) for eligible categories.",
-    },
-    {
-      category: "payments",
-      q: "HOW DOES DIGITAL ESCROW PROTECTION WORK?",
-      a: "Customer payments are held safely in a digital escrow account until delivery or service completion is verified via OTP, ensuring full buyer protection before funds are distributed to merchants or drivers.",
-    },
-    {
-      category: "payments",
-      q: "HOW DO REFUNDS WORK IF AN ITEM IS UNAVAILABLE?",
-      a: "If a merchant is out of stock for any item, an instant split refund is credited back to your original payment method or BetterMend wallet within minutes.",
-    },
-
-    // 6. Partners
-    {
-      category: "partners",
-      q: "HOW CAN A LOCAL SHOP OWNER REGISTER AS A VENDOR?",
-      a: "Merchants can download the BetterMend Vendor POS app or visit our Merchant Portal. Enter your GST/Trade License details, upload your catalog, and local Sector Admins will verify your store within 24 hours.",
-    },
-    {
-      category: "partners",
-      q: "HOW QUICKLY ARE MERCHANT & DRIVER PAYOUTS SETTLED?",
-      a: "BetterMend executes automated daily settlements directly into bank accounts or UPI IDs with zero hidden platform withholding fees.",
-    },
-    {
-      category: "partners",
-      q: "WHAT ARE THE MINIMUM REQUIREMENTS TO JOIN AS A DELIVERY PARTNER?",
-      a: "You need a valid two-wheeler driving license, vehicle registration, and a smartphone. Onboarding is completed with localized identity verification.",
+      q: "HOW CAN I DELETE MY ACCOUNT AND ASSOCIATED DATA?",
+      a: "In accordance with Google Play Store guidelines, we provide a dedicated request system. Go to our Data Deletion Request Page, enter your registered credentials, and submit the form. Your profile and telemetry will be purged within 30 days.",
+      link: { text: "Go to Data Deletion Request Page →", href: "/delete-account" },
     },
   ];
 
-  // Filtering Logic: Filter FAQs by selected category
-  const filteredFaqs = allFaqs.filter((faq) => faq.category === selectedCategory);
+  // Filter FAQs based on active tab
+  const filteredFaqs =
+    selectedCategory === "all"
+      ? allFaqs
+      : allFaqs.filter((faq) => faq.category === selectedCategory);
 
   const toggleAccordion = (idx) => {
     setOpenIndex(openIndex === idx ? null : idx);
@@ -173,15 +142,17 @@ export default function FaqPage() {
       {/* 2. Hero Header Section */}
       <section className="pt-[110px] sm:pt-[130px] pb-6 px-4 sm:px-6 w-full max-w-[1312px] mx-auto text-center">
         
+        {/* H1 as specified in PDF */}
         <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-black uppercase tracking-tight text-slate-950 font-montserrat leading-[1.05] mb-3">
-          FREQUENTLY ASKED QUESTIONS
+          Everything You Need. One BetterMend.
         </h1>
 
+        {/* Core Entity Description */}
         <p className="text-xs sm:text-base text-slate-600 font-roboto font-normal max-w-2xl mx-auto leading-relaxed mb-8">
-          Everything you need to know about BetterMend and how our integrated urban services operate.
+          BetterMend is a super app created in Kerala that brings transportation, delivery, skilled workers, and essential digital services together on one platform.
         </p>
 
-        {/* 6 Category Filter Tabs (Pill Buttons) */}
+        {/* Category Filter Tabs (Pill Buttons) */}
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
           {categories.map((cat) => {
             const isSelected = selectedCategory === cat.id;
@@ -216,7 +187,7 @@ export default function FaqPage() {
           {/* Header Inside Navy Box */}
           <div className="text-center max-w-2xl mx-auto mb-10">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black uppercase font-heading text-white tracking-tight mb-2">
-              {categoryHeaders[selectedCategory]?.title || "GENERAL INQUIRIES"}
+              {categoryHeaders[selectedCategory]?.title || "FREQUENTLY ASKED QUESTIONS"}
             </h2>
             <p className="text-xs sm:text-sm text-white/75 leading-relaxed font-sans">
               {categoryHeaders[selectedCategory]?.subtitle}
@@ -229,7 +200,7 @@ export default function FaqPage() {
               const isOpen = openIndex === idx;
               return (
                 <div
-                  key={idx}
+                  key={faq.id || idx}
                   className="bg-white text-slate-900 rounded-2xl overflow-hidden shadow-md transition-all duration-300"
                 >
                   <button
@@ -259,6 +230,16 @@ export default function FaqPage() {
                   {isOpen && (
                     <div className="px-6 sm:px-8 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed font-sans border-t border-slate-100 animate-fadeIn">
                       <p>{faq.a}</p>
+                      {faq.link && (
+                        <div className="mt-2.5">
+                          <Link
+                            href={faq.link.href}
+                            className="text-[#030C54] font-bold hover:underline inline-flex items-center gap-1"
+                          >
+                            {faq.link.text}
+                          </Link>
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
@@ -269,9 +250,7 @@ export default function FaqPage() {
         </div>
       </section>
 
-
-
-      {/* 5. Assistance Protocol Banner: "STILL HAVE QUESTIONS?" */}
+      {/* 4. Assistance Protocol Banner: "STILL HAVE QUESTIONS?" */}
       <section className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
         <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-8 sm:p-12 lg:p-14 text-white shadow-2xl">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
@@ -304,7 +283,7 @@ export default function FaqPage() {
         </div>
       </section>
 
-      {/* 6. Footer Capsule */}
+      {/* 5. Footer Capsule */}
       <Footer />
 
     </div>
