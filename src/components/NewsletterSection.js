@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Toast from "@/components/Toast";
+import { Heart } from "lucide-react";
 
 export default function NewsletterSection() {
   const [email, setEmail] = useState("");
@@ -19,18 +20,23 @@ export default function NewsletterSection() {
 
   return (
     <section className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
-      <div className="bg-white rounded-[28px] sm:rounded-[38px] p-8 sm:p-14 lg:p-16 text-center border border-slate-200/80 shadow-sm text-slate-900 overflow-hidden">
+      <div className="bg-white rounded-[28px] sm:rounded-[38px] p-8 sm:p-12 lg:p-16 text-center border border-slate-200/80 shadow-sm text-slate-900 overflow-hidden">
         <div className="max-w-3xl mx-auto space-y-4">
           
           {/* Main Huge Headline */}
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-950 uppercase tracking-tight leading-[1.0] font-heading">
-            Join Us In Uplifting <br /> Millions In India&apos;s <br /> Small Cities
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-950 uppercase tracking-tight leading-[1.05] font-montserrat">
+            INDIA&apos;S EVER <br /> SUPER APP
           </h2>
 
-          {/* Subtitle */}
-          <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed font-sans pt-2">
-            Be part of India&apos;s fastest-growing regional super app. Get the latest updates, exclusive offers, and new service launches delivered to your inbox.
-          </p>
+          {/* Subtitle with Love/Heart Icon */}
+          <div className="space-y-1 text-sm sm:text-base lg:text-lg text-slate-700 font-sans font-medium pt-1">
+            <p className="flex items-center justify-center gap-1.5 flex-wrap">
+              <span>Created with</span>
+              <Heart size={18} className="text-rose-600 fill-rose-600 inline-block animate-pulse shrink-0" />
+              <span>in Kerala</span>
+            </p>
+            <p className="text-slate-500 font-normal">Built for the world</p>
+          </div>
 
           {/* Capsule Email Subscription Bar */}
           <form
