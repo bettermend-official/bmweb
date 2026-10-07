@@ -12,22 +12,13 @@ export default function Footer() {
           
           {/* 1. Left Brand Column */}
           <div className="md:col-span-5 space-y-4">
-            <Link href="/" className="inline-flex items-center gap-3.5 group">
-              <div className="relative w-14 h-14 sm:w-18 sm:h-18 md:w-20 md:h-20 flex items-center justify-center shrink-0">
-                <Image
-                  src="/logo.png"
-                  alt="BetterMend Icon"
-                  width={80}
-                  height={80}
-                  className="object-contain group-hover:scale-105 transition-transform"
-                />
-              </div>
+            <Link href="/" className="inline-flex items-center group">
               <div className="relative h-7 sm:h-8 w-40 sm:w-48 flex items-center">
                 <Image
                   src="/bettermend wordmark.png"
                   alt="BetterMend"
                   fill
-                  className="object-contain object-left"
+                  className="object-contain object-left group-hover:opacity-90 transition-opacity"
                 />
               </div>
             </Link>
