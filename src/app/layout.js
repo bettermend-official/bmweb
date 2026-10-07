@@ -1,7 +1,6 @@
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import ScrollToTop from "@/components/ScrollToTop";
-import Preloader from "@/components/Preloader";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,7 +27,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
       <body className="bg-background text-text-main min-h-screen antialiased selection:bg-primary selection:text-black">
-        <Preloader />
         <ScrollToTop />
         {children}
       </body>
