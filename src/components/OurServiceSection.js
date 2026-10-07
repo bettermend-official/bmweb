@@ -13,7 +13,7 @@ export default function OurServiceSection() {
       tag: "15+ VEHICLE CATEGORIES",
       description:
         "Expand your fleet or book instant rides, outstation trips, and reliable local cabs across the network.",
-      link: "/catalog",
+      link: "/services",
     },
     {
       id: "workers",
@@ -23,7 +23,7 @@ export default function OurServiceSection() {
       tag: "5000+ VERIFIED PROS",
       description:
         "On-demand local blue-collar pros, technicians, plumbers, electricians, and handymen with quick pay dispatch.",
-      link: "/catalog",
+      link: "/services",
     },
     {
       id: "e-services",
@@ -33,7 +33,7 @@ export default function OurServiceSection() {
       tag: "ALL-IN-ONE UTILITY HUB",
       description:
         "Digital registrations, public utility bills, smart citizen portals, and online urban service assistance with ease.",
-      link: "/catalog",
+      link: "/services",
     },
     {
       id: "delivery",
@@ -43,7 +43,7 @@ export default function OurServiceSection() {
       tag: "30 MIN GUARANTEED",
       description:
         "Hyper-local multi-vendor delivery from local groceries, bakery goods, medical items, and packages with live courier tracking.",
-      link: "/catalog",
+      link: "/services",
     },
   ];
 

@@ -22,8 +22,8 @@ export default function FaqSection() {
     },
     {
       q: "CAN I REGISTER AS A MERCHANT ON THE PLATFORM?",
-      a: "Yes! You can download the Vendor App or visit our Catalog Manager to set up your store catalog. Local Sector Admins will review and approve your storefront.",
-      link: { text: "Explore Catalog Manager →", href: "/catalog" },
+      a: "Yes! You can download the Vendor App or visit our Ecosystem overview to learn more about setting up your storefront. Local Sector Admins will review and approve your storefront.",
+      link: { text: "Explore Ecosystem →", href: "/ecosystem" },
     },
   ];
 
