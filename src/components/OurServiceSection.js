@@ -10,8 +10,9 @@ export default function OurServiceSection() {
       num: "01",
       title: "Transportation",
       image: "/transpot.png",
+      buttonText: "Explore Transportation",
       description:
-        "Expand your fleet or book instant rides, outstation trips, and reliable local cabs across the network.",
+        "Move around your city with ease. Book convenient local rides and transportation options for everyday travel, commuting and local journeys, all through the BetterMend app.",
       link: "/services",
     },
     {
@@ -19,17 +20,19 @@ export default function OurServiceSection() {
       num: "02",
       title: "Workers",
       image: "/workers.png",
+      buttonText: "Find a Professional",
       description:
-        "On-demand local blue-collar pros, technicians, plumbers, electricians, and handymen with quick pay dispatch.",
+        "Find trusted local professionals when you need them. Connect with skilled professionals such as electricians, plumbers, tutors and other service providers for your everyday needs.",
       link: "/services",
     },
     {
       id: "e-services",
       num: "03",
-      title: "E-Services",
+      title: "E Services",
       image: "/eservice.png",
+      buttonText: "Explore E Services",
       description:
-        "Digital registrations, public utility bills, smart citizen portals, and online urban service assistance with ease.",
+        "Essential services, made simpler. Access digital services, bill payments, bookings, appointments and other everyday assistance without having to navigate multiple platforms.",
       link: "/services",
     },
     {
@@ -37,8 +40,9 @@ export default function OurServiceSection() {
       num: "04",
       title: "Delivery",
       image: "/delivery.png",
+      buttonText: "Explore Delivery",
       description:
-        "Hyper-local multi-vendor delivery from local groceries, bakery goods, medical items, and packages with live courier tracking.",
+        "Get everyday essentials from local businesses. Order food, groceries, medicines and other everyday essentials from nearby businesses and have them delivered to your doorstep.",
       link: "/services",
     },
   ];
@@ -52,15 +56,18 @@ export default function OurServiceSection() {
 
         {/* Section Header Bar */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6 sm:mb-8 relative z-10">
-          <div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight uppercase font-heading text-white">
-              Our Service
+          <div className="max-w-2xl">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight uppercase font-heading text-white mb-2">
+              Everything You Need. One Simple App.
             </h2>
+            <p className="text-xs sm:text-sm text-white/80 leading-relaxed font-sans">
+              BetterMend brings everyday services together in one place, from getting around and ordering essentials to finding trusted local professionals and accessing essential digital services. Instead of switching between multiple apps, BetterMend helps you discover, access and manage the services you need through one connected platform.
+            </p>
           </div>
 
           <Link
             href="/services"
-            className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-white/80 hover:text-white transition-colors group"
+            className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-white/80 hover:text-white transition-colors group shrink-0"
           >
             <span>View All Services</span>
             <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -102,7 +109,7 @@ export default function OurServiceSection() {
                     href={svc.link}
                     className="w-full py-2 px-3 rounded-xl bg-slate-50 hover:bg-[#030C54] text-slate-900 hover:text-white text-[11px] font-bold tracking-wide transition-all duration-200 flex items-center justify-between group/btn"
                   >
-                    <span>View Details</span>
+                    <span>{svc.buttonText || "View Details"}</span>
                     <ArrowUpRight size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                   </Link>
                 </div>

@@ -10,19 +10,17 @@ export default function AboutSection() {
           
           {/* Left Text */}
           <div className="lg:col-span-6 space-y-5 text-left">
-       
-
             <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black text-slate-950 uppercase tracking-tight leading-[1.05] font-heading">
               Empowering Region, <br className="hidden sm:inline" /> Connecting Communities
             </h2>
 
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
-              BetterMend was conceptualized with a mission to bridge hyper-local trade and modern technology. We connect neighborhood mom-and-pop stores, local taxi fleets, skilled technicians, and everyday consumers in a fair, distributed economic network designed for real regional impact.
+              BetterMend connects local businesses, taxi operators, skilled professionals, and customers through one easy to use platform. By bringing these services together, we help communities access what they need and create more opportunities for local people and businesses.
             </p>
 
             <div className="pt-2">
               <Link
-                href="/contact"
+                href="/about"
                 className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white font-extrabold text-xs tracking-wider uppercase transition-all"
               >
                 <span>Learn More</span>

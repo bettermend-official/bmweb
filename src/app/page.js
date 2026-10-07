@@ -50,7 +50,7 @@ export default function HomePage() {
               style={{ fontFamily: "'Roboto', sans-serif" }}
             >
               <p>Created with love in Kerala</p>
-              <p>Build for the world</p>
+              <p>Built for the world</p>
             </div>
 
             {/* CTA & App Store Badges */}
