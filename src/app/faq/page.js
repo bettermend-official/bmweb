@@ -144,7 +144,8 @@ export default function FaqPage() {
         
         {/* H1 as specified in PDF */}
         <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-black uppercase tracking-tight text-slate-950 font-montserrat leading-[1.05] mb-3">
-          Everything You Need. One BetterMend.
+          Everything You Need. <br />
+          One BetterMend.
         </h1>
 
         {/* Core Entity Description */}
