@@ -41,12 +41,67 @@
     font-family: var(--font-outfit), system-ui, sans-serif;
   }
 
+  /* 1. Default Selection (On White / Light backgrounds): Blue highlight + White text */
   ::selection {
     background-color: #030C54 !important;
     color: #ffffff !important;
   }
 
   ::-moz-selection {
+    background-color: #030C54 !important;
+    color: #ffffff !important;
+  }
+
+  /* 2. Selection on Blue / Dark / Navy backgrounds: White highlight + Blue text */
+  [class*="bg-[#030C54]"] ::selection,
+  [class*="bg-[#030C54]"]::selection,
+  [class*="bg-[#02083a]"] ::selection,
+  [class*="bg-[#02083a]"]::selection,
+  [class*="bg-[#020617]"] ::selection,
+  [class*="bg-[#070a13]"] ::selection,
+  [class*="bg-slate-900"] ::selection,
+  [class*="bg-slate-950"] ::selection,
+  [class*="bg-black"] ::selection,
+  nav ::selection,
+  header ::selection,
+  footer ::selection,
+  .text-white::selection,
+  .text-white ::selection {
+    background-color: #ffffff !important;
+    color: #030C54 !important;
+  }
+
+  [class*="bg-[#030C54]"] ::-moz-selection,
+  [class*="bg-[#030C54]"]::-moz-selection,
+  [class*="bg-[#02083a]"] ::-moz-selection,
+  [class*="bg-[#02083a]"]::-moz-selection,
+  [class*="bg-[#020617]"] ::-moz-selection,
+  [class*="bg-[#070a13]"] ::-moz-selection,
+  [class*="bg-slate-900"] ::-moz-selection,
+  [class*="bg-slate-950"] ::-moz-selection,
+  [class*="bg-black"] ::-moz-selection,
+  nav ::-moz-selection,
+  header ::-moz-selection,
+  footer ::-moz-selection,
+  .text-white::-moz-selection,
+  .text-white ::-moz-selection {
+    background-color: #ffffff !important;
+    color: #030C54 !important;
+  }
+
+  /* 3. Nested White cards inside Blue sections (e.g. FAQ pills, Service cards): Blue highlight + White text */
+  [class*="bg-[#030C54]"] [class*="bg-white"] ::selection,
+  [class*="bg-[#030C54]"] [class*="bg-white"]::selection,
+  [class*="bg-[#030C54]"] [class*="bg-slate-50"] ::selection,
+  [class*="bg-[#030C54]"] [class*="bg-slate-100"] ::selection {
+    background-color: #030C54 !important;
+    color: #ffffff !important;
+  }
+
+  [class*="bg-[#030C54]"] [class*="bg-white"] ::-moz-selection,
+  [class*="bg-[#030C54]"] [class*="bg-white"]::-moz-selection,
+  [class*="bg-[#030C54]"] [class*="bg-slate-50"] ::-moz-selection,
+  [class*="bg-[#030C54]"] [class*="bg-slate-100"] ::-moz-selection {
     background-color: #030C54 !important;
     color: #ffffff !important;
   }
