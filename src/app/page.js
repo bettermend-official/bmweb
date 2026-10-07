@@ -115,21 +115,21 @@ export default function HomePage() {
       {/* 7. Join Us In Uplifting Millions (Newsletter Section) */}
       <NewsletterSection />
 
-      {/* 8. Super App Regional Branding Ribbon (Side aligned, natural casing) */}
-      <section className="pt-6 pb-2 sm:pt-8 sm:pb-4 px-6 sm:px-10 w-full max-w-[1312px] mx-auto text-left">
+      {/* 8. Super App Regional Branding Ribbon (Center aligned, sentence case with only 'I' capital) */}
+      <section className="pt-6 pb-2 sm:pt-8 sm:pb-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto text-center">
         <div className="space-y-2.5 sm:space-y-3">
           <h2 className="text-2xl sm:text-4xl lg:text-[46px] font-black text-slate-950 tracking-tight leading-[1.1] font-montserrat select-none">
-            India&apos;s Ever <br />
-            Super App
+            India&apos;s ever <br />
+            super app
           </h2>
 
           <div className="space-y-0.5 text-xs sm:text-sm lg:text-base text-slate-700 font-sans font-medium">
-            <p className="flex items-center gap-1.5">
-              <span>Created with</span>
+            <p className="flex items-center justify-center gap-1.5 flex-wrap">
+              <span>created with</span>
               <Heart size={16} className="text-rose-600 fill-rose-600 inline-block animate-pulse shrink-0" />
-              <span>in Kerala</span>
+              <span>in kerala</span>
             </p>
-            <p className="text-slate-500 font-normal">Built for the world</p>
+            <p className="text-slate-500 font-normal">built for the world</p>
           </div>
         </div>
       </section>
