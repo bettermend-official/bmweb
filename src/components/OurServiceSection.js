@@ -10,7 +10,6 @@ export default function OurServiceSection() {
       num: "01",
       title: "Transportation",
       image: "/transpot.png",
-      tag: "15+ VEHICLE CATEGORIES",
       description:
         "Expand your fleet or book instant rides, outstation trips, and reliable local cabs across the network.",
       link: "/services",
@@ -20,7 +19,6 @@ export default function OurServiceSection() {
       num: "02",
       title: "Workers",
       image: "/workers.png",
-      tag: "5000+ VERIFIED PROS",
       description:
         "On-demand local blue-collar pros, technicians, plumbers, electricians, and handymen with quick pay dispatch.",
       link: "/services",
@@ -30,7 +28,6 @@ export default function OurServiceSection() {
       num: "03",
       title: "E-Services",
       image: "/eservice.png",
-      tag: "ALL-IN-ONE UTILITY HUB",
       description:
         "Digital registrations, public utility bills, smart citizen portals, and online urban service assistance with ease.",
       link: "/services",
@@ -40,7 +37,6 @@ export default function OurServiceSection() {
       num: "04",
       title: "Delivery",
       image: "/delivery.png",
-      tag: "30 MIN GUARANTEED",
       description:
         "Hyper-local multi-vendor delivery from local groceries, bakery goods, medical items, and packages with live courier tracking.",
       link: "/services",
@@ -91,10 +87,6 @@ export default function OurServiceSection() {
               {/* Card Body */}
               <div className="p-4 sm:p-5 flex flex-col justify-between flex-1">
                 <div>
-                  <span className="block text-[9.5px] font-extrabold tracking-wider text-blue-900 bg-blue-50 border border-blue-100/80 px-2 py-0.5 rounded-md uppercase font-sans mb-2.5 w-fit">
-                    {svc.tag}
-                  </span>
-
                   <h3 className="text-base sm:text-lg font-black text-slate-950 font-heading mb-1.5">
                     {svc.title}
                   </h3>
