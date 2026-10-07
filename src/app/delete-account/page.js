@@ -58,11 +58,7 @@ export default function DeleteAccountPage() {
         <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-10 shadow-sm border border-slate-200/80 space-y-8">
           
           {/* Header Metadata Block */}
-          <div className="border-b border-slate-200 pb-6 space-y-3">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold bg-rose-50 text-rose-700 border border-rose-200 tracking-wider uppercase">
-              <ShieldAlert size={14} />
-              Google Play Store Compliance
-            </span>
+          <div className="border-b border-slate-200 pb-6 space-y-2">
             <h1 className="text-2xl sm:text-3xl font-black uppercase text-slate-950 font-heading tracking-tight">
               User Data &amp; Account Deletion Request
             </h1>
