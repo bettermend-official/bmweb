@@ -91,7 +91,7 @@ export default function EcosystemSection() {
       </div>
 
       {/* Deep Navy Hero Card (Compact Height) */}
-      <div className="bg-[#030C54] rounded-[28px] sm:rounded-[37px] py-5 sm:py-6 lg:py-6 px-6 sm:px-10 lg:px-12 text-white shadow-2xl overflow-hidden w-full lg:min-h-[350px] flex items-center">
+      <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[37px] py-5 sm:py-6 lg:py-6 px-6 sm:px-10 lg:px-12 text-white shadow-2xl overflow-hidden w-full lg:min-h-[350px] flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center w-full">
 
           {/* Left: 3 Mobile App Screens Mockup (Significantly Enlarged Image inside same box) */}

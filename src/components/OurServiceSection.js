@@ -49,7 +49,7 @@ export default function OurServiceSection() {
 
   return (
     <section id="services" className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
-      <div className="bg-[#030C54] rounded-[28px] sm:rounded-[38px] p-6 sm:p-8 lg:p-10 shadow-2xl text-white relative overflow-hidden">
+      <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-6 sm:p-8 lg:p-10 shadow-2xl text-white relative overflow-hidden">
         
         {/* Subtle decorative background glow */}
         <div className="absolute top-0 right-1/4 w-96 h-96 rounded-full bg-blue-500/10 filter blur-3xl pointer-events-none" />
@@ -76,7 +76,7 @@ export default function OurServiceSection() {
           {services.map((svc) => (
             <div
               key={svc.id}
-              className="bg-white text-slate-900 rounded-[22px] overflow-hidden shadow-lg flex flex-col justify-between group hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300 border border-slate-100/80"
+              className="bg-white text-slate-900 selection:bg-[#030C54] selection:text-white rounded-[22px] overflow-hidden shadow-lg flex flex-col justify-between group hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300 border border-slate-100/80"
             >
               {/* Card Image Area */}
               <div className="relative w-full h-36 sm:h-40 overflow-hidden bg-slate-100">

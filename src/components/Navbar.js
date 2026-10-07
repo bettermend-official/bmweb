@@ -37,7 +37,7 @@ export default function Navbar({ activePage = "home" }) {
         
         {/* Floating Capsule Bar (Screenshot Base) */}
         <nav
-          className={`relative w-full rounded-full transition-all duration-300 border border-white/10 px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between ${
+          className={`relative w-full rounded-full transition-all duration-300 border border-white/10 px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between selection:bg-white selection:text-[#030C54] ${
             scrolled
               ? "bg-[#02083a]/95 backdrop-blur-md"
               : "bg-[#030C54]"

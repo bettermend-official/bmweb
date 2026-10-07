@@ -44,31 +44,40 @@
 
 /* Custom Selection Highlight Styles */
 ::selection {
-  background-color: #030C54;
-  color: #ffffff;
+  background-color: #030C54 !important;
+  color: #ffffff !important;
 }
 
 /* Selection on Blue / Dark / Header / Footer sections: White background with Navy text */
-[class*="bg-[#030C54]"] ::selection,
+[class*="bg-[#030C54]"] *::selection,
 [class*="bg-[#030C54]"]::selection,
-[class*="bg-[#02083a]"] ::selection,
+[class*="bg-[#02083a]"] *::selection,
 [class*="bg-[#02083a]"]::selection,
-[class*="bg-[#020617]"] ::selection,
-[class*="bg-[#070a13]"] ::selection,
-nav ::selection,
-header ::selection,
-footer ::selection {
-  background-color: #ffffff;
-  color: #030C54;
+[class*="bg-[#020617]"] *::selection,
+[class*="bg-[#020617]"]::selection,
+[class*="bg-[#070a13]"] *::selection,
+[class*="bg-[#070a13]"]::selection,
+[class*="bg-black"] *::selection,
+[class*="bg-black"]::selection,
+nav *::selection,
+nav::selection,
+header *::selection,
+header::selection,
+footer *::selection,
+footer::selection {
+  background-color: #ffffff !important;
+  color: #030C54 !important;
 }
 
 /* Inside white elements nested in blue sections (e.g. FAQ pills, Service cards): Navy background with White text */
-[class*="bg-[#030C54]"] [class*="bg-white"] ::selection,
+[class*="bg-[#030C54]"] [class*="bg-white"] *::selection,
 [class*="bg-[#030C54]"] [class*="bg-white"]::selection,
-[class*="bg-[#030C54]"] [class*="bg-slate-50"] ::selection,
-[class*="bg-[#030C54]"] [class*="bg-slate-100"] ::selection {
-  background-color: #030C54;
-  color: #ffffff;
+[class*="bg-[#030C54]"] [class*="bg-slate-50"] *::selection,
+[class*="bg-[#030C54]"] [class*="bg-slate-50"]::selection,
+[class*="bg-[#030C54]"] [class*="bg-slate-100"] *::selection,
+[class*="bg-[#030C54]"] [class*="bg-slate-100"]::selection {
+  background-color: #030C54 !important;
+  color: #ffffff !important;
 }
 
 /* Custom Scrollbar */

@@ -33,7 +33,7 @@ export default function FaqSection() {
 
   return (
     <section id="faq" className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
-      <div className="bg-[#030C54] rounded-[28px] sm:rounded-[38px] p-6 sm:p-12 lg:p-16 text-white text-center shadow-2xl overflow-hidden">
+      <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-6 sm:p-12 lg:p-16 text-white text-center shadow-2xl overflow-hidden">
         
         {/* Header */}
         
@@ -51,7 +51,7 @@ export default function FaqSection() {
             return (
               <div
                 key={idx}
-                className="bg-white text-slate-900 rounded-2xl sm:rounded-full overflow-hidden shadow-sm transition-all"
+                className="bg-white text-slate-900 selection:bg-[#030C54] selection:text-white rounded-2xl sm:rounded-full overflow-hidden shadow-sm transition-all"
               >
                 <button
                   onClick={() => toggleFaq(idx)}
