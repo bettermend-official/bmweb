@@ -86,7 +86,7 @@ export default function AboutPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#eaedf2] text-slate-900 selection:bg-[#030C54] selection:text-white font-sans antialiased overflow-x-hidden">
+    <div className="min-h-screen bg-[#eaedf2] text-slate-900 font-sans antialiased overflow-x-hidden">
       
       {/* 1. Capsule Navbar */}
       <Navbar activePage="about" />

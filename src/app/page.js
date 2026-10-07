@@ -11,14 +11,14 @@ import { Heart } from "lucide-react";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#eaedf2] text-slate-900 selection:bg-[#030C54] selection:text-white font-sans antialiased overflow-x-hidden">
+    <div className="min-h-screen bg-[#eaedf2] text-slate-900 font-sans antialiased overflow-x-hidden">
 
       {/* 1. Floating Capsule Navbar (Screenshot Base) */}
       <Navbar activePage="home" />
 
       {/* 2. Hero Section Card (Figma Exact: 1312px width, 552px height, 38px border-radius) */}
       <section className="pt-[105px] sm:pt-[123px] pb-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
-        <div className="relative w-full rounded-[28px] sm:rounded-[38px] overflow-hidden min-h-[480px] sm:min-h-[552px] lg:h-[552px] shadow-[0_20px_50px_rgba(0,0,0,0.18)] flex items-center">
+        <div className="relative w-full rounded-[28px] sm:rounded-[38px] overflow-hidden min-h-[480px] sm:min-h-[552px] lg:h-[552px] shadow-[0_20px_50px_rgba(0,0,0,0.18)] flex items-center selection:bg-white selection:text-[#030C54]">
 
           {/* Background Image: Taxi & City Night */}
           <Image

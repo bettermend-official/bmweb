@@ -26,7 +26,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
-      <body className="bg-background text-text-main min-h-screen antialiased selection:bg-[#030C54] selection:text-white">
+      <body className="bg-background text-text-main min-h-screen antialiased">
         <ScrollToTop />
         {children}
       </body>

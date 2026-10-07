@@ -170,7 +170,7 @@ export default function EcosystemPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#eaedf2] text-slate-900 selection:bg-[#030C54] selection:text-white font-sans antialiased overflow-x-hidden">
+    <div className="min-h-screen bg-[#eaedf2] text-slate-900 font-sans antialiased overflow-x-hidden">
 
       {/* 1. Navbar */}
       <Navbar activePage="ecosystem" />
@@ -526,7 +526,7 @@ export default function EcosystemPage() {
 
       {/* 7. CTA Banner: "READY TO JOIN THE ECOSYSTEM?" (Screenshot Exact Match) */}
       <section className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
-        <div className="bg-[#030C54] rounded-[28px] sm:rounded-[38px] p-8 sm:p-14 lg:p-16 text-white text-center shadow-2xl relative overflow-hidden">
+        <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-8 sm:p-14 lg:p-16 text-white text-center shadow-2xl relative overflow-hidden">
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase font-heading text-white tracking-tight mb-3">
             READY TO JOIN THE <br />

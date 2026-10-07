@@ -59,12 +59,16 @@
 [class*="bg-[#070a13]"]::selection,
 [class*="bg-black"] *::selection,
 [class*="bg-black"]::selection,
+.bg-\[\#030C54\] *::selection,
+.bg-\[\#030C54\]::selection,
 nav *::selection,
 nav::selection,
 header *::selection,
 header::selection,
 footer *::selection,
-footer::selection {
+footer::selection,
+.text-white::selection,
+.text-white *::selection {
   background-color: #ffffff !important;
   color: #030C54 !important;
 }
@@ -75,7 +79,13 @@ footer::selection {
 [class*="bg-[#030C54]"] [class*="bg-slate-50"] *::selection,
 [class*="bg-[#030C54]"] [class*="bg-slate-50"]::selection,
 [class*="bg-[#030C54]"] [class*="bg-slate-100"] *::selection,
-[class*="bg-[#030C54]"] [class*="bg-slate-100"]::selection {
+[class*="bg-[#030C54]"] [class*="bg-slate-100"]::selection,
+.text-white [class*="bg-white"] *::selection,
+.text-white [class*="bg-white"]::selection,
+.text-white [class*="bg-slate-50"] *::selection,
+.text-white [class*="bg-slate-50"]::selection,
+.text-white [class*="bg-slate-100"] *::selection,
+.text-white [class*="bg-slate-100"]::selection {
   background-color: #030C54 !important;
   color: #ffffff !important;
 }

@@ -165,7 +165,7 @@ export default function FaqPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#eaedf2] text-slate-900 selection:bg-[#030C54] selection:text-white font-sans antialiased overflow-x-hidden">
+    <div className="min-h-screen bg-[#eaedf2] text-slate-900 font-sans antialiased overflow-x-hidden">
       
       {/* 1. Capsule Navbar */}
       <Navbar activePage="faq" />
@@ -208,7 +208,7 @@ export default function FaqPage() {
 
       {/* 3. Main FAQ Accordion Card (Deep Navy Container) */}
       <section className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
-        <div className="bg-[#030C54] rounded-[28px] sm:rounded-[38px] p-6 sm:p-12 lg:p-16 text-white shadow-2xl relative overflow-hidden">
+        <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-6 sm:p-12 lg:p-16 text-white shadow-2xl relative overflow-hidden">
           
           {/* Subtle decorative glow */}
           <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-blue-500/10 filter blur-3xl pointer-events-none" />
@@ -273,7 +273,7 @@ export default function FaqPage() {
 
       {/* 5. Assistance Protocol Banner: "STILL HAVE QUESTIONS?" */}
       <section className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
-        <div className="bg-[#030C54] rounded-[28px] sm:rounded-[38px] p-8 sm:p-12 lg:p-14 text-white shadow-2xl">
+        <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-8 sm:p-12 lg:p-14 text-white shadow-2xl">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             
             <div className="space-y-2 max-w-xl text-left">
