@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Toast from "@/components/Toast";
-import { ShieldAlert, CheckCircle2, AlertTriangle } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 export default function DeleteAccountPage() {
   const [submitting, setSubmitting] = useState(false);
@@ -68,8 +68,7 @@ export default function DeleteAccountPage() {
           </div>
 
           {/* Warning / Notice Banner */}
-          <div className="p-5 sm:p-6 rounded-2xl bg-rose-50/70 border border-rose-200/90 flex items-start gap-4">
-            <AlertTriangle size={22} className="text-rose-600 shrink-0 mt-0.5" />
+          <div className="p-5 sm:p-6 rounded-2xl bg-rose-50/70 border border-rose-200/90">
             <div className="text-xs sm:text-[13px] text-slate-700 space-y-2 leading-relaxed">
               <h2 className="text-xs sm:text-sm font-bold text-rose-950 uppercase tracking-wide">
                 Important Account Deletion Notice:
@@ -202,10 +201,7 @@ export default function DeleteAccountPage() {
                 {submitting ? (
                   <span>Processing Deletion Request...</span>
                 ) : (
-                  <>
-                    <ShieldAlert size={16} />
-                    <span>Submit Permanent Deletion Request</span>
-                  </>
+                  <span>Submit Permanent Deletion Request</span>
                 )}
               </button>
             </form>
