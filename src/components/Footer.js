@@ -170,7 +170,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-bold text-white/70">
           <div className="tracking-widest uppercase font-heading">
-            © 2020 BETTERMEND PRIVATE LIMITED. ALL RIGHTS RESERVED.
+            © 2026 BETTERMEND PRIVATE LIMITED. ALL RIGHTS RESERVED.
           </div>
 
           <div className="flex flex-wrap items-center gap-4 text-[10px] sm:text-[11px] uppercase tracking-wider">

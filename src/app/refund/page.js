@@ -318,7 +318,7 @@ export default function RefundPage() {
 
       {/* Minimal Clean Footer */}
       <footer className="border-t border-slate-200/80 py-6 text-center text-xs text-slate-500 bg-white">
-        <p>© 2020 Bettermend Private Limited. All rights reserved.</p>
+        <p>© 2026 Bettermend Private Limited. All rights reserved.</p>
       </footer>
 
     </div>
