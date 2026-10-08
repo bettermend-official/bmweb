@@ -41,82 +41,93 @@ export default function FaqPage() {
   };
 
   const allFaqs = [
+    // 1. Ecosystem FAQ 1
     {
-      id: "faq-1",
-      category: "ecosystem",
-      q: "WHAT IS BETTERMEND?",
-      a: "BetterMend is a super app designed to bring multiple everyday services together on one platform, including transportation, delivery, skilled workers and essential digital services.",
+      id: "eco-1",
+      category: ["ecosystem", "services"],
+      q: "WHAT IS THE BETTERMEND ECOSYSTEM?",
+      a: "The BetterMend ecosystem connects customers, local businesses, skilled professionals, transportation providers and essential services through one digital platform.",
     },
+    // 2. Ecosystem FAQ 2
     {
-      id: "faq-2",
-      category: "services",
-      q: "WHAT SERVICES ARE AVAILABLE ON BETTERMEND?",
-      a: "BetterMend brings together four core service areas: transportation, delivery, skilled workers and e services. Availability may vary by location as BetterMend expands.",
+      id: "eco-2",
+      category: ["ecosystem", "services"],
+      q: "HOW IS BETTERMEND DIFFERENT FROM A DELIVERY APP?",
+      a: "Delivery is one part of BetterMend. The platform is designed as a broader super app covering transportation, delivery, skilled workers and e services.",
     },
+    // 3. Ecosystem FAQ 3
     {
-      id: "faq-3",
-      category: "services",
-      q: "IS BETTERMEND A DELIVERY APP?",
-      a: "Delivery is one part of the BetterMend ecosystem. BetterMend is being built as a broader super app connecting transportation, local delivery, skilled professionals and essential digital services.",
+      id: "eco-3",
+      category: ["ecosystem", "community"],
+      q: "WHO IS PART OF THE BETTERMEND ECOSYSTEM?",
+      a: "Customers, local businesses, skilled professionals, transportation providers and essential service providers can all be part of the BetterMend ecosystem.",
     },
+    // 4. Ecosystem FAQ 4
     {
-      id: "faq-4",
-      category: "orders",
-      q: "HOW DOES MULTI SHOP CART DELIVERY WORK?",
-      a: "When you add items from multiple shops in a single checkout, the app coordinates the pickup sequence. A single delivery partner receives the route, stops at the respective locations in sequence, and delivers everything in one batch.",
+      id: "eco-4",
+      category: ["ecosystem", "community"],
+      q: "HOW DOES BETTERMEND SUPPORT LOCAL BUSINESSES?",
+      a: "BetterMend aims to help local businesses build digital connections with nearby customers and take part in a connected regional service ecosystem.",
     },
+    // 5. Ecosystem FAQ 5
     {
-      id: "faq-5",
-      category: "ecosystem",
+      id: "eco-5",
+      category: ["ecosystem", "community"],
+      q: "HOW DOES BETTERMEND SUPPORT SKILLED WORKERS?",
+      a: "BetterMend connects skilled professionals with customers looking for services, helping create greater access to local demand.",
+    },
+    // 6. Ecosystem FAQ 6
+    {
+      id: "eco-6",
+      category: ["ecosystem", "services"],
+      q: "IS BETTERMEND AVAILABLE EVERYWHERE IN INDIA?",
+      a: "Availability depends on location. BetterMend is expanding progressively, beginning with regional markets before moving toward wider coverage.",
+    },
+    // 7. Ecosystem Origin & Vision
+    {
+      id: "eco-7",
+      category: ["ecosystem"],
       q: "WHERE WAS BETTERMEND CREATED?",
       a: "BetterMend was created in Kerala, India, with a vision to build technology for regional communities and eventually serve wider markets.",
     },
     {
-      id: "faq-6",
-      category: "services",
-      q: "DOES BETTERMEND WORK IN EVERY CITY IN INDIA?",
-      a: "Service availability depends on the location. BetterMend is expanding its service network progressively, beginning with regional markets and growing toward wider coverage.",
-    },
-    {
-      id: "faq-7",
-      category: "services",
-      q: "WHAT CAN I USE BETTERMEND FOR?",
-      a: "Depending on your location, you can use BetterMend to access transportation, order everyday essentials, find local professionals and access selected digital services.",
-    },
-    {
-      id: "faq-8",
-      category: "ecosystem",
-      q: "WHO CAN JOIN THE BETTERMEND ECOSYSTEM?",
-      a: "Customers, local businesses, transportation providers and skilled professionals can participate in the BetterMend ecosystem, subject to applicable onboarding and service requirements.",
-    },
-    {
-      id: "faq-9",
-      category: "community",
-      q: "HOW DOES BETTERMEND SUPPORT LOCAL BUSINESSES?",
-      a: "BetterMend aims to help local businesses build digital connections with nearby customers and participate in a connected regional service ecosystem.",
-    },
-    {
-      id: "faq-10",
-      category: "community",
-      q: "HOW DOES BETTERMEND SUPPORT SKILLED WORKERS?",
-      a: "BetterMend connects skilled professionals with customers looking for services, helping create greater access to local demand.",
-    },
-    {
-      id: "faq-11",
-      category: "ecosystem",
+      id: "eco-8",
+      category: ["ecosystem"],
       q: "WHAT IS THE VISION OF BETTERMEND?",
       a: "BetterMend aims to make everyday life simpler by connecting people, businesses, professionals, transportation providers, and essential services through one platform.",
     },
+    // 8. Services FAQs
     {
-      id: "faq-12",
-      category: "community",
+      id: "faq-services-1",
+      category: ["services"],
+      q: "WHAT SERVICES ARE AVAILABLE ON BETTERMEND?",
+      a: "BetterMend brings together four core service areas: transportation, delivery, skilled workers and e services. Availability may vary by location as BetterMend expands.",
+    },
+    {
+      id: "faq-services-2",
+      category: ["services"],
+      q: "WHAT CAN I USE BETTERMEND FOR?",
+      a: "Depending on your location, you can use BetterMend to access transportation, order everyday essentials, find local professionals and access selected digital services.",
+    },
+    // 9. Orders & Cart FAQs
+    {
+      id: "faq-orders-1",
+      category: ["orders"],
+      q: "HOW DOES MULTI SHOP CART DELIVERY WORK?",
+      a: "When you add items from multiple shops in a single checkout, the app coordinates the pickup sequence. A single delivery partner receives the route, stops at the respective locations in sequence, and delivers everything in one batch.",
+    },
+    // 10. Community & Merchant Registration
+    {
+      id: "faq-merchant-1",
+      category: ["community", "ecosystem"],
       q: "CAN I REGISTER AS A MERCHANT ON THE PLATFORM?",
       a: "Yes! You can download the Vendor App or visit our Ecosystem overview to learn more about setting up your storefront. Local Sector Admins will review and approve your storefront.",
       link: { text: "Explore Ecosystem →", href: "/ecosystem" },
     },
+    // 11. Account Deletion
     {
-      id: "faq-13",
-      category: "orders",
+      id: "faq-delete-1",
+      category: ["orders"],
       q: "HOW CAN I DELETE MY ACCOUNT AND ASSOCIATED DATA?",
       a: "In accordance with Google Play Store guidelines, we provide a dedicated request system. Go to our Data Deletion Request Page, enter your registered credentials, and submit the form. Your profile and telemetry will be purged within 30 days.",
       link: { text: "Go to Data Deletion Request Page →", href: "/delete-account" },
@@ -127,7 +138,12 @@ export default function FaqPage() {
   const filteredFaqs =
     selectedCategory === "all"
       ? allFaqs
-      : allFaqs.filter((faq) => faq.category === selectedCategory);
+      : allFaqs.filter((faq) => {
+          if (Array.isArray(faq.category)) {
+            return faq.category.includes(selectedCategory);
+          }
+          return faq.category === selectedCategory;
+        });
 
   const toggleAccordion = (idx) => {
     setOpenIndex(openIndex === idx ? null : idx);

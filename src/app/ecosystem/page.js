@@ -12,7 +12,6 @@ import {
   ShieldCheck,
   Layers,
   ArrowRight,
-  CheckCircle2,
   Cpu,
   Zap,
   Radio,
@@ -24,7 +23,6 @@ import {
   Lock,
   ChevronDown,
   X,
-  Sparkles,
   Users,
   Boxes,
   Activity,
@@ -41,13 +39,11 @@ import {
   Car,
   Globe,
   Heart,
-  HelpCircle,
 } from "lucide-react";
 
 export default function EcosystemPage() {
   const [activeModal, setActiveModal] = useState(null);
   const [toast, setToast] = useState(null);
-  const [openFaqIndex, setOpenFaqIndex] = useState(0);
 
   const appCards = [
     {
@@ -168,40 +164,8 @@ export default function EcosystemPage() {
     },
   ];
 
-  // FAQ list from Page 4 of PDF Developer Handoff
-  const faqs = [
-    {
-      q: "What is the BetterMend ecosystem?",
-      a: "The BetterMend ecosystem connects customers, local businesses, skilled professionals, transportation providers and essential services through one digital platform.",
-    },
-    {
-      q: "How is BetterMend different from a delivery app?",
-      a: "Delivery is one part of BetterMend. The platform is designed as a broader super app covering transportation, delivery, skilled workers and e services.",
-    },
-    {
-      q: "Who is part of the BetterMend ecosystem?",
-      a: "Customers, local businesses, skilled professionals, transportation providers and essential service providers can all be part of the BetterMend ecosystem.",
-    },
-    {
-      q: "How does BetterMend support local businesses?",
-      a: "BetterMend aims to help local businesses build digital connections with nearby customers and take part in a connected regional service ecosystem.",
-    },
-    {
-      q: "How does BetterMend support skilled workers?",
-      a: "BetterMend connects skilled professionals with customers looking for services, helping create greater access to local demand.",
-    },
-    {
-      q: "Is BetterMend available everywhere in India?",
-      a: "Availability depends on location. BetterMend is expanding progressively, beginning with regional markets before moving toward wider coverage.",
-    },
-  ];
-
   const handleOpenDetail = (item) => {
     setActiveModal(item);
-  };
-
-  const toggleFaq = (idx) => {
-    setOpenFaqIndex(openFaqIndex === idx ? null : idx);
   };
 
   return (
@@ -210,13 +174,8 @@ export default function EcosystemPage() {
       {/* 1. Navbar */}
       <Navbar activePage="ecosystem" />
 
-      {/* 2. Top Header & Title (Exact PDF Spec) */}
+      {/* 2. Top Header & Title */}
       <section className="pt-[110px] sm:pt-[130px] pb-6 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto text-center">
-        <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#030C54]/5 text-[#030C54] text-[11px] font-black uppercase tracking-widest font-heading mb-3 border border-[#030C54]/10">
-          <Sparkles size={13} className="text-[#030C54]" />
-          <span>One Platform. A Connected Ecosystem.</span>
-        </span>
-
         <h1 className="text-3xl sm:text-5xl lg:text-[56px] font-black uppercase tracking-tight text-slate-950 font-montserrat leading-[1.05] mb-3">
           ONE ECOSYSTEM. <br />
           EVERY REGIONAL SERVICES
@@ -277,11 +236,11 @@ export default function EcosystemPage() {
                     {card.description}
                   </p>
 
-                  {/* 4 Checkmark Bullets */}
+                  {/* 4 Feature Bullets */}
                   <div className="space-y-1.5 mb-4">
                     {card.bullets.map((bullet, idx) => (
-                      <div key={idx} className="flex items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-700 font-medium truncate">
-                        <CheckCircle2 size={12} className="text-emerald-600 shrink-0" />
+                      <div key={idx} className="flex items-center gap-2 text-[10px] sm:text-[11px] text-slate-700 font-medium truncate">
+                        <span className="w-1.5 h-1.5 rounded-full bg-slate-300 shrink-0" />
                         <span className="truncate">{bullet}</span>
                       </div>
                     ))}
@@ -312,15 +271,11 @@ export default function EcosystemPage() {
       {/* 4. What is the BetterMend ecosystem? & How the ecosystem works (Deep Navy Card) */}
       <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-6 sm:p-12 lg:p-16 text-white shadow-2xl relative overflow-hidden">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center relative z-10">
-            
+
             {/* Left: What is the BetterMend ecosystem? */}
             <div className="lg:col-span-6 space-y-4 text-left">
-              <span className="inline-block text-[11px] font-extrabold text-blue-300 uppercase tracking-widest font-mono">
-                MORE THAN A SUPER APP
-              </span>
-
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black uppercase font-heading tracking-tight text-white leading-tight">
                 What is the BetterMend ecosystem?
               </h2>
@@ -332,12 +287,6 @@ export default function EcosystemPage() {
               <p className="text-xs sm:text-sm text-white/85 leading-relaxed font-sans font-normal">
                 BetterMend is building an integrated ecosystem where people discover and access services, businesses reach customers digitally, professionals connect their skills with local demand, transportation providers help people and goods move, and essential services become easier to access.
               </p>
-
-              <div className="pt-2">
-                <span className="inline-block px-4 py-2 rounded-xl bg-white/10 border border-white/20 text-xs sm:text-sm font-bold text-white tracking-wide">
-                  Everyone connects. Everyone benefits.
-                </span>
-              </div>
             </div>
 
             {/* Right: How the ecosystem works (White Interior Card) */}
@@ -357,11 +306,6 @@ export default function EcosystemPage() {
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
                 Revenue circulates within the regional economy. As businesses grow, more opportunities are created and the ecosystem becomes stronger.
               </p>
-
-              <div className="pt-3 border-t border-slate-100 flex items-center gap-2 text-xs font-bold text-[#030C54]">
-                <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />
-                <span>Supports regional economic growth through local participation.</span>
-              </div>
             </div>
 
           </div>
@@ -372,23 +316,23 @@ export default function EcosystemPage() {
       {/* 5. Problem Statement: "Why a connected ecosystem matters" (Interactive Horseshoe Arc Graphic) */}
       <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-gradient-to-b from-[#dce4ed]/70 via-[#f0f4f8] to-[#dce4ed]/70 rounded-[28px] sm:rounded-[38px] p-6 sm:p-10 lg:p-14 border border-slate-200/80 shadow-sm text-slate-900 overflow-hidden text-center relative">
-          
+
           {/* Header */}
-          <div className="max-w-3xl mx-auto mb-6 sm:mb-10 relative z-10 space-y-1">
-            <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-black text-[#030C54] font-heading font-montserrat tracking-tight leading-tight uppercase">
-              Why a connected ecosystem matters
+          <div className="max-w-2xl mx-auto mb-6 sm:mb-10 relative z-10 space-y-1">
+            <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-black text-[#030C54] font-heading font-montserrat tracking-tight leading-tight">
+              Problem statement
             </h2>
             <p className="text-xs sm:text-sm lg:text-base font-bold text-slate-700 font-sans pt-1">
-              Everyday services can be spread across separate systems. People may use one platform for food, another for transportation, another to find a professional and another for digital services.
+              Key Problems in the Hyperlocal Ecosystem
             </p>
-            <p className="text-xs sm:text-sm font-semibold text-slate-600 italic font-sans">
-              &ldquo;This can make everyday life more complicated and leave local businesses and professionals disconnected from digital demand. BetterMend brings services, people and the local economy closer together.&rdquo;
+            <p className="text-xs sm:text-sm font-semibold text-slate-500 italic font-sans">
+              &ldquo;A Broken Hyperlocal Ecosystem&rdquo;
             </p>
           </div>
 
           {/* Desktop & Tablet: Exact Interlocking Horseshoe Arc Graphic */}
           <div className="hidden md:block relative z-10 max-w-5xl mx-auto min-h-[390px]">
-            
+
             {/* 1. Top Left Text Callout */}
             <div className="absolute left-[10px] lg:left-[25px] top-[45px] w-[280px] lg:w-[300px] text-right space-y-1">
               <h3 className="text-base lg:text-lg font-black text-[#030C54] font-heading leading-tight">
@@ -447,7 +391,7 @@ export default function EcosystemPage() {
             {/* Center Horseshoe Chain SVG (Interlocking & Contiguous) */}
             <div className="flex items-center justify-center pt-2">
               <svg viewBox="0 0 540 330" className="w-[520px] h-[320px] overflow-visible">
-                
+
                 {/* Stone 1: Top-Left (Consumer Multi-App) */}
                 <g transform="translate(160, 95) rotate(-35)">
                   <path
@@ -552,7 +496,7 @@ export default function EcosystemPage() {
 
           {/* Mobile Fallback: Vertical Stacked Flow */}
           <div className="md:hidden space-y-4 pt-2 text-left">
-            
+
             <div className="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs flex items-center gap-3.5">
               <div className="w-12 h-12 rounded-2xl bg-[#030C54]/5 border border-[#030C54]/40 text-[#030C54] flex items-center justify-center shrink-0">
                 <Users size={20} />
@@ -631,14 +575,10 @@ export default function EcosystemPage() {
       {/* 6. Regional Impact & Kerala Origin and Global Ambition (2-Column Spec) */}
       <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-          
+
           {/* Card A: Regional Impact */}
           <div className="bg-white rounded-[28px] sm:rounded-[34px] p-6 sm:p-10 border border-slate-200/80 shadow-sm flex flex-col justify-between text-left">
             <div className="space-y-3">
-              <span className="inline-block text-[11px] font-extrabold text-[#030C54] uppercase tracking-widest font-mono">
-                REGIONAL IMPACT
-              </span>
-
               <h3 className="text-2xl sm:text-3xl font-black uppercase font-heading text-slate-950 tracking-tight">
                 Technology That Strengthens Local Economies
               </h3>
@@ -651,20 +591,11 @@ export default function EcosystemPage() {
                 Our goal is to build digital infrastructure that helps communities become more connected, accessible and efficient.
               </p>
             </div>
-
-            <div className="pt-5 border-t border-slate-100 mt-4 flex items-center gap-2 text-xs font-bold text-[#030C54]">
-              <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />
-              <span>Digital infrastructure for connected regional communities.</span>
-            </div>
           </div>
 
           {/* Card B: Kerala Origin and Global Ambition & Philosophy */}
           <div className="bg-white rounded-[28px] sm:rounded-[34px] p-6 sm:p-10 border border-slate-200/80 shadow-sm flex flex-col justify-between text-left">
             <div className="space-y-3">
-              <span className="inline-block text-[11px] font-extrabold text-[#030C54] uppercase tracking-widest font-mono">
-                BORN FROM A REGIONAL PERSPECTIVE
-              </span>
-
               <h3 className="text-2xl sm:text-3xl font-black uppercase font-heading text-slate-950 tracking-tight">
                 Kerala Origin and Global Ambition
               </h3>
@@ -686,74 +617,16 @@ export default function EcosystemPage() {
                 </p>
               </div>
             </div>
-
-            <div className="pt-5 border-t border-slate-100 mt-4 flex items-center gap-2 text-xs font-bold text-[#030C54]">
-              <Sparkles size={16} className="text-indigo-600 shrink-0" />
-              <span>Think local. Build regional. Scale global.</span>
-            </div>
           </div>
 
         </div>
       </section>
 
-      {/* 7. Frequently Asked Questions (from Page 4 of PDF) */}
-      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
-        <div className="bg-white rounded-[28px] sm:rounded-[38px] p-6 sm:p-10 lg:p-14 border border-slate-200/80 shadow-sm text-slate-900">
-          
-          <div className="text-center max-w-xl mx-auto mb-8">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#030C54]/5 text-[#030C54] text-[11px] font-black uppercase tracking-widest font-heading mb-2.5 border border-[#030C54]/10">
-              <HelpCircle size={13} className="text-[#030C54]" />
-              <span>Common Questions</span>
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black uppercase font-heading text-slate-950 tracking-tight">
-              Frequently Asked Questions
-            </h2>
-          </div>
 
-          <div className="max-w-3xl mx-auto space-y-3">
-            {faqs.map((faq, idx) => {
-              const isOpen = openFaqIndex === idx;
-              return (
-                <div
-                  key={idx}
-                  className="rounded-2xl border border-slate-200/80 overflow-hidden bg-slate-50/60 transition-all duration-200"
-                >
-                  <button
-                    onClick={() => toggleFaq(idx)}
-                    className="w-full p-4 sm:p-5 flex items-center justify-between gap-4 text-left hover:bg-slate-100/70 transition-colors cursor-pointer"
-                  >
-                    <span className="text-xs sm:text-sm font-black uppercase font-heading text-slate-950">
-                      {faq.q}
-                    </span>
-                    <div
-                      className={`w-6 h-6 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                        isOpen ? "bg-[#030C54] text-white rotate-180" : "bg-slate-200 text-slate-700"
-                      }`}
-                    >
-                      <ChevronDown size={14} />
-                    </div>
-                  </button>
 
-                  {isOpen && (
-                    <div className="px-4 sm:px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed font-sans border-t border-slate-200/60 animate-fadeIn">
-                      <p>{faq.a}</p>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-
-        </div>
-      </section>
-
-      {/* 8. Closing Call to Action: "Be Part of a Better Connected Future" (Exact PDF Match) */}
+      {/* 8. Closing Call to Action: "Be Part of a Better Connected Future" */}
       <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-8 sm:p-14 lg:p-16 text-white text-center shadow-2xl relative overflow-hidden">
-
-          <span className="inline-block text-[11px] font-extrabold text-blue-300 uppercase tracking-widest font-mono mb-3">
-            CLOSING CALL TO ACTION
-          </span>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase font-heading text-white tracking-tight mb-3">
             Be Part of a Better <br />
