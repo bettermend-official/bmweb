@@ -110,7 +110,7 @@ export default function AboutPage() {
               </p>
 
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans font-normal">
-                Through innovation, technology, and a strong understanding of real-world urban needs, Bettermend develops practical solutions that connect people with essential services through one integrated ecosystem—bringing multiple everyday rurban services together on a single Super App platform.
+                Through innovation, technology, and a strong understanding of real-world urban needs, Bettermend develops practical solutions that connect people with essential services through one integrated ecosystem bringing multiple everyday rurban services together on a single Super App platform.
               </p>
 
               <div className="pt-2">
@@ -202,7 +202,7 @@ export default function AboutPage() {
                 Solving the Fragmented Ecosystem
               </h2>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
-                Conventional rurban markets suffer from siloed apps and disconnected logistics. BetterMend replaces this friction with one unified municipal super-app.
+                Conventional rurban markets suffer from siloed apps and disconnected logistics. BetterMend replaces this friction with one unified municipal super app.
               </p>
             </div>
 

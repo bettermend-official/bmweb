@@ -317,7 +317,7 @@ export default function ContactPage() {
               LOOKING FOR INSTANT ANSWERS?
             </h3>
             <p className="text-xs sm:text-sm text-white/80 leading-relaxed font-sans">
-              Explore our knowledge base for instant answers regarding multi-shop delivery fees, refund timelines, and account settings.
+              Our dedicated operational desk is ready to help you with bookings, safety concerns, and merchant onboarding.
             </p>
           </div>
 

@@ -132,14 +132,14 @@ export default function ServicesPage() {
 
   return (
     <div className="min-h-screen bg-[#eaedf2] text-slate-900 font-sans antialiased overflow-x-hidden">
-      
+
       {/* 1. Navbar */}
       <Navbar activePage="services" />
 
       {/* 2. Hero Header Banner (Large & Impactful) */}
       <section className="pt-[105px] sm:pt-[125px] pb-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-8 sm:p-14 lg:p-16 text-white shadow-2xl relative overflow-hidden">
-          
+
           {/* Faded Background Image */}
           <div className="absolute inset-0 z-0 pointer-events-none">
             <Image
@@ -168,7 +168,7 @@ export default function ServicesPage() {
       {/* 3. Interactive Split-Showcase Section (Clean Single-Screen Fit) */}
       <section className="py-3 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-6 sm:p-10 lg:p-12 shadow-2xl text-white relative overflow-hidden">
-          
+
           {/* Decorative ambient glow */}
           <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-blue-500/10 filter blur-3xl pointer-events-none" />
 
@@ -186,7 +186,7 @@ export default function ServicesPage() {
 
           {/* Interactive 2-Column Showcase (Equal Height Alignment) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-stretch relative z-10">
-            
+
             {/* Left Column: 4 Service Selector Buttons (5 cols) */}
             <div className="lg:col-span-5 flex flex-col justify-between gap-3">
               {allServices.map((svc) => {
@@ -197,19 +197,17 @@ export default function ServicesPage() {
                   <button
                     key={svc.id}
                     onClick={() => setActiveServiceId(svc.id)}
-                    className={`w-full p-4 sm:p-4.5 rounded-2xl text-left transition-all duration-200 cursor-pointer flex items-center justify-between gap-3 border ${
-                      isActive
+                    className={`w-full p-4 sm:p-4.5 rounded-2xl text-left transition-all duration-200 cursor-pointer flex items-center justify-between gap-3 border ${isActive
                         ? "bg-white text-slate-900 shadow-xl border-white translate-x-1"
                         : "bg-white/5 hover:bg-white/10 text-white/90 border-white/10 hover:border-white/20"
-                    }`}
+                      }`}
                   >
                     <div className="flex items-center gap-3.5 min-w-0">
                       <div
-                        className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
-                          isActive
+                        className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 transition-colors ${isActive
                             ? "bg-[#030C54] text-white shadow-sm"
                             : "bg-white/10 text-white"
-                        }`}
+                          }`}
                       >
                         <IconComponent size={20} />
                       </div>
@@ -223,11 +221,10 @@ export default function ServicesPage() {
 
                     <div className="shrink-0 text-right">
                       <div
-                        className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${
-                          isActive
+                        className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${isActive
                             ? "bg-[#030C54] text-white"
                             : "text-white/40"
-                        }`}
+                          }`}
                       >
                         <ArrowRight size={15} />
                       </div>
@@ -239,7 +236,7 @@ export default function ServicesPage() {
 
             {/* Right Column: Featured Spotlight Preview Card (7 cols) */}
             <div className="lg:col-span-7 bg-white text-slate-900 rounded-[28px] overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-100 animate-fadeIn">
-              
+
               {/* Spotlight Image Area */}
               <div className="relative w-full h-44 sm:h-52 overflow-hidden bg-slate-100 shrink-0">
                 <Image
@@ -300,7 +297,7 @@ export default function ServicesPage() {
       {/* 4. How It Works 3-Step Process (White Rounded Card) */}
       <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-white rounded-[28px] sm:rounded-[38px] p-8 sm:p-12 border border-slate-200/80 shadow-sm text-slate-900">
-          
+
           <div className="text-center max-w-xl mx-auto mb-10">
             <h3 className="text-2xl sm:text-3xl font-black uppercase font-heading text-slate-950">
               How BetterMend Works
@@ -308,7 +305,7 @@ export default function ServicesPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-center">
-            
+
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col items-center">
               <div className="w-12 h-12 rounded-full bg-[#030C54] text-white flex items-center justify-center font-black text-lg font-heading mb-4 shadow-md">
                 1
@@ -354,7 +351,7 @@ export default function ServicesPage() {
       {activeModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-fadeIn">
           <div className="relative w-full max-w-xl rounded-3xl bg-white text-slate-900 border border-slate-200 p-6 sm:p-8 shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
-            
+
             {/* Close Button */}
             <button
               onClick={() => setActiveModal(null)}
