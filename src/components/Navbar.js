@@ -18,7 +18,8 @@ export default function Navbar({ activePage = "home" }) {
         setScrolled(false);
       }
     };
-    window.addEventListener("scroll", handleScroll);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -35,12 +36,12 @@ export default function Navbar({ activePage = "home" }) {
     <header className="fixed top-0 left-0 right-0 z-50 pt-3 sm:pt-5 transition-all duration-300 pointer-events-none">
       <div className="w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 pointer-events-auto">
         
-        {/* Floating Capsule Bar (Screenshot Base) */}
+        {/* Floating Capsule Bar: Solid on top, Transparent Glass on Scroll */}
         <nav
-          className={`relative w-full rounded-full transition-all duration-300 border border-white/10 px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between selection:bg-white selection:text-[#030C54] ${
+          className={`relative w-full rounded-full transition-all duration-300 px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between selection:bg-white selection:text-[#030C54] ${
             scrolled
-              ? "bg-[#02083a]/95 backdrop-blur-md"
-              : "bg-[#030C54]"
+              ? "bg-[#030C54]/35 backdrop-blur-xl border border-white/25 shadow-[0_8px_30px_rgb(0,0,0,0.2)]"
+              : "bg-[#030C54] border border-white/10 shadow-md"
           }`}
         >
           
