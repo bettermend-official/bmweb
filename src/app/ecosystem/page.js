@@ -50,7 +50,7 @@ export default function EcosystemPage() {
       id: "user",
       badge: "USER APP",
       badgeRight: "iOS & Android",
-      image: "/ecosystem_user_app.jpg",
+      image: "/userapp.jpeg",
       tag: "CONSUMER APPLICATION",
       title: "USER APP",
       description:
@@ -79,7 +79,7 @@ export default function EcosystemPage() {
       id: "vendor",
       badge: "MERCHANT APP",
       badgeRight: "Tablet POS",
-      image: "/ecosystem_merchant_pos.jpg",
+      image: "/vendorapp.jpeg",
       tag: "MERCHANT POS & WEB",
       title: "VENDOR APP",
       description:
@@ -108,7 +108,7 @@ export default function EcosystemPage() {
       id: "delivery",
       badge: "DRIVER APP",
       badgeRight: "Rider Hub",
-      image: "/ecosystem_delivery_rider.jpg",
+      image: "/deliverypartner.jpeg",
       tag: "FLEET LOGISTICS",
       title: "DELIVERY PARTNER",
       description:
@@ -137,7 +137,7 @@ export default function EcosystemPage() {
       id: "manager",
       badge: "GOVERNANCE",
       badgeRight: "Enterprise Web",
-      image: "/ecosystem_control_room.jpg",
+      image: "/sectormanager.jpeg",
       tag: "REGIONAL MANAGEMENT",
       title: "SECTOR MANAGER",
       description:
@@ -176,7 +176,7 @@ export default function EcosystemPage() {
       <Navbar activePage="ecosystem" />
 
       {/* 2. Top Header & Title (Screenshot Exact Base) */}
-      <section className="pt-[110px] sm:pt-[130px] pb-6 px-4 sm:px-6 w-full max-w-[1312px] mx-auto text-center">
+      <section className="pt-[110px] sm:pt-[130px] pb-6 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto text-center">
         <h1 className="text-3xl sm:text-5xl lg:text-[56px] font-black uppercase tracking-tight text-slate-950 font-montserrat leading-[1.05] mb-3">
           ONE ECOSYSTEM. <br />
           EVERY LOCAL SERVICE.
@@ -188,7 +188,7 @@ export default function EcosystemPage() {
       </section>
 
       {/* 3. 4-Cards Single-Screen Grid (4 in 1 Row on Desktop) */}
-      <section className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
+      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {appCards.map((card) => (
             <div
@@ -255,7 +255,7 @@ export default function EcosystemPage() {
       </section>
 
       {/* 4. Problem Statement: "A Broken Hyperlocal Ecosystem" (Pitch Deck Slide 4 Pixel-Perfect Match) */}
-      <section className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
+      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-gradient-to-b from-[#dce4ed]/70 via-[#f0f4f8] to-[#dce4ed]/70 rounded-[28px] sm:rounded-[38px] p-6 sm:p-10 lg:p-14 border border-slate-200/80 shadow-sm text-slate-900 overflow-hidden text-center relative">
           
           {/* Header */}
@@ -525,7 +525,7 @@ export default function EcosystemPage() {
 
 
       {/* 7. CTA Banner: "READY TO JOIN THE ECOSYSTEM?" (Screenshot Exact Match) */}
-      <section className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
+      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-8 sm:p-14 lg:p-16 text-white text-center shadow-2xl relative overflow-hidden">
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase font-heading text-white tracking-tight mb-3">

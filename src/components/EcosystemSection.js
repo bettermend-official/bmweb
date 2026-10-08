@@ -58,7 +58,7 @@ export default function EcosystemSection() {
   const current = content[activeTab];
 
   return (
-    <section id="ecosystem" className="py-8 px-4 sm:px-6 w-full max-w-[1302px] mx-auto">
+    <section id="ecosystem" className="py-8 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
 
       {/* Header Info */}
       <div className="text-center max-w-3xl mx-auto mb-8">

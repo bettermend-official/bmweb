@@ -33,7 +33,7 @@ export default function Navbar({ activePage = "home" }) {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 pt-3 sm:pt-5 transition-all duration-300 pointer-events-none">
-      <div className="w-full max-w-[1312px] mx-auto px-4 sm:px-6 pointer-events-auto">
+      <div className="w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 pointer-events-auto">
         
         {/* Floating Capsule Bar (Screenshot Base) */}
         <nav

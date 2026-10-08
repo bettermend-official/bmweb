@@ -18,7 +18,7 @@ export default function NewsletterSection() {
   };
 
   return (
-    <section className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
+    <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
       <div className="bg-white rounded-[28px] sm:rounded-[38px] p-8 sm:p-14 lg:p-16 text-center border border-slate-200/80 shadow-sm text-slate-900 overflow-hidden">
         <div className="max-w-3xl mx-auto space-y-4">
           

@@ -63,8 +63,8 @@ export default function ContactPage() {
       {/* 1. Capsule Navbar */}
       <Navbar activePage="contact" />
 
-      {/* 2. Hero Header Banner (Deep Navy Theme - Exact 1312px Grid) */}
-      <section className="pt-[105px] sm:pt-[123px] pb-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
+      {/* 2. Hero Header Banner */}
+      <section className="pt-[105px] sm:pt-[123px] pb-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-8 sm:p-12 lg:p-16 text-white shadow-2xl relative overflow-hidden">
           
           {/* Subtle decorative glow */}
@@ -84,7 +84,7 @@ export default function ContactPage() {
       </section>
 
       {/* 3. Main Grid: Contact Info Cards + Interactive Form */}
-      <section className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
+      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
           
           {/* Left: Contact Channels (5 cols) */}
@@ -309,8 +309,8 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* 4. Quick Help FAQ Bar (Deep Navy 1312px Card) */}
-      <section className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
+      {/* 4. Quick Help FAQ Bar */}
+      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-8 sm:p-12 text-white shadow-2xl flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-2 max-w-xl text-left">
             <h3 className="text-2xl sm:text-3xl font-black uppercase font-heading tracking-tight">

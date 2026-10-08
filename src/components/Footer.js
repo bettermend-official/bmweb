@@ -4,7 +4,7 @@ import { Mail, ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="px-4 sm:px-6 pb-8 pt-4 w-full max-w-[1312px] mx-auto">
+    <footer className="px-4 sm:px-6 lg:px-8 pb-8 pt-4 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
       <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-8 sm:p-12 lg:p-14 text-white shadow-2xl">
         
         {/* Main Footer Grid */}

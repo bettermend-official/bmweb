@@ -9,7 +9,7 @@ export default function OurServiceSection() {
       id: "transportation",
       num: "01",
       title: "Transportation",
-      image: "/transpot.png",
+      image: "/trasport.jpeg",
       buttonText: "Explore Transportation",
       description:
         "Move around your city with ease. Book convenient local rides and transportation options for everyday travel, commuting and local journeys, all through the BetterMend app.",
@@ -19,7 +19,7 @@ export default function OurServiceSection() {
       id: "workers",
       num: "02",
       title: "Workers",
-      image: "/workers.png",
+      image: "/worker.jpeg",
       buttonText: "Find a Professional",
       description:
         "Find trusted local professionals when you need them. Connect with skilled professionals such as electricians, plumbers, tutors and other service providers for your everyday needs.",
@@ -29,7 +29,7 @@ export default function OurServiceSection() {
       id: "e-services",
       num: "03",
       title: "E Services",
-      image: "/eservice.png",
+      image: "/e service.jpeg",
       buttonText: "Explore E Services",
       description:
         "Essential services, made simpler. Access digital services, bill payments, bookings, appointments and other everyday assistance without having to navigate multiple platforms.",
@@ -39,7 +39,7 @@ export default function OurServiceSection() {
       id: "delivery",
       num: "04",
       title: "Delivery",
-      image: "/delivery.png",
+      image: "/delivery.jpeg",
       buttonText: "Explore Delivery",
       description:
         "Get everyday essentials from local businesses. Order food, groceries, medicines and other everyday essentials from nearby businesses and have them delivered to your doorstep.",
@@ -48,7 +48,7 @@ export default function OurServiceSection() {
   ];
 
   return (
-    <section id="services" className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
+    <section id="services" className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
       <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-6 sm:p-8 lg:p-10 shadow-2xl text-white relative overflow-hidden">
         
         {/* Subtle decorative background glow */}

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { Plus, X } from "lucide-react";
+import { Plus, X, ArrowUpRight } from "lucide-react";
 
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -20,34 +20,8 @@ export default function FaqSection() {
       a: "Delivery is one part of the BetterMend ecosystem. BetterMend is being built as a broader super app connecting transportation, local delivery, skilled professionals and essential digital services.",
     },
     {
-      q: "Where is BetterMend based?",
-      a: "BetterMend was created in Kerala, India, with a vision to build technology for India's regional communities and eventually serve a wider global market.",
-    },
-    {
-      q: "Does BetterMend work in every city in India?",
-      a: "Service availability depends on the location. BetterMend is expanding its service network progressively, beginning with regional markets and growing toward wider coverage.",
-    },
-    {
-      q: "What can I use BetterMend for?",
-      a: "Depending on your location, you can use BetterMend to access transportation, order everyday essentials, find local professionals and access selected digital services.",
-    },
-    {
-      q: "Who can join the BetterMend ecosystem?",
-      a: "Customers, local businesses, transportation providers and skilled professionals can participate in the BetterMend ecosystem, subject to applicable onboarding and service requirements.",
-    },
-    {
       q: "HOW DOES MULTI SHOP CART DELIVERY WORK?",
       a: "When you add items from multiple shops in a single checkout, the app coordinates the pickup sequence. A single delivery partner receives the route, stops at the respective locations in sequence, and delivers everything in one batch.",
-    },
-    {
-      q: "HOW CAN I DELETE MY ACCOUNT AND ASSOCIATED DATA?",
-      a: "In accordance with Google Play Store guidelines, we provide a dedicated request system. Go to our Data Deletion Request Page, enter your registered credentials, and submit the form. Your profile and telemetry will be purged within 30 days.",
-      link: { text: "Go to Data Deletion Request Page →", href: "/delete-account" },
-    },
-    {
-      q: "CAN I REGISTER AS A MERCHANT ON THE PLATFORM?",
-      a: "Yes! You can download the Vendor App or visit our Ecosystem overview to learn more about setting up your storefront. Local Sector Admins will review and approve your storefront.",
-      link: { text: "Explore Ecosystem →", href: "/ecosystem" },
     },
   ];
 
@@ -56,7 +30,7 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
+    <section id="faq" className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
       <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-6 sm:p-12 lg:p-16 text-white text-center shadow-2xl overflow-hidden">
         
         {/* Header */}
@@ -91,21 +65,22 @@ export default function FaqSection() {
                 {isOpen && (
                   <div className="px-5 sm:px-8 pb-4 pt-1 text-xs text-slate-600 leading-relaxed font-sans border-t border-slate-100">
                     <p>{faq.a}</p>
-                    {faq.link && (
-                      <div className="mt-2.5">
-                        <Link
-                          href={faq.link.href}
-                          className="text-[#030C54] font-bold hover:underline inline-flex items-center gap-1"
-                        >
-                          {faq.link.text}
-                        </Link>
-                      </div>
-                    )}
                   </div>
                 )}
               </div>
             );
           })}
+        </div>
+
+        {/* View All FAQs Link */}
+        <div className="mt-8">
+          <Link
+            href="/faq"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white/10 hover:bg-white text-white hover:text-[#030C54] text-xs font-black uppercase tracking-wider transition-all duration-200 border border-white/20 hover:border-white group"
+          >
+            <span>View All Questions</span>
+            <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </Link>
         </div>
 
       </div>

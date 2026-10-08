@@ -31,7 +31,7 @@ export default function ServicesPage() {
       num: "01",
       icon: Car,
       title: "Transport",
-      image: "/transpot.png",
+      image: "/trasport.jpeg",
       badge: "Instant Rides & Fleet",
       rating: "4.9",
       trips: "120K+ rides",
@@ -54,7 +54,7 @@ export default function ServicesPage() {
       num: "02",
       icon: Wrench,
       title: "Workers",
-      image: "/workers.png",
+      image: "/worker.jpeg",
       badge: "Background Verified",
       rating: "4.9",
       trips: "85K+ jobs done",
@@ -77,7 +77,7 @@ export default function ServicesPage() {
       num: "03",
       icon: Globe,
       title: "E-Services",
-      image: "/eservice.png",
+      image: "/e service.jpeg",
       badge: "Citizen Utility Hub",
       rating: "4.9",
       trips: "250K+ bills settled",
@@ -100,7 +100,7 @@ export default function ServicesPage() {
       num: "04",
       icon: ShoppingBag,
       title: "Delivery",
-      image: "/delivery.png",
+      image: "/delivery.jpeg",
       badge: "Multi-Shop Cart",
       rating: "4.9",
       trips: "500K+ orders delivered",
@@ -137,7 +137,7 @@ export default function ServicesPage() {
       <Navbar activePage="services" />
 
       {/* 2. Hero Header Banner (Large & Impactful) */}
-      <section className="pt-[105px] sm:pt-[125px] pb-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
+      <section className="pt-[105px] sm:pt-[125px] pb-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-8 sm:p-14 lg:p-16 text-white shadow-2xl relative overflow-hidden">
           
           {/* Faded Background Image */}
@@ -166,7 +166,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 3. Interactive Split-Showcase Section (Clean Single-Screen Fit) */}
-      <section className="py-3 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
+      <section className="py-3 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-6 sm:p-10 lg:p-12 shadow-2xl text-white relative overflow-hidden">
           
           {/* Decorative ambient glow */}
@@ -303,7 +303,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 4. How It Works 3-Step Process (White Rounded Card) */}
-      <section className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
+      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-white rounded-[28px] sm:rounded-[38px] p-8 sm:p-12 border border-slate-200/80 shadow-sm text-slate-900">
           
           <div className="text-center max-w-xl mx-auto mb-10">

@@ -43,35 +43,35 @@ export default function AboutPage() {
       icon: Smartphone,
       title: "Fragmented Consumer Experience",
       desc: "Multiple disjointed apps for everyday needs with zero unified hyperlocal platform.",
-      image: "/ecosystem_user_app.jpg",
+      image: "/userapp.jpeg",
     },
     {
       id: "p2",
       icon: Car,
       title: "Fragmented Mobility Ecosystem",
       desc: "Disconnected ride, rental, and premium transport services create inefficiencies and higher costs.",
-      image: "/ecosystem_control_room.jpg",
+      image: "/trasport.jpeg",
     },
     {
       id: "p3",
       icon: ShoppingBag,
       title: "Inefficient Hyperlocal Delivery",
       desc: "Dark-store dominance reduces efficiency, increases costs, and hurts local neighborhood businesses.",
-      image: "/ecosystem_delivery_rider.jpg",
+      image: "/deliverypartner.jpeg",
     },
     {
       id: "p4",
       icon: ShieldAlert,
       title: "Trust & Quality Gap in Services",
       desc: "Unverified providers and inconsistent service quality severely reduce customer trust.",
-      image: "/ecosystem_merchant_pos.jpg",
+      image: "/vendorapp.jpeg",
     },
     {
       id: "p5",
       icon: Users,
       title: "Limited Market Access for Workers",
       desc: "Skilled local workers struggle to access nearby demand directly and affordably.",
-      image: "/ecosystem_local_community.jpg",
+      image: "/worker.jpeg",
     },
   ];
 
@@ -92,7 +92,7 @@ export default function AboutPage() {
       <Navbar activePage="about" />
 
       {/* 2. Hero Section Card: Pitch Deck Slide 2 */}
-      <section className="pt-[105px] sm:pt-[125px] pb-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
+      <section className="pt-[105px] sm:pt-[125px] pb-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-white rounded-[28px] sm:rounded-[38px] p-6 sm:p-12 lg:p-16 border border-slate-200/80 shadow-sm text-slate-900 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
             
@@ -110,7 +110,7 @@ export default function AboutPage() {
               </p>
 
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans font-normal">
-                Through innovation, technology, and a strong understanding of real-world rurban needs, Bettermend develops practical solutions that connect people with essential services through one integrated ecosystem—bringing multiple everyday rurban services together on a single Super App platform.
+                Through innovation, technology, and a strong understanding of real-world urban needs, Bettermend develops practical solutions that connect people with essential services through one integrated ecosystem—bringing multiple everyday rurban services together on a single Super App platform.
               </p>
 
               <div className="pt-2">
@@ -140,7 +140,7 @@ export default function AboutPage() {
       </section>
 
       {/* 3. Vision & Mission Section (Exact Match with About Us Box & Theme - Inverted Split) */}
-      <section className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
+      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-white rounded-[28px] sm:rounded-[38px] p-6 sm:p-12 lg:p-16 border border-slate-200/80 shadow-sm text-slate-900 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
             
@@ -191,7 +191,7 @@ export default function AboutPage() {
       </section>
 
       {/* 4. Problem Statement vs. Our Solutions (Pitch Deck Slides 4 & 5) */}
-      <section className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
+      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-white rounded-[28px] sm:rounded-[38px] p-6 sm:p-12 lg:p-14 border border-slate-200/80 shadow-sm text-slate-900">
           
           {/* Section Header */}
@@ -286,7 +286,7 @@ export default function AboutPage() {
 
 
       {/* 6. Contact & Registered Office Info (Pitch Deck Slide 14) */}
-      <section className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
+      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-white rounded-[28px] sm:rounded-[38px] p-6 sm:p-12 lg:p-14 border border-slate-200/80 shadow-sm text-slate-900">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="space-y-2 text-left">

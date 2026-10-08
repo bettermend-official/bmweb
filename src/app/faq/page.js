@@ -44,68 +44,68 @@ export default function FaqPage() {
     {
       id: "faq-1",
       category: "ecosystem",
-      q: "WHAT IS THE BETTERMEND ECOSYSTEM?",
-      a: "The BetterMend ecosystem connects customers, local businesses, skilled professionals, transportation providers, and essential services through one digital platform.",
+      q: "WHAT IS BETTERMEND?",
+      a: "BetterMend is a super app designed to bring multiple everyday services together on one platform, including transportation, delivery, skilled workers and essential digital services.",
     },
     {
       id: "faq-2",
       category: "services",
-      q: "HOW IS BETTERMEND DIFFERENT FROM A DELIVERY APP?",
-      a: "Delivery is only one part of BetterMend. The platform is designed as a broader super app covering transportation, delivery, skilled workers, and E Services.",
+      q: "WHAT SERVICES ARE AVAILABLE ON BETTERMEND?",
+      a: "BetterMend brings together four core service areas: transportation, delivery, skilled workers and e services. Availability may vary by location as BetterMend expands.",
     },
     {
       id: "faq-3",
-      category: "ecosystem",
-      q: "WHO IS PART OF THE BETTERMEND ECOSYSTEM?",
-      a: "Customers, local businesses, skilled professionals, transportation providers, and essential service providers can all form part of the BetterMend ecosystem.",
+      category: "services",
+      q: "IS BETTERMEND A DELIVERY APP?",
+      a: "Delivery is one part of the BetterMend ecosystem. BetterMend is being built as a broader super app connecting transportation, local delivery, skilled professionals and essential digital services.",
     },
     {
       id: "faq-4",
-      category: "community",
-      q: "HOW DOES BETTERMEND SUPPORT LOCAL BUSINESSES?",
-      a: "BetterMend aims to help local businesses build digital connections with nearby customers and participate in a connected regional service ecosystem.",
+      category: "orders",
+      q: "HOW DOES MULTI SHOP CART DELIVERY WORK?",
+      a: "When you add items from multiple shops in a single checkout, the app coordinates the pickup sequence. A single delivery partner receives the route, stops at the respective locations in sequence, and delivers everything in one batch.",
     },
     {
       id: "faq-5",
-      category: "community",
-      q: "HOW DOES BETTERMEND SUPPORT SKILLED WORKERS?",
-      a: "BetterMend connects skilled professionals with customers looking for services, helping create greater access to local demand.",
-    },
-    {
-      id: "faq-6",
-      category: "services",
-      q: "IS BETTERMEND AVAILABLE EVERYWHERE IN INDIA?",
-      a: "Availability depends on location. BetterMend is expanding progressively, beginning with regional markets before moving toward wider coverage.",
-    },
-    {
-      id: "faq-7",
-      category: "services",
-      q: "WHAT SERVICES DOES BETTERMEND PROVIDE?",
-      a: "BetterMend brings transportation, delivery, skilled workers, and E Services together on one platform. Service availability can vary by location.",
-    },
-    {
-      id: "faq-8",
-      category: "ecosystem",
-      q: "WHAT IS THE VISION OF BETTERMEND?",
-      a: "BetterMend aims to make everyday life simpler by connecting people, businesses, professionals, transportation providers, and essential services through one platform.",
-    },
-    {
-      id: "faq-9",
       category: "ecosystem",
       q: "WHERE WAS BETTERMEND CREATED?",
       a: "BetterMend was created in Kerala, India, with a vision to build technology for regional communities and eventually serve wider markets.",
     },
     {
-      id: "faq-10",
+      id: "faq-6",
+      category: "services",
+      q: "DOES BETTERMEND WORK IN EVERY CITY IN INDIA?",
+      a: "Service availability depends on the location. BetterMend is expanding its service network progressively, beginning with regional markets and growing toward wider coverage.",
+    },
+    {
+      id: "faq-7",
+      category: "services",
+      q: "WHAT CAN I USE BETTERMEND FOR?",
+      a: "Depending on your location, you can use BetterMend to access transportation, order everyday essentials, find local professionals and access selected digital services.",
+    },
+    {
+      id: "faq-8",
       category: "ecosystem",
-      q: "WHO CAN USE BETTERMEND?",
-      a: "Customers can use BetterMend to discover and access everyday services. Businesses, professionals, and transportation providers can participate in the wider BetterMend ecosystem subject to applicable onboarding and service requirements.",
+      q: "WHO CAN JOIN THE BETTERMEND ECOSYSTEM?",
+      a: "Customers, local businesses, transportation providers and skilled professionals can participate in the BetterMend ecosystem, subject to applicable onboarding and service requirements.",
+    },
+    {
+      id: "faq-9",
+      category: "community",
+      q: "HOW DOES BETTERMEND SUPPORT LOCAL BUSINESSES?",
+      a: "BetterMend aims to help local businesses build digital connections with nearby customers and participate in a connected regional service ecosystem.",
+    },
+    {
+      id: "faq-10",
+      category: "community",
+      q: "HOW DOES BETTERMEND SUPPORT SKILLED WORKERS?",
+      a: "BetterMend connects skilled professionals with customers looking for services, helping create greater access to local demand.",
     },
     {
       id: "faq-11",
-      category: "orders",
-      q: "HOW DOES MULTI SHOP CART DELIVERY WORK?",
-      a: "When you add items from multiple shops in a single checkout, the app coordinates the pickup sequence. A single delivery partner receives the route, stops at the respective locations in sequence, and delivers everything in one batch.",
+      category: "ecosystem",
+      q: "WHAT IS THE VISION OF BETTERMEND?",
+      a: "BetterMend aims to make everyday life simpler by connecting people, businesses, professionals, transportation providers, and essential services through one platform.",
     },
     {
       id: "faq-12",
@@ -140,7 +140,7 @@ export default function FaqPage() {
       <Navbar activePage="faq" />
 
       {/* 2. Hero Header Section */}
-      <section className="pt-[110px] sm:pt-[130px] pb-6 px-4 sm:px-6 w-full max-w-[1312px] mx-auto text-center">
+      <section className="pt-[110px] sm:pt-[130px] pb-6 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto text-center">
         
         {/* H1 as specified in PDF */}
         <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-black uppercase tracking-tight text-slate-950 font-montserrat leading-[1.05] mb-3">
@@ -179,7 +179,7 @@ export default function FaqPage() {
       </section>
 
       {/* 3. Main FAQ Accordion Card (Deep Navy Container) */}
-      <section className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
+      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-6 sm:p-12 lg:p-16 text-white shadow-2xl relative overflow-hidden">
           
           {/* Subtle decorative glow */}
@@ -252,7 +252,7 @@ export default function FaqPage() {
       </section>
 
       {/* 4. Assistance Protocol Banner: "STILL HAVE QUESTIONS?" */}
-      <section className="py-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
+      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-8 sm:p-12 lg:p-14 text-white shadow-2xl">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             

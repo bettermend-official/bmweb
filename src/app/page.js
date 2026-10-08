@@ -16,8 +16,8 @@ export default function HomePage() {
       {/* 1. Floating Capsule Navbar (Screenshot Base) */}
       <Navbar activePage="home" />
 
-      {/* 2. Hero Section Card (Figma Exact: 1312px width, 552px height, 38px border-radius) */}
-      <section className="pt-[105px] sm:pt-[123px] pb-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto">
+      {/* 2. Hero Section Card */}
+      <section className="pt-[105px] sm:pt-[123px] pb-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="relative w-full rounded-[28px] sm:rounded-[38px] overflow-hidden min-h-[480px] sm:min-h-[552px] lg:h-[552px] shadow-[0_20px_50px_rgba(0,0,0,0.18)] flex items-center selection:bg-white selection:text-[#030C54]">
 
           {/* Background Image: Taxi & City Night */}
@@ -49,7 +49,11 @@ export default function HomePage() {
               className="mt-5 sm:mt-6 space-y-0.5 text-white/95 font-roboto font-normal text-[15px] sm:text-[18px] lg:text-[21px] leading-[1.4] tracking-[0.01em]"
               style={{ fontFamily: "'Roboto', sans-serif" }}
             >
-              <p>Created with love in Kerala</p>
+              <p className="flex items-center gap-1.5 flex-wrap">
+                <span>Created with</span>
+                <Heart size={20} className="text-rose-500 fill-rose-500 inline-block shrink-0" />
+                <span>in Kerala</span>
+              </p>
               <p>Built for the world</p>
             </div>
 
@@ -116,7 +120,7 @@ export default function HomePage() {
       <NewsletterSection />
 
       {/* 8. Super App Regional Branding Ribbon (Center aligned, sentence case with only 'I' capital) */}
-      <section className="pt-6 pb-2 sm:pt-8 sm:pb-4 px-4 sm:px-6 w-full max-w-[1312px] mx-auto text-center">
+      <section className="pt-6 pb-2 sm:pt-8 sm:pb-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto text-center">
         <div className="space-y-2.5 sm:space-y-3">
           <h2 className="text-2xl sm:text-4xl lg:text-[46px] font-black text-slate-950 tracking-tight leading-[1.1] font-montserrat select-none">
             India&apos;s ever <br />
@@ -126,7 +130,7 @@ export default function HomePage() {
           <div className="space-y-0.5 text-xs sm:text-sm lg:text-base text-slate-700 font-sans font-medium">
             <p className="flex items-center justify-center gap-1.5 flex-wrap">
               <span>created with</span>
-              <Heart size={16} className="text-rose-600 fill-rose-600 inline-block animate-pulse shrink-0" />
+              <Heart size={16} className="text-rose-600 fill-rose-600 inline-block shrink-0" />
               <span>in kerala</span>
             </p>
             <p className="text-slate-500 font-normal">built for the world</p>
