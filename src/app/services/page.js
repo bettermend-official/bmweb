@@ -4,25 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Toast from "@/components/Toast";
 import {
   Car,
   Wrench,
   ShoppingBag,
-  CheckCircle2,
-  Star,
   ArrowRight,
-  X,
-  Sparkles,
   Globe,
-  ShieldCheck,
-  Zap,
 } from "lucide-react";
 
 export default function ServicesPage() {
   const [activeServiceId, setActiveServiceId] = useState("transportation");
-  const [activeModal, setActiveModal] = useState(null);
-  const [toast, setToast] = useState(null);
 
   const allServices = [
     // 1. Transport
@@ -120,15 +111,6 @@ export default function ServicesPage() {
 
   const activeService =
     allServices.find((s) => s.id === activeServiceId) || allServices[0];
-
-  const handleBookNow = (serviceName) => {
-    setActiveModal(null);
-    setToast({
-      message: `Booking request initiated for ${serviceName}! Please check the mobile app to confirm dispatch.`,
-      type: "success",
-    });
-    setTimeout(() => setToast(null), 5000);
-  };
 
   return (
     <div className="min-h-screen bg-[#eaedf2] text-slate-900 font-sans antialiased overflow-x-hidden">
@@ -276,13 +258,13 @@ export default function ServicesPage() {
 
                 {/* Spotlight Action Bar */}
                 <div className="pt-3.5 border-t border-slate-100 flex items-center justify-start">
-                  <button
-                    onClick={() => setActiveModal(activeService)}
+                  <Link
+                    href={`/services/${activeService.id}`}
                     className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#030C54] hover:bg-[#02083a] text-white text-xs font-black uppercase tracking-wider transition-all shadow-md hover:scale-[1.02] cursor-pointer"
                   >
                     <span>Full Specifications</span>
                     <ArrowRight size={14} />
-                  </button>
+                  </Link>
                 </div>
 
               </div>
@@ -347,75 +329,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* 5. Detail Modal Dialog */}
-      {activeModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-fadeIn">
-          <div className="relative w-full max-w-xl rounded-3xl bg-white text-slate-900 border border-slate-200 p-6 sm:p-8 shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
 
-            {/* Close Button */}
-            <button
-              onClick={() => setActiveModal(null)}
-              className="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors cursor-pointer"
-            >
-              <X size={16} />
-            </button>
-
-            {/* Modal Image */}
-            <div className="relative w-full h-48 rounded-2xl overflow-hidden mb-5 bg-slate-100">
-              <Image
-                src={activeModal.image}
-                alt={activeModal.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            {/* Header info */}
-            <div className="flex items-center justify-between gap-3 mb-2">
-              <h3 className="text-2xl font-black font-heading text-slate-950">
-                {activeModal.title}
-              </h3>
-            </div>
-
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-              {activeModal.fullDesc}
-            </p>
-
-            {/* Detailed Features list */}
-            <div className="space-y-2 mb-6 p-4 rounded-xl bg-slate-50 border border-slate-100">
-              <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 block mb-2">
-                Included Features & Standards
-              </span>
-              {activeModal.features.map((feat, idx) => (
-                <div key={idx} className="p-2.5 rounded-lg bg-white border border-slate-100 text-xs sm:text-sm text-slate-800 font-medium">
-                  <span>{feat}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Actions */}
-            <div className="flex flex-col sm:flex-row items-center gap-3 pt-2">
-              <button
-                onClick={() => handleBookNow(activeModal.title)}
-                className="w-full py-3 rounded-full bg-[#030C54] hover:bg-[#02083a] text-white font-black text-xs uppercase tracking-wider transition-all shadow-md cursor-pointer"
-              >
-                Request / Book on Mobile App
-              </button>
-              <Link
-                href="/contact"
-                onClick={() => setActiveModal(null)}
-                className="w-full sm:w-auto px-6 py-3 rounded-full border border-slate-300 text-slate-700 hover:bg-slate-50 text-xs font-bold uppercase tracking-wider text-center"
-              >
-                Speak with Desk
-              </Link>
-            </div>
-
-          </div>
-        </div>
-      )}
-
-      {/* 6. Toast */}
-      <Toast toast={toast} onClose={() => setToast(null)} />
 
       {/* 7. Footer */}
       <Footer />

@@ -13,7 +13,7 @@ export default function OurServiceSection() {
       buttonText: "Explore Transportation",
       description:
         "Move around your city with ease. Book convenient local rides and transportation options for everyday travel, commuting and local journeys, all through the BetterMend app.",
-      link: "/services",
+      link: "/services/transportation",
     },
     {
       id: "workers",
@@ -23,7 +23,7 @@ export default function OurServiceSection() {
       buttonText: "Find a Professional",
       description:
         "Find trusted local professionals when you need them. Connect with skilled professionals such as electricians, plumbers, tutors and other service providers for your everyday needs.",
-      link: "/services",
+      link: "/services/workers",
     },
     {
       id: "e-services",
@@ -33,7 +33,7 @@ export default function OurServiceSection() {
       buttonText: "Explore E Services",
       description:
         "Essential services, made simpler. Access digital services, bill payments, bookings, appointments and other everyday assistance without having to navigate multiple platforms.",
-      link: "/services",
+      link: "/services/e-services",
     },
     {
       id: "delivery",
@@ -43,7 +43,7 @@ export default function OurServiceSection() {
       buttonText: "Explore Delivery",
       description:
         "Get everyday essentials from local businesses. Order food, groceries, medicines and other everyday essentials from nearby businesses and have them delivered to your doorstep.",
-      link: "/services",
+      link: "/services/delivery",
     },
   ];
 
