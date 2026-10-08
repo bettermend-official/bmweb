@@ -215,14 +215,9 @@ export default function ServicesPage() {
                       </div>
 
                       <div className="min-w-0">
-                        <div className="flex items-center gap-1.5">
-                          <span className={`text-[11px] font-mono font-bold ${isActive ? "text-blue-600" : "text-white/40"}`}>
-                            {svc.num}
-                          </span>
-                          <h3 className="text-sm sm:text-base font-black uppercase font-heading truncate">
-                            {svc.title}
-                          </h3>
-                        </div>
+                        <h3 className="text-sm sm:text-base font-black uppercase font-heading truncate">
+                          {svc.title}
+                        </h3>
                       </div>
                     </div>
 

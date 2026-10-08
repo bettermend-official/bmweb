@@ -152,14 +152,7 @@ export default function Footer() {
                     Contact Support
                   </Link>
                 </li>
-                <li>
-                  <a
-                    href="mailto:support@bettermend.com"
-                    className="hover:text-white transition-colors inline-flex items-center gap-1"
-                  >
-                    <span>support@bettermend.com</span>
-                  </a>
-                </li>
+              
               </ul>
             </div>
 
