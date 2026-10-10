@@ -32,7 +32,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 pt-1 text-white/90">
               {/* LinkedIn Icon */}
               <a
-                href="https://www.linkedin.com/company/bettermend"
+                href="https://www.linkedin.com/company/bettermend-urban-services/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -56,7 +56,9 @@ export default function Footer() {
 
               {/* Instagram Icon */}
               <a
-                href="#"
+                href="https://www.instagram.com/bettermend_?utm_source=ig_web_button_share_sheet&exln=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="w-8 h-8 rounded-full bg-white/10 hover:bg-white hover:text-[#030C54] flex items-center justify-center transition-all"
               >
@@ -67,7 +69,9 @@ export default function Footer() {
 
               {/* YouTube Icon */}
               <a
-                href="#"
+                href="https://youtube.com/@bettermendurbenservices?si=CHGAl4JBnMKvQN0f"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="YouTube"
                 className="w-8 h-8 rounded-full bg-white/10 hover:bg-white hover:text-[#030C54] flex items-center justify-center transition-all"
               >
