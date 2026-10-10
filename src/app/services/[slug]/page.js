@@ -7,14 +7,28 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
   FaCarSide,
+  FaMotorcycle,
+  FaVanShuttle,
+  MdElectricRickshaw,
+  FaBasketShopping,
+  FaUtensils,
+  MdLocalPharmacy,
+  FaStore,
+  FaBolt,
+  MdPlumbing,
+  FaHammer,
+  FaGraduationCap,
+  FaLaptopCode,
+  FaLightbulb,
+  FaWater,
+  FaLandmark,
+  FaFileContract,
+  FaUserDoctor,
   GrUserWorker,
   FaInternetExplorer,
   TbTruckDelivery,
 } from "@/components/Icons";
 import {
-  Bike,
-  Car,
-  ShoppingBag,
   ChevronDown,
   ArrowRight,
   ShieldCheck,
@@ -23,16 +37,6 @@ import {
   CheckCircle2,
   Sparkles,
   Zap,
-  Users,
-  Building2,
-  FileText,
-  CreditCard,
-  Droplets,
-  Lightbulb,
-  Stethoscope,
-  Hammer,
-  GraduationCap,
-  Laptop,
 } from "lucide-react";
 
 // Complete dataset for all 4 services from PDF developer handoff
@@ -63,13 +67,13 @@ const servicesData = {
       {
         title: "Bikes",
         desc: "Convenient mobility for short local journeys and everyday travel.",
-        icon: Bike,
+        icon: FaMotorcycle,
         badge: "Short Journeys",
       },
       {
         title: "Autos",
         desc: "A practical option for local commuting and point to point travel.",
-        icon: Zap,
+        icon: MdElectricRickshaw,
         badge: "Local Commute",
       },
       {
@@ -81,7 +85,7 @@ const servicesData = {
       {
         title: "Seven Seater Cars",
         desc: "More space for families, groups and journeys that require additional passenger capacity.",
-        icon: Users,
+        icon: FaVanShuttle,
         badge: "Family & Groups",
       },
     ],
@@ -234,25 +238,25 @@ const servicesData = {
       {
         title: "Fresh Groceries",
         desc: "Find everyday grocery requirements: fresh vegetables, fruits, daily household essentials, and packaged groceries.",
-        icon: ShoppingBag,
+        icon: FaBasketShopping,
         badge: "Fresh & Packaged",
       },
       {
         title: "Food and Bakery",
         desc: "Discover food and bakery products: prepared hot food, bakery items, quick snacks, and meals from local businesses.",
-        icon: Sparkles,
+        icon: FaUtensils,
         badge: "Hot & Fresh",
       },
       {
         title: "Pharmacy & Essentials",
         desc: "Selected pharmacy and health essentials handled strictly according to provider and regulatory requirements.",
-        icon: ShieldCheck,
+        icon: MdLocalPharmacy,
         badge: "Health & Care",
       },
       {
         title: "Multi Store Shopping",
         desc: "Combine products from up to 3 participating neighborhood stores into a single consolidated checkout and delivery.",
-        icon: Zap,
+        icon: FaStore,
         badge: "Up to 3 Stores",
       },
     ],
@@ -405,31 +409,31 @@ const servicesData = {
       {
         title: "Electrical Services",
         desc: "Repairs, switch & socket work, lighting, fan installations, troubleshooting, and household electrical requirements.",
-        icon: Lightbulb,
+        icon: FaBolt,
         badge: "Certified Electricians",
       },
       {
         title: "Plumbing Services",
         desc: "Leak repairs, tap/faucet fixes, pipe work, drainage issues, bathroom plumbing, and water connection solutions.",
-        icon: Droplets,
+        icon: MdPlumbing,
         badge: "Expert Plumbers",
       },
       {
         title: "Carpentry Services",
         desc: "Furniture repair, door and window work, shelf installations, woodwork, assembly, and maintenance.",
-        icon: Hammer,
+        icon: FaHammer,
         badge: "Master Carpenters",
       },
       {
         title: "Tutoring & Learning",
         desc: "Academic tutoring, subject specific learning support, homework assistance, and exam preparation for students.",
-        icon: GraduationCap,
+        icon: FaGraduationCap,
         badge: "Academic Tutors",
       },
       {
         title: "Technical & Freelance",
         desc: "Specialized computer support, digital tasks, technical assistance, and freelance professional services.",
-        icon: Laptop,
+        icon: FaLaptopCode,
         badge: "Tech & Freelancers",
       },
     ],
@@ -571,31 +575,31 @@ const servicesData = {
       {
         title: "KSEB Electricity Services",
         desc: "Access electricity related payment services and bill inquiries through a simpler digital experience.",
-        icon: Lightbulb,
+        icon: FaLightbulb,
         badge: "Power Utility",
       },
       {
         title: "KWA Water Services",
         desc: "Manage applicable water authority payment requirements and connection records through the platform.",
-        icon: Droplets,
+        icon: FaWater,
         badge: "Water Board",
       },
       {
         title: "Municipal & Tax Services",
         desc: "Access selected municipal tax and civic payment services where supported.",
-        icon: Building2,
+        icon: FaLandmark,
         badge: "Civic Taxes",
       },
       {
         title: "Civic & E-Governance",
         desc: "Support for e-governance registrations, civic document support, and public certificate processes.",
-        icon: FileText,
+        icon: FaFileContract,
         badge: "Public Certificates",
       },
       {
         title: "Doctor & Expert Appointments",
         desc: "Discover appointment scheduling options for doctors, experts, and professional advisors.",
-        icon: Stethoscope,
+        icon: FaUserDoctor,
         badge: "Healthcare & Experts",
       },
     ],
@@ -918,7 +922,7 @@ export default function ServiceDetailPage({ params }) {
                 >
                   <div className="space-y-2">
                     <div className="w-10 h-10 rounded-xl bg-[#030C54]/5 text-[#030C54] flex items-center justify-center font-bold">
-                      <IconComp size={20} />
+                      <IconComp size={22} className="shrink-0" />
                     </div>
                     <span className="text-[10px] font-black uppercase tracking-wider text-slate-400 font-heading block">
                       {opt.badge}

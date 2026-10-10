@@ -1,6 +1,23 @@
 import { IoIosCall } from "react-icons/io";
-import { MdEmail } from "react-icons/md";
-import { FaHouse, FaCarSide } from "react-icons/fa6";
+import { MdEmail, MdElectricRickshaw, MdLocalPharmacy, MdPlumbing } from "react-icons/md";
+import {
+  FaHouse,
+  FaCarSide,
+  FaMotorcycle,
+  FaVanShuttle,
+  FaBasketShopping,
+  FaUtensils,
+  FaStore,
+  FaBolt,
+  FaHammer,
+  FaGraduationCap,
+  FaLaptopCode,
+  FaLightbulb,
+  FaWater,
+  FaLandmark,
+  FaFileContract,
+  FaUserDoctor,
+} from "react-icons/fa6";
 import { FaInternetExplorer } from "react-icons/fa";
 import { IoLocationOutline, IoBagOutline } from "react-icons/io5";
 import { CiMobile3 } from "react-icons/ci";
@@ -12,10 +29,27 @@ import { TbTruckDelivery } from "react-icons/tb";
 export {
   IoIosCall,
   MdEmail,
+  MdElectricRickshaw,
+  MdLocalPharmacy,
+  MdPlumbing,
   FaHouse,
   IoLocationOutline,
   CiMobile3,
   FaCarSide,
+  FaMotorcycle,
+  FaVanShuttle,
+  FaBasketShopping,
+  FaUtensils,
+  FaStore,
+  FaBolt,
+  FaHammer,
+  FaGraduationCap,
+  FaLaptopCode,
+  FaLightbulb,
+  FaWater,
+  FaLandmark,
+  FaFileContract,
+  FaUserDoctor,
   IoBagOutline,
   VscWorkspaceTrusted,
   GrUserWorker,
@@ -37,6 +71,9 @@ export const EServicesIcon = FaInternetExplorer;
 export const InternetExplorerIcon = FaInternetExplorer;
 export const DeliveryIcon = TbTruckDelivery;
 export const TruckDeliveryIcon = TbTruckDelivery;
+export const BikeIcon = FaMotorcycle;
+export const AutoIcon = MdElectricRickshaw;
+export const VanIcon = FaVanShuttle;
 
 export default {
   IoIosCall,
