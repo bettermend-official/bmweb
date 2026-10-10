@@ -359,19 +359,15 @@ export default function Navbar({ activePage = "home" }) {
             {/* 3. Right: Search Button + Contact Pill */}
             <div className="flex items-center gap-2 sm:gap-3 pr-1 sm:pr-2 relative z-10">
               
-              {/* Search Trigger Button */}
+              {/* Search Trigger Button (Icon Only) */}
               <button
                 type="button"
                 onClick={() => setSearchOpen(true)}
-                className="flex items-center gap-2 px-3 py-1.5 rounded-full text-white/85 hover:text-white hover:bg-white/10 transition-all cursor-pointer active:scale-95 group"
-                aria-label="Search website"
-                title="Search services, apps & pages (Ctrl+K)"
+                className="p-2 rounded-full text-white/85 hover:text-white hover:bg-white/10 transition-all cursor-pointer active:scale-95 flex items-center justify-center"
+                aria-label="Search"
+                title="Search"
               >
-                <Search size={17} strokeWidth={2.2} className="group-hover:scale-110 transition-transform" />
-                <span className="hidden xl:inline text-xs text-white/70 font-medium">Search...</span>
-                <kbd className="hidden lg:inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-white/15 text-white/80 border border-white/20">
-                  ⌘K
-                </kbd>
+                <Search size={18} strokeWidth={2.2} className="hover:scale-110 transition-transform" />
               </button>
 
               {/* White Pill Contact Button */}
