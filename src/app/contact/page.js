@@ -93,8 +93,8 @@ export default function ContactPage() {
           <div className="lg:col-span-5 space-y-3.5 sm:space-y-4">
             
             {/* Card 1: Customer Care (Email) */}
-            <div className="bg-white rounded-[20px] sm:rounded-[28px] p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-start gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#030C54] flex items-center justify-center shrink-0 shadow-sm">
+            <div className="bg-white rounded-[20px] sm:rounded-[28px] p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-start gap-4 group">
+              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#030C54] flex items-center justify-center shrink-0 shadow-sm group-hover:bg-[#030C54] group-hover:text-white transition-colors">
                 <MdEmail size={24} />
               </div>
               <div className="space-y-1 text-left">
@@ -114,8 +114,8 @@ export default function ContactPage() {
             </div>
 
             {/* Card 2: Merchant & Partners (House / Corporate Desk) */}
-            <div className="bg-white rounded-[20px] sm:rounded-[28px] p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-start gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 shadow-sm">
+            <div className="bg-white rounded-[20px] sm:rounded-[28px] p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-start gap-4 group">
+              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#030C54] flex items-center justify-center shrink-0 shadow-sm group-hover:bg-[#030C54] group-hover:text-white transition-colors">
                 <FaHouse size={20} />
               </div>
               <div className="space-y-1 text-left">
@@ -135,8 +135,8 @@ export default function ContactPage() {
             </div>
 
             {/* Card 3: 24/7 Helpline (Call) */}
-            <div className="bg-white rounded-[20px] sm:rounded-[28px] p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-start gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-purple-50 text-purple-700 flex items-center justify-center shrink-0 shadow-sm">
+            <div className="bg-white rounded-[20px] sm:rounded-[28px] p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-start gap-4 group">
+              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#030C54] flex items-center justify-center shrink-0 shadow-sm group-hover:bg-[#030C54] group-hover:text-white transition-colors">
                 <IoIosCall size={24} />
               </div>
               <div className="space-y-1 text-left">
@@ -153,8 +153,8 @@ export default function ContactPage() {
             </div>
 
             {/* Card 4: Headquarters Location (Location Pin) */}
-            <div className="bg-white rounded-[20px] sm:rounded-[28px] p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-start gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 shadow-sm">
+            <div className="bg-white rounded-[20px] sm:rounded-[28px] p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-start gap-4 group">
+              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#030C54] flex items-center justify-center shrink-0 shadow-sm group-hover:bg-[#030C54] group-hover:text-white transition-colors">
                 <IoLocationOutline size={24} />
               </div>
               <div className="space-y-1 text-left">
