@@ -9,10 +9,7 @@ import {
   Search,
   ShieldAlert,
   ArrowRight,
-  Sparkles,
   ChevronRight,
-  Compass,
-  CornerDownLeft,
 } from "lucide-react";
 
 const searchableItems = [
@@ -176,16 +173,7 @@ const searchableItems = [
   },
 ];
 
-const popularSearches = [
-  { label: "Transportation & Cabs", query: "taxi" },
-  { label: "Hyperlocal Delivery", query: "delivery" },
-  { label: "Plumber & Electrician", query: "worker" },
-  { label: "E-Services", query: "digital" },
-  { label: "Vendor App", query: "vendor" },
-  { label: "About Us", query: "about" },
-  { label: "FAQ", query: "faq" },
-  { label: "Contact Regional Desk", query: "contact" },
-];
+
 
 export default function Navbar({ activePage = "home" }) {
   const router = useRouter();
@@ -476,7 +464,7 @@ export default function Navbar({ activePage = "home" }) {
             className="w-full max-w-2xl bg-white rounded-[26px] sm:rounded-[32px] shadow-2xl border border-slate-200/90 overflow-hidden text-slate-900 transition-all flex flex-col max-h-[82vh]"
           >
             {/* Search Input Bar */}
-            <div className="flex items-center gap-3 px-5 sm:px-6 py-4 border-b border-slate-100">
+            <div className={`flex items-center gap-3 px-5 sm:px-6 py-4 ${searchQuery.trim() ? "border-b border-slate-100" : ""}`}>
               <Search size={22} className="text-[#030C54] shrink-0" strokeWidth={2.4} />
               <input
                 ref={searchInputRef}
@@ -506,161 +494,81 @@ export default function Navbar({ activePage = "home" }) {
               </button>
             </div>
 
-            {/* Results / Suggestion Body */}
-            <div className="flex-1 overflow-y-auto p-4 sm:p-5 space-y-4">
-              
-              {/* If query has results */}
-              {searchQuery.trim() && filteredResults.length > 0 && (
-                <div className="space-y-1.5">
-                  <div className="flex items-center justify-between px-2 pb-1">
-                    <span className="text-[11px] font-black uppercase tracking-wider font-mono text-slate-400">
-                      Results ({filteredResults.length})
-                    </span>
-                    <span className="text-[11px] text-slate-400 font-mono">
-                      Use ↑ ↓ to navigate
-                    </span>
-                  </div>
+            {/* Results Body (only shown when typing) */}
+            {searchQuery.trim() && (
+              <div className="flex-1 overflow-y-auto p-4 sm:p-5 space-y-4">
+                
+                {/* If query has results */}
+                {filteredResults.length > 0 && (
+                  <div className="space-y-1.5">
+                    <div className="px-2 pb-1">
+                      <span className="text-[11px] font-black uppercase tracking-wider font-mono text-slate-400">
+                        Results ({filteredResults.length})
+                      </span>
+                    </div>
 
-                  {filteredResults.map((item, idx) => {
-                    const isSelected = selectedIndex === idx;
-                    return (
-                      <div
-                        key={item.id}
-                        onClick={() => handleSelectResult(item.href)}
-                        onMouseEnter={() => setSelectedIndex(idx)}
-                        className={`p-3.5 rounded-2xl transition-all cursor-pointer flex items-center justify-between gap-3 text-left border ${
-                          isSelected
-                            ? "bg-[#030C54]/5 border-[#030C54] shadow-xs"
-                            : "bg-white hover:bg-slate-50 border-slate-100"
-                        }`}
-                      >
-                        <div className="space-y-0.5 min-w-0 flex-1">
-                          <div className="flex items-center gap-2">
-                            <span className="text-[10px] font-black uppercase font-mono px-2 py-0.5 rounded-full bg-slate-100 text-[#030C54] border border-slate-200/60">
-                              {item.badge || item.category}
-                            </span>
-                            <h4
-                              className={`text-sm font-bold truncate ${
-                                isSelected ? "text-[#030C54]" : "text-slate-900"
-                              }`}
-                            >
-                              {item.title}
-                            </h4>
+                    {filteredResults.map((item, idx) => {
+                      const isSelected = selectedIndex === idx;
+                      return (
+                        <div
+                          key={item.id}
+                          onClick={() => handleSelectResult(item.href)}
+                          onMouseEnter={() => setSelectedIndex(idx)}
+                          className={`p-3.5 rounded-2xl transition-all cursor-pointer flex items-center justify-between gap-3 text-left border ${
+                            isSelected
+                              ? "bg-[#030C54]/5 border-[#030C54] shadow-xs"
+                              : "bg-white hover:bg-slate-50 border-slate-100"
+                          }`}
+                        >
+                          <div className="space-y-0.5 min-w-0 flex-1">
+                            <div className="flex items-center gap-2">
+                              <span className="text-[10px] font-black uppercase font-mono px-2 py-0.5 rounded-full bg-slate-100 text-[#030C54] border border-slate-200/60">
+                                {item.badge || item.category}
+                              </span>
+                              <h4
+                                className={`text-sm font-bold truncate ${
+                                  isSelected ? "text-[#030C54]" : "text-slate-900"
+                                }`}
+                              >
+                                {item.title}
+                              </h4>
+                            </div>
+                            <p className="text-xs text-slate-500 truncate font-sans">
+                              {item.description}
+                            </p>
                           </div>
-                          <p className="text-xs text-slate-500 truncate font-sans">
-                            {item.description}
-                          </p>
-                        </div>
 
-                        <div className="flex items-center gap-2 shrink-0">
-                          {isSelected && (
-                            <kbd className="hidden sm:inline-flex items-center gap-0.5 text-[10px] font-mono px-1.5 py-0.5 rounded bg-white text-[#030C54] border border-[#030C54]/20 shadow-xs">
-                              <span>Enter</span>
-                              <CornerDownLeft size={10} />
-                            </kbd>
-                          )}
                           <ChevronRight
                             size={16}
-                            className={`transition-transform ${
+                            className={`transition-transform shrink-0 ${
                               isSelected ? "text-[#030C54] translate-x-1" : "text-slate-300"
                             }`}
                           />
                         </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
-
-              {/* If query has NO matches */}
-              {searchQuery.trim() && filteredResults.length === 0 && (
-                <div className="text-center py-8 space-y-3">
-                  <div className="w-12 h-12 rounded-2xl bg-slate-100 text-slate-400 flex items-center justify-center mx-auto">
-                    <Search size={22} />
+                      );
+                    })}
                   </div>
-                  <div className="space-y-1">
-                    <h4 className="text-sm font-bold text-slate-800">
-                      No matching results for &ldquo;{searchQuery}&rdquo;
-                    </h4>
-                    <p className="text-xs text-slate-500">
-                      Try searching for services like &ldquo;taxi&rdquo;, &ldquo;delivery&rdquo;, &ldquo;plumber&rdquo;, or &ldquo;contact&rdquo;.
-                    </p>
-                  </div>
-                </div>
-              )}
+                )}
 
-              {/* If query is empty: Show Popular Quick Searches & Sections */}
-              {!searchQuery.trim() && (
-                <div className="space-y-4">
-                  {/* Popular Searches */}
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-1.5 px-1 text-[11px] font-black uppercase tracking-wider font-mono text-slate-400">
-                      <Sparkles size={12} className="text-[#030C54]" />
-                      <span>Popular Searches</span>
+                {/* If query has NO matches */}
+                {filteredResults.length === 0 && (
+                  <div className="text-center py-8 space-y-3">
+                    <div className="w-12 h-12 rounded-2xl bg-slate-100 text-slate-400 flex items-center justify-center mx-auto">
+                      <Search size={22} />
                     </div>
-
-                    <div className="flex flex-wrap gap-2">
-                      {popularSearches.map((item) => (
-                        <button
-                          key={item.label}
-                          type="button"
-                          onClick={() => setSearchQuery(item.query)}
-                          className="px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-100 hover:bg-[#030C54] hover:text-white text-slate-700 transition-colors border border-slate-200/80 cursor-pointer"
-                        >
-                          {item.label}
-                        </button>
-                      ))}
+                    <div className="space-y-1">
+                      <h4 className="text-sm font-bold text-slate-800">
+                        No matching results for &ldquo;{searchQuery}&rdquo;
+                      </h4>
+                      <p className="text-xs text-slate-500">
+                        Try searching for services like &ldquo;taxi&rdquo;, &ldquo;delivery&rdquo;, &ldquo;plumber&rdquo;, or &ldquo;contact&rdquo;.
+                      </p>
                     </div>
                   </div>
+                )}
 
-                  {/* Quick Jump Links */}
-                  <div className="space-y-1.5 pt-2 border-t border-slate-100">
-                    <div className="flex items-center gap-1.5 px-1 pb-1 text-[11px] font-black uppercase tracking-wider font-mono text-slate-400">
-                      <Compass size={12} className="text-[#030C54]" />
-                      <span>Quick Navigation</span>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      {searchableItems.slice(0, 4).map((item) => (
-                        <div
-                          key={item.id}
-                          onClick={() => handleSelectResult(item.href)}
-                          className="p-3 rounded-xl bg-slate-50 hover:bg-white border border-slate-200/70 hover:border-slate-300 hover:shadow-xs transition-all cursor-pointer text-left group"
-                        >
-                          <div className="flex items-center justify-between">
-                            <span className="text-xs font-bold text-slate-900 group-hover:text-[#030C54] transition-colors truncate">
-                              {item.title}
-                            </span>
-                            <ArrowRight size={13} className="text-slate-400 group-hover:text-[#030C54] group-hover:translate-x-0.5 transition-all shrink-0 ml-1" />
-                          </div>
-                          <p className="text-[11px] text-slate-500 truncate mt-0.5">
-                            {item.description}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )}
-
-            </div>
-
-            {/* Modal Keyboard Helper Footer */}
-            <div className="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-mono">
-              <div className="flex items-center gap-3">
-                <span className="hidden sm:inline">
-                  <kbd className="px-1.5 py-0.5 rounded bg-white border border-slate-200 font-bold text-slate-700 mr-1">↵</kbd> Select
-                </span>
-                <span className="hidden sm:inline">
-                  <kbd className="px-1.5 py-0.5 rounded bg-white border border-slate-200 font-bold text-slate-700 mr-1">↑↓</kbd> Navigate
-                </span>
               </div>
-              <div className="flex items-center gap-1.5">
-                <span>BetterMend Search</span>
-                <span>&bull;</span>
-                <span><kbd className="px-1.5 py-0.5 rounded bg-white border border-slate-200 font-bold text-slate-700">ESC</kbd> Close</span>
-              </div>
-            </div>
+            )}
 
           </div>
         </div>
