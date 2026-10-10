@@ -8,6 +8,8 @@ import AboutSection from "@/components/AboutSection";
 import FaqSection from "@/components/FaqSection";
 import NewsletterSection from "@/components/NewsletterSection";
 import { Heart } from "lucide-react";
+import { FaApple } from "react-icons/fa";
+import { IoLogoGooglePlaystore } from "react-icons/io5";
 
 export default function HomePage() {
   return (
@@ -73,9 +75,7 @@ export default function HomePage() {
                   href="#download"
                   className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-lg border border-white/90 bg-black/60 backdrop-blur-md text-white hover:bg-black/90 hover:scale-105 transition-all shadow-md"
                 >
-                  <svg className="w-6 h-6 fill-current shrink-0" viewBox="0 0 384 512">
-                    <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-48.7-22.7-84.5-22.7-46.9 0-92.4 26.5-116.6 68.7-49.9 86.8-12.8 215.1 35.4 284.7 23.6 34.1 51.2 72.3 87.8 71 35.6-1.4 49.4-22.8 89.6-22.8 39.9 0 53 22.8 89.6 22.4 37.6-.5 62-34.9 85.5-69.1 27.2-40 38.4-78.7 38.9-80.7-1.5-.8-75.1-28.8-75.6-114.7zM259.4 75.6c16-19.4 26.8-46.6 23.8-75.6-24.9 1-55.5 16.6-73.4 37.6-15.8 18.3-29.7 45.8-25.9 74.3 27.8 2.2 56.6-13.6 75.5-36.3z" />
-                  </svg>
+                  <FaApple className="w-6 h-6 shrink-0 text-white" />
                   <div className="text-left leading-tight">
                     <span className="block text-[9px] text-white/80 font-normal">Available on the</span>
                     <span className="block text-xs font-bold font-heading">App Store</span>
@@ -87,9 +87,7 @@ export default function HomePage() {
                   href="#download"
                   className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-lg border border-white/90 bg-black/60 backdrop-blur-md text-white hover:bg-black/90 hover:scale-105 transition-all shadow-md"
                 >
-                  <svg className="w-5 h-5 fill-current shrink-0" viewBox="0 0 512 512">
-                    <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58 33.3-60.1-60.1 118.1 26.8c12.1 6.1 20 18.2 20 31.5 0 13.3-7.9 25.4-20 31.5zm-300.5 40.7l60.1 60.1L104.6 499l220.7-221.3-63.5-11.4z" />
-                  </svg>
+                  <IoLogoGooglePlaystore className="w-5 h-5 shrink-0 text-white" />
                   <div className="text-left leading-tight">
                     <span className="block text-[8px] text-white/80 uppercase font-semibold">GET IT ON</span>
                     <span className="block text-xs font-bold font-heading">Google Play</span>
