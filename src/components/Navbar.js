@@ -406,13 +406,10 @@ export default function Navbar({ activePage = "home" }) {
                   setMobileMenuOpen(false);
                   setSearchOpen(true);
                 }}
-                className="w-full flex items-center justify-between px-4 py-2.5 rounded-2xl bg-white/10 border border-white/20 text-white/70 text-xs font-medium cursor-pointer active:scale-98"
+                className="w-full flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white/10 border border-white/20 text-white/70 text-xs font-medium cursor-pointer active:scale-98 hover:bg-white/15 transition-colors"
               >
-                <div className="flex items-center gap-2.5">
-                  <Search size={16} className="text-white" />
-                  <span>Search services, apps & pages...</span>
-                </div>
-                <kbd className="text-[10px] px-1.5 py-0.5 rounded bg-white/15 text-white font-mono">⌘K</kbd>
+                <Search size={16} className="text-white" />
+                <span>Search services, apps & pages...</span>
               </button>
 
               {navLinks.map((link) => {
