@@ -5,16 +5,18 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Toast from "@/components/Toast";
 import {
-  Mail,
-  Phone,
-  MapPin,
+  IoIosCall,
+  MdEmail,
+  FaHouse,
+  IoLocationOutline,
+} from "@/components/Icons";
+import {
   Send,
   MessageSquare,
   Clock,
   ShieldCheck,
   CheckCircle2,
   Headphones,
-  Store,
   Bike,
   Sparkles,
   ChevronRight,
@@ -64,8 +66,8 @@ export default function ContactPage() {
       <Navbar activePage="contact" />
 
       {/* 2. Hero Header Banner */}
-      <section className="pt-[105px] sm:pt-[123px] pb-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
-        <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-8 sm:p-12 lg:p-16 text-white shadow-2xl relative overflow-hidden">
+      <section className="pt-[80px] sm:pt-[105px] md:pt-[120px] pb-2 sm:pb-3 px-3 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
+        <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[24px] sm:rounded-[32px] md:rounded-[38px] p-6 sm:p-10 md:p-14 lg:p-16 text-white shadow-2xl relative overflow-hidden">
           
           {/* Subtle decorative glow */}
           <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-blue-500/10 filter blur-3xl pointer-events-none" />
@@ -84,16 +86,16 @@ export default function ContactPage() {
       </section>
 
       {/* 3. Main Grid: Contact Info Cards + Interactive Form */}
-      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+      <section className="py-2.5 sm:py-3.5 px-3 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-start">
           
           {/* Left: Contact Channels (5 cols) */}
-          <div className="lg:col-span-5 space-y-4">
+          <div className="lg:col-span-5 space-y-3.5 sm:space-y-4">
             
-            {/* Card 1: Customer Care */}
-            <div className="bg-white rounded-[24px] sm:rounded-[30px] p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-start gap-4">
+            {/* Card 1: Customer Care (Email) */}
+            <div className="bg-white rounded-[20px] sm:rounded-[28px] p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-start gap-4">
               <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#030C54] flex items-center justify-center shrink-0 shadow-sm">
-                <Mail size={22} />
+                <MdEmail size={24} />
               </div>
               <div className="space-y-1 text-left">
                 <h4 className="text-base font-black font-heading text-slate-950">
@@ -111,10 +113,10 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Card 2: Merchant & Partners */}
-            <div className="bg-white rounded-[24px] sm:rounded-[30px] p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-start gap-4">
+            {/* Card 2: Merchant & Partners (House / Corporate Desk) */}
+            <div className="bg-white rounded-[20px] sm:rounded-[28px] p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-start gap-4">
               <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 shadow-sm">
-                <Store size={22} />
+                <FaHouse size={20} />
               </div>
               <div className="space-y-1 text-left">
                 <h4 className="text-base font-black font-heading text-slate-950">
@@ -132,10 +134,10 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Card 3: 24/7 Helpline */}
-            <div className="bg-white rounded-[24px] sm:rounded-[30px] p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-start gap-4">
+            {/* Card 3: 24/7 Helpline (Call) */}
+            <div className="bg-white rounded-[20px] sm:rounded-[28px] p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-start gap-4">
               <div className="w-12 h-12 rounded-2xl bg-purple-50 text-purple-700 flex items-center justify-center shrink-0 shadow-sm">
-                <Phone size={22} />
+                <IoIosCall size={24} />
               </div>
               <div className="space-y-1 text-left">
                 <h4 className="text-base font-black font-heading text-slate-950">
@@ -150,10 +152,10 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Card 4: Headquarters Location */}
-            <div className="bg-white rounded-[24px] sm:rounded-[30px] p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-start gap-4">
+            {/* Card 4: Headquarters Location (Location Pin) */}
+            <div className="bg-white rounded-[20px] sm:rounded-[28px] p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-start gap-4">
               <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 shadow-sm">
-                <MapPin size={22} />
+                <IoLocationOutline size={24} />
               </div>
               <div className="space-y-1 text-left">
                 <h4 className="text-base font-black font-heading text-slate-950">

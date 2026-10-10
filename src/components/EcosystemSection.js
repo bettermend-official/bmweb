@@ -104,6 +104,7 @@ export default function EcosystemSection() {
                 alt="BetterMend App UI Mockup"
                 fill
                 priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-contain"
               />
             </div>

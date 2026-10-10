@@ -33,33 +33,40 @@ export default function Navbar({ activePage = "home" }) {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 pt-3 sm:pt-5 transition-all duration-300 pointer-events-none">
-      <div className="w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 pointer-events-auto">
+    <header className="fixed top-0 left-0 right-0 z-50 pt-2.5 sm:pt-4 transition-all duration-500 pointer-events-none">
+      <div className="w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto px-3 sm:px-6 lg:px-8 pointer-events-auto">
         
-        {/* Floating Capsule Bar: Solid on top, Transparent Glass on Scroll */}
+        {/* Floating Capsule Bar: Solid Navy on top, Authentic iPhone Liquid Glass on Scroll */}
         <nav
-          className={`relative w-full rounded-full transition-all duration-300 px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between selection:bg-white selection:text-[#030C54] ${
+          className={`relative w-full rounded-full transition-all duration-500 ease-out px-4 sm:px-6 flex items-center justify-between selection:bg-white selection:text-[#030C54] overflow-hidden ${
             scrolled
-              ? "bg-[#030C54]/35 backdrop-blur-xl border border-white/25 shadow-[0_8px_30px_rgb(0,0,0,0.2)]"
-              : "bg-[#030C54] border border-white/10 shadow-md"
+              ? "py-2 sm:py-2.5 ios-glass-nav"
+              : "py-2.5 sm:py-3 bg-[#030C54] border border-white/10 shadow-md"
           }`}
         >
-          
+          {/* iOS Specular Top Reflection Ray */}
+          <div
+            className={`absolute inset-x-8 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-white/80 to-transparent pointer-events-none transition-opacity duration-500 ${
+              scrolled ? "opacity-100" : "opacity-0"
+            }`}
+          />
+
           {/* 1. Left: BetterMend Wordmark Logo */}
-          <Link href="/" className="flex items-center pl-1 sm:pl-2 group shrink-0">
+          <Link href="/" className="flex items-center pl-1 sm:pl-2 group shrink-0 relative z-10">
             <div className="relative h-5 sm:h-6 w-28 sm:w-36 flex items-center">
               <Image
                 src="/bettermend wordmark.png"
                 alt="BetterMend Urban Services"
                 fill
                 priority
+                sizes="(max-width: 640px) 112px, 144px"
                 className="object-contain object-left group-hover:opacity-95 transition-opacity"
               />
             </div>
           </Link>
 
-          {/* 2. Center: Desktop Nav Links with Active & Hover Underline Indicator */}
-          <div className="hidden md:flex items-center gap-6 lg:gap-9">
+          {/* 2. Center: Desktop Nav Links with Clean Active & Hover Underline */}
+          <div className="hidden md:flex items-center gap-6 lg:gap-9 relative z-10">
             {navLinks.map((link) => {
               const isActive =
                 activePage === link.id ||
@@ -73,14 +80,14 @@ export default function Navbar({ activePage = "home" }) {
                   className={`relative text-xs lg:text-[13px] font-bold tracking-wider transition-colors py-1 group ${
                     isActive
                       ? "text-white"
-                      : "text-white/70 hover:text-white"
+                      : "text-white/75 hover:text-white"
                   }`}
                 >
                   <span>{link.label}</span>
                   
-                  {/* Animated White Underline on Hover and Active State */}
+                  {/* Clean Solid White Underline */}
                   <span
-                    className={`absolute -bottom-1 left-0 h-[2.5px] bg-white rounded-full transition-all duration-250 ${
+                    className={`absolute -bottom-1 left-0 h-[2px] bg-white rounded-full transition-all duration-200 ${
                       isActive ? "w-full" : "w-0 group-hover:w-full"
                     }`}
                   />
@@ -90,12 +97,12 @@ export default function Navbar({ activePage = "home" }) {
           </div>
 
           {/* 3. Right: Search Icon + Search Button / Pill Action */}
-          <div className="flex items-center gap-3 sm:gap-4 pr-1 sm:pr-2">
+          <div className="flex items-center gap-2.5 sm:gap-4 pr-1 sm:pr-2 relative z-10">
             
             {/* Search Trigger */}
             <div className="relative flex items-center">
               {searchOpen ? (
-                <div className="flex items-center gap-2 animate-fadeIn bg-white/10 rounded-full px-3 py-1 border border-white/20">
+                <div className="flex items-center gap-2 animate-fadeIn bg-white/15 backdrop-blur-md rounded-full px-3 py-1 border border-white/25 shadow-inner">
                   <input
                     type="text"
                     autoFocus
@@ -106,7 +113,7 @@ export default function Navbar({ activePage = "home" }) {
                   />
                   <button
                     onClick={() => setSearchOpen(false)}
-                    className="text-white/70 hover:text-white text-xs"
+                    className="text-white/70 hover:text-white text-xs cursor-pointer"
                   >
                     ✕
                   </button>
@@ -114,7 +121,7 @@ export default function Navbar({ activePage = "home" }) {
               ) : (
                 <button
                   onClick={() => setSearchOpen(true)}
-                  className="p-1.5 text-white/80 hover:text-white transition-colors"
+                  className="p-1.5 text-white/85 hover:text-white transition-colors cursor-pointer hover:scale-110 active:scale-95"
                   aria-label="Search"
                 >
                   <Search size={18} strokeWidth={2.2} />
@@ -125,7 +132,11 @@ export default function Navbar({ activePage = "home" }) {
             {/* White Pill Contact Button */}
             <Link
               href="/contact"
-              className="hidden sm:inline-flex items-center justify-center px-5 py-2 rounded-full bg-white text-[#030C54] hover:bg-slate-100 font-extrabold text-xs tracking-wider uppercase shadow-md hover:scale-105 transition-all"
+              className={`hidden sm:inline-flex items-center justify-center px-5 py-1.5 sm:py-2 rounded-full font-extrabold text-xs tracking-wider uppercase transition-all shadow-md hover:scale-105 active:scale-95 ${
+                scrolled
+                  ? "bg-white text-[#030C54] hover:bg-slate-100 shadow-[0_4px_15px_rgba(0,0,0,0.18)]"
+                  : "bg-white text-[#030C54] hover:bg-slate-100"
+              }`}
             >
               Contact
             </Link>
@@ -133,7 +144,7 @@ export default function Navbar({ activePage = "home" }) {
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-1.5 text-white/90 hover:text-white"
+              className="md:hidden p-1.5 text-white/90 hover:text-white cursor-pointer"
               aria-label="Toggle Menu"
             >
               {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -142,9 +153,9 @@ export default function Navbar({ activePage = "home" }) {
 
         </nav>
 
-        {/* Mobile Dropdown Menu (Navy Pill Style) */}
+        {/* Mobile Dropdown Menu (iPhone Liquid Glass Style) */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-2 p-5 rounded-3xl bg-[#030C54]/95 backdrop-blur-xl border border-white/15 shadow-2xl space-y-3 animate-fadeIn">
+          <div className="md:hidden mt-2 p-5 rounded-3xl ios-glass-dropdown space-y-3 animate-fadeIn">
             {navLinks.map((link) => {
               const isActive = activePage === link.id;
               return (

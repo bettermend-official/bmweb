@@ -6,11 +6,15 @@ import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
-  Car,
+  FaCarSide,
+  GrUserWorker,
+  FaInternetExplorer,
+  TbTruckDelivery,
+} from "@/components/Icons";
+import {
   Bike,
-  Wrench,
+  Car,
   ShoppingBag,
-  Globe,
   ChevronDown,
   ArrowRight,
   ShieldCheck,
@@ -35,20 +39,22 @@ import {
 const servicesData = {
   transportation: {
     id: "transportation",
+    title: "Transportation",
+    icon: FaCarSide,
     slug: "transportation",
-    title: "BetterMend Transportation",
     navLabel: "Transportation",
+
     h1: "Move Around With a Simpler Way to Travel",
     tagline: "Move with ease. Stay connected. Keep it simple.",
     image: "/trasport.jpeg",
-    icon: Car,
+    
     summary:
       "BetterMend Transportation is designed to connect people with convenient local and regional mobility options through one simple platform. From everyday commuting and local travel to larger group journeys, BetterMend brings different transportation options together within its wider super app ecosystem.",
     connectedOverview: {
       title: "Everyday Transportation, Connected",
       description:
         "Getting around should not require managing multiple services or searching through different options. BetterMend is building a connected transportation experience that brings local mobility options closer to the people who need them. The goal is simple: make everyday transportation easier to discover, request and manage.",
-      quote: "Simple transportation for everyday life.",
+
     },
     optionsHeading: "Transportation Options",
     optionsSubheading:
@@ -69,7 +75,7 @@ const servicesData = {
       {
         title: "Prime Sedans",
         desc: "Comfortable passenger transportation for everyday journeys and selected travel requirements.",
-        icon: Car,
+        icon: FaCarSide,
         badge: "Comfort & Style",
       },
       {
@@ -141,7 +147,6 @@ const servicesData = {
       },
     ],
     partnerSection: {
-      tag: "FOR OPERATORS & DRIVERS",
       title: "For Transportation Providers",
       desc: "BetterMend is also building an ecosystem for transportation providers and local mobility operators. The goal is to create digital opportunities for eligible transportation providers to connect with customers and participate in a connected mobility network. If you operate a taxi, auto, passenger vehicle or other eligible transportation service, you can explore becoming part of the BetterMend transportation ecosystem, subject to applicable onboarding and service requirements.",
       btnText: "Join Transportation Network",
@@ -206,20 +211,21 @@ const servicesData = {
 
   delivery: {
     id: "delivery",
+    title: "Delivery",
+    icon: TbTruckDelivery,
     slug: "delivery",
-    title: "BetterMend Delivery",
     navLabel: "Delivery",
     h1: "Everything You Need, From Nearby Stores",
     tagline: "Groceries. Food. Pharmacy essentials. One simpler experience.",
     image: "/delivery.jpeg",
-    icon: ShoppingBag,
+ 
     summary:
       "BetterMend Delivery is designed to make local shopping simpler by bringing multiple neighborhood businesses together in one delivery experience. Choose products from different participating stores, add them to one cart where supported, and receive your selected items through a connected local delivery service.",
     connectedOverview: {
       title: "A Better Way to Shop Locally",
       description:
         "Sometimes what you need is available at different stores. Vegetables from one shop. Bakery items from another. Pharmacy essentials from somewhere else. BetterMend is designed to bring supported neighborhood stores into one connected shopping experience so customers can discover everyday products without managing separate orders across different platforms.",
-      quote: "One cart. Multiple local stores. A simpler way to shop.",
+   
     },
     optionsHeading: "Delivery Product Categories",
     optionsSubheading:
@@ -312,7 +318,6 @@ const servicesData = {
       },
     ],
     partnerSection: {
-      tag: "FOR LOCAL SHOPS & FLEET",
       title: "For Local Businesses & Delivery Partners",
       desc: "Are you a local store, restaurant, bakery, pharmacy or other neighborhood business? BetterMend helps you reach nearby customers, showcase products, receive digital orders, and participate in local delivery. Delivery partners can also become part of the wider BetterMend ecosystem subject to onboarding and operating requirements.",
       btnText: "Register as Merchant / Partner",
@@ -377,20 +382,21 @@ const servicesData = {
 
   workers: {
     id: "workers",
+    title: "Workers",
+    icon: GrUserWorker,
     slug: "workers",
-    title: "BetterMend Workers",
     navLabel: "Workers",
     h1: "Get Things Done With the Right Professional",
     tagline: "Local skills. Everyday solutions. One platform.",
     image: "/worker.jpeg",
-    icon: Wrench,
+
     summary:
       "Everyday life comes with jobs that need the right skills. Electrical work. Plumbing. Carpentry. Tutoring. Technical assistance. Freelance services. BetterMend Workers is designed to connect people with skilled professionals through a simple and trusted digital experience.",
     connectedOverview: {
       title: "Professional Services, Made Simpler",
       description:
         "Finding the right person for a job can often mean asking friends, searching online, making calls, and comparing different options. BetterMend is building a simpler way to discover professional services. The Workers ecosystem is designed to bring customers and skilled professionals together through one connected platform. From household repairs to learning support and technical requirements, the goal is simple: make it easier to find the right person for the job.",
-      quote: "Find the right service. Connect with the right professional.",
+    
     },
     optionsHeading: "Skilled Trade & Professional Categories",
     optionsSubheading:
@@ -484,7 +490,7 @@ const servicesData = {
       },
     ],
     partnerSection: {
-      tag: "FOR SKILLED TRADESPEOPLE",
+   
       title: "Are You a Skilled Professional?",
       desc: "BetterMend is building opportunities for skilled professionals to connect with customers who need their services. If you are an electrician, plumber, carpenter, tutor, technician, freelancer or another service professional, you can explore becoming part of the BetterMend professional ecosystem. Build your presence. Connect with local demand. Grow your opportunities.",
       btnText: "Join as a Verified Professional",
@@ -541,20 +547,22 @@ const servicesData = {
 
   eservices: {
     id: "eservices",
+    title: "E Services",
+    icon: FaInternetExplorer,
     slug: "e-services",
-    title: "BetterMend E Services",
+
     navLabel: "E Services",
     h1: "Your Everyday Digital Services, Made Simpler",
     tagline: "Less waiting. Less searching. A simpler digital experience.",
     image: "/e service.jpeg",
-    icon: Globe,
+    
     summary:
       "BetterMend E Services is designed to bring essential civic, public utility and professional services together through one simple digital platform. From electricity and water related payments to municipal services, civic documents and professional appointments, BetterMend aims to make everyday digital tasks easier to discover and manage.",
     connectedOverview: {
       title: "One Place for Everyday Digital Services",
       description:
         "Everyday public and professional services can often require different websites, offices, forms and processes. BetterMend is designed to bring selected services together through one connected digital experience. The goal is simple: make essential services easier to access while reducing unnecessary complexity.",
-      quote: "Less searching. Less complexity. More convenience.",
+    
     },
     optionsHeading: "Digital Utility & Civic Categories",
     optionsSubheading:
@@ -648,7 +656,7 @@ const servicesData = {
       },
     ],
     partnerSection: {
-      tag: "FOR SERVICE PROVIDERS & CLINICS",
+     
       title: "For Service Providers and Professionals",
       desc: "BetterMend is also designed to create a connected digital environment for eligible service providers and professionals. Doctors, experts, businesses and other eligible providers can participate in supported appointment or service categories. The goal is to create a simpler connection between people who need services and the providers who deliver them.",
       btnText: "Partner with E-Services",
@@ -740,11 +748,15 @@ export default function ServiceDetailPage({ params }) {
   };
 
   const navTabs = [
-    { key: "transportation", label: "Transportation", href: "/services/transportation" },
-    { key: "delivery", label: "Delivery", href: "/services/delivery" },
-    { key: "workers", label: "Workers", href: "/services/workers" },
-    { key: "eservices", label: "E Services", href: "/services/e-services" },
+    { key: "transportation", label: "Transportation", href: "/services/transportation", icon: FaCarSide },
+    { key: "delivery", label: "Delivery", href: "/services/delivery", icon: TbTruckDelivery },
+    { key: "workers", label: "Workers", href: "/services/workers", icon: GrUserWorker },
+    { key: "eservices", label: "E Services", href: "/services/e-services", icon: FaInternetExplorer },
   ];
+
+  const currentTab = navTabs.find((t) => t.key === targetKey);
+  const CurrentIcon = currentService.icon || currentTab?.icon || Sparkles;
+  const currentTitle = currentService.title || currentTab?.label || currentService.navLabel;
 
   return (
     <div className="min-h-screen bg-[#eaedf2] text-slate-900 font-sans antialiased overflow-x-hidden">
@@ -752,65 +764,71 @@ export default function ServiceDetailPage({ params }) {
       {/* 1. Header Capsule Navbar */}
       <Navbar activePage="services" />
 
-      {/* 2. Top Navigation Tabs Bar */}
-      <section className="pt-[105px] sm:pt-[125px] pb-3 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 bg-white/80 backdrop-blur-md p-2 rounded-full border border-slate-200 shadow-xs max-w-2xl mx-auto">
-          {navTabs.map((tab) => {
-            const isActive = tab.key === targetKey;
-            return (
-              <Link
-                key={tab.key}
-                href={tab.href}
-                className={`px-4 sm:px-6 py-2 rounded-full text-xs font-black uppercase tracking-wider transition-all duration-200 ${
-                  isActive
-                    ? "bg-[#030C54] text-white shadow-md scale-105"
-                    : "text-slate-600 hover:text-slate-950 hover:bg-slate-100"
-                }`}
-              >
-                {tab.label}
-              </Link>
-            );
-          })}
+      {/* 2. Top Navigation Tabs Bar (Scrollable on mobile, Centered capsule on desktop) */}
+      <section className="pt-[80px] sm:pt-[105px] md:pt-[120px] pb-2 sm:pb-3 px-3 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
+        <div className="w-full max-w-2xl mx-auto">
+          <div className="flex items-center justify-start sm:justify-center overflow-x-auto no-scrollbar scrollbar-none gap-1.5 sm:gap-2.5 bg-white/90 backdrop-blur-md p-1.5 sm:p-2 rounded-full border border-slate-200 shadow-xs">
+            {navTabs.map((tab) => {
+              const isActive = tab.key === targetKey;
+              const TabIcon = tab.icon;
+              return (
+                <Link
+                  key={tab.key}
+                  href={tab.href}
+                  className={`shrink-0 flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs font-black uppercase tracking-wider transition-all duration-200 whitespace-nowrap ${
+                    isActive
+                      ? "bg-[#030C54] text-white shadow-md scale-[1.02]"
+                      : "text-slate-600 hover:text-slate-950 hover:bg-slate-100"
+                  }`}
+                >
+                  <TabIcon size={14} className="shrink-0" />
+                  <span>{tab.label}</span>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </section>
 
       {/* 3. Hero Header Section */}
-      <section className="py-3 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
-        <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-6 sm:p-12 lg:p-16 text-white shadow-2xl relative overflow-hidden">
+      <section className="py-2 sm:py-3 px-3 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
+        <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[24px] sm:rounded-[32px] md:rounded-[38px] p-5 sm:p-8 md:p-12 lg:p-16 text-white shadow-2xl relative overflow-hidden">
           
           {/* Subtle glow */}
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-blue-500/10 filter blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-blue-500/10 filter blur-3xl pointer-events-none" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center relative z-10">
             
             {/* Left Column: Headings & Intro */}
-            <div className="lg:col-span-7 space-y-4 text-left">
-              <span className="inline-block px-3.5 py-1 rounded-full bg-white/10 border border-white/20 text-[11px] font-black uppercase tracking-widest font-mono text-blue-200">
-                {currentService.title}
-              </span>
+            <div className="lg:col-span-7 space-y-3.5 sm:space-y-4 text-left">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-[10px] sm:text-[11px] font-black uppercase tracking-widest font-mono text-blue-200">
+                <CurrentIcon size={13} className="shrink-0" />
+                <span>{currentTitle}</span>
+              </div>
 
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-[1.05] font-heading font-montserrat text-white">
+              <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-[1.08] font-heading font-montserrat text-white break-words">
                 {currentService.h1}
               </h1>
 
-              <p className="text-xs sm:text-base text-white/85 leading-relaxed font-sans font-normal pt-1 max-w-xl">
+              <p className="text-xs sm:text-sm md:text-base text-white/85 leading-relaxed font-sans font-normal pt-0.5 max-w-xl">
                 {currentService.summary}
               </p>
 
-              <div className="pt-2 text-xs sm:text-sm font-semibold text-white/70 italic">
+              <div className="pt-1 text-xs sm:text-sm font-semibold text-white/70 italic border-l-2 border-blue-400/40 pl-3">
                 &ldquo;{currentService.tagline}&rdquo;
               </div>
 
-              <div className="pt-4 flex flex-wrap items-center gap-3">
+              <div className="pt-3 sm:pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
                 <a
                   href="/#download"
-                  className="px-6 py-2.5 rounded-full bg-white text-[#030C54] hover:bg-slate-100 font-black text-xs uppercase tracking-wider transition-all shadow-md hover:scale-105"
+                  className="w-full sm:w-auto px-6 py-3 rounded-full bg-white text-[#030C54] hover:bg-slate-100 font-black text-xs uppercase tracking-wider transition-all shadow-md hover:scale-105 inline-flex items-center justify-center gap-2"
                 >
-                  Get Started on App
+                  <span>Get Started on App</span>
+                  <ArrowRight size={14} />
                 </a>
                 <Link
                   href="/contact"
-                  className="px-6 py-2.5 rounded-full border border-white/40 hover:bg-white/10 text-white font-bold text-xs uppercase tracking-wider transition-all"
+                  className="w-full sm:w-auto px-6 py-3 rounded-full border border-white/40 hover:bg-white/10 text-white font-bold text-xs uppercase tracking-wider transition-all inline-flex items-center justify-center"
                 >
                   Contact Desk
                 </Link>
@@ -818,13 +836,14 @@ export default function ServiceDetailPage({ params }) {
             </div>
 
             {/* Right Column: Hero Showcase Image */}
-            <div className="lg:col-span-5 relative w-full h-64 sm:h-80 rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-white/5">
+            <div className="lg:col-span-5 relative w-full h-52 xs:h-64 sm:h-72 md:h-80 lg:h-[340px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-white/5">
               <Image
                 src={currentService.image}
                 alt={currentService.title}
                 fill
                 priority
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
               />
             </div>
 
@@ -834,25 +853,30 @@ export default function ServiceDetailPage({ params }) {
       </section>
 
       {/* 4. Connected Overview & Pillars */}
-      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
-        <div className="bg-white rounded-[28px] sm:rounded-[38px] p-6 sm:p-10 lg:p-12 border border-slate-200/80 shadow-sm text-slate-900">
+      <section className="py-2 sm:py-3.5 px-3 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
+        <div className="bg-white rounded-[24px] sm:rounded-[32px] md:rounded-[38px] p-5 sm:p-8 md:p-10 lg:p-12 border border-slate-200/80 shadow-sm text-slate-900">
           
-          <div className="max-w-3xl mb-8 text-left space-y-2">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black uppercase font-heading text-slate-950 tracking-tight">
+          <div className="max-w-3xl mb-6 sm:mb-8 text-left space-y-2">
+            <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-black uppercase font-heading text-slate-950 tracking-tight">
               {currentService.connectedOverview.title}
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
               {currentService.connectedOverview.description}
             </p>
+            {currentService.connectedOverview.quote && (
+              <div className="inline-block mt-2 px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200/80 text-[11px] sm:text-xs font-bold text-[#030C54]">
+                ✨ &ldquo;{currentService.connectedOverview.quote}&rdquo;
+              </div>
+            )}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {currentService.pillars.map((pillar, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col justify-between space-y-3 text-left"
+                className="p-4.5 sm:p-6 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-100 flex flex-col justify-between space-y-2.5 text-left hover:border-slate-200 transition-colors"
               >
-                <h3 className="text-base sm:text-lg font-black uppercase font-heading text-slate-950">
+                <h3 className="text-sm sm:text-base md:text-lg font-black uppercase font-heading text-slate-950">
                   {pillar.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
@@ -866,11 +890,11 @@ export default function ServiceDetailPage({ params }) {
       </section>
 
       {/* 5. Service Options / Offerings Grid */}
-      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
-        <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-6 sm:p-10 lg:p-12 text-white shadow-2xl">
+      <section className="py-2 sm:py-3.5 px-3 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
+        <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[24px] sm:rounded-[32px] md:rounded-[38px] p-5 sm:p-8 md:p-10 lg:p-12 text-white shadow-2xl">
           
-          <div className="text-center max-w-2xl mx-auto mb-8">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black uppercase font-heading tracking-tight text-white mb-2">
+          <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
+            <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-black uppercase font-heading tracking-tight text-white mb-2">
               {currentService.optionsHeading}
             </h2>
             <p className="text-xs sm:text-sm text-white/80 leading-relaxed font-sans">
@@ -878,13 +902,19 @@ export default function ServiceDetailPage({ params }) {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+          <div
+            className={`grid gap-3.5 sm:gap-4 lg:gap-5 ${
+              currentService.options.length === 5
+                ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
+                : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+            }`}
+          >
             {currentService.options.map((opt, idx) => {
               const IconComp = opt.icon || Sparkles;
               return (
                 <div
                   key={idx}
-                  className="bg-white text-slate-900 rounded-2xl p-5 sm:p-6 shadow-md flex flex-col justify-between space-y-3 text-left hover:-translate-y-1 transition-transform"
+                  className="bg-white text-slate-900 rounded-2xl p-4.5 sm:p-5 md:p-6 shadow-md flex flex-col justify-between space-y-3 text-left hover:-translate-y-1 transition-transform"
                 >
                   <div className="space-y-2">
                     <div className="w-10 h-10 rounded-xl bg-[#030C54]/5 text-[#030C54] flex items-center justify-center font-bold">
@@ -893,7 +923,7 @@ export default function ServiceDetailPage({ params }) {
                     <span className="text-[10px] font-black uppercase tracking-wider text-slate-400 font-heading block">
                       {opt.badge}
                     </span>
-                    <h3 className="text-base sm:text-lg font-black font-heading text-slate-950">
+                    <h3 className="text-sm sm:text-base md:text-lg font-black font-heading text-slate-950">
                       {opt.title}
                     </h3>
                     <p className="text-xs text-slate-600 leading-relaxed font-sans">
@@ -909,25 +939,25 @@ export default function ServiceDetailPage({ params }) {
       </section>
 
       {/* 6. Step-by-Step Workflow (How it Works 01 to 06) */}
-      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
-        <div className="bg-white rounded-[28px] sm:rounded-[38px] p-6 sm:p-10 lg:p-12 border border-slate-200/80 shadow-sm text-slate-900">
+      <section className="py-2 sm:py-3.5 px-3 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
+        <div className="bg-white rounded-[24px] sm:rounded-[32px] md:rounded-[38px] p-5 sm:p-8 md:p-10 lg:p-12 border border-slate-200/80 shadow-sm text-slate-900">
           
-          <div className="text-center max-w-xl mx-auto mb-10">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black uppercase font-heading text-slate-950 tracking-tight">
+          <div className="text-center max-w-xl mx-auto mb-6 sm:mb-10">
+            <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-black uppercase font-heading text-slate-950 tracking-tight">
               {currentService.workflowHeading}
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-5 lg:gap-6">
             {currentService.workflow.map((item, idx) => (
               <div
                 key={idx}
-                className="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-100 text-left flex flex-col justify-between space-y-2"
+                className="p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-100 text-left flex flex-col justify-between space-y-2 hover:border-slate-200 transition-colors"
               >
-                <div className="w-9 h-9 rounded-full bg-[#030C54] text-white flex items-center justify-center font-black text-xs font-mono shadow-sm">
+                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#030C54] text-white flex items-center justify-center font-black text-xs font-mono shadow-sm">
                   {item.step}
                 </div>
-                <h3 className="text-sm sm:text-base font-black uppercase font-heading text-slate-950 pt-1">
+                <h3 className="text-xs sm:text-sm md:text-base font-black uppercase font-heading text-slate-950 pt-1">
                   {item.title}
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed font-sans">
@@ -941,14 +971,14 @@ export default function ServiceDetailPage({ params }) {
       </section>
 
       {/* 7. Operational Standards & Architecture (4 Key Feature Highlights) */}
-      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+      <section className="py-2 sm:py-3.5 px-3 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4 lg:gap-5">
           {currentService.features.map((feat, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-[24px] sm:rounded-[28px] p-5 sm:p-6 border border-slate-200/80 shadow-sm text-left flex flex-col justify-between space-y-2"
+              className="bg-white rounded-[20px] sm:rounded-[24px] md:rounded-[28px] p-4.5 sm:p-5 md:p-6 border border-slate-200/80 shadow-sm text-left flex flex-col justify-between space-y-2 hover:border-slate-300 transition-colors"
             >
-              <h3 className="text-sm sm:text-base font-black uppercase font-heading text-slate-950">
+              <h3 className="text-xs sm:text-sm md:text-base font-black uppercase font-heading text-slate-950">
                 {feat.title}
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed font-sans">
@@ -960,14 +990,14 @@ export default function ServiceDetailPage({ params }) {
       </section>
 
       {/* 8. For Providers / Professionals / Businesses Banner */}
-      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
-        <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-6 sm:p-10 lg:p-12 text-white shadow-2xl">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 text-left">
+      <section className="py-2 sm:py-3.5 px-3 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
+        <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[24px] sm:rounded-[32px] md:rounded-[38px] p-5 sm:p-8 md:p-10 lg:p-12 text-white shadow-2xl">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-5 sm:gap-6 text-left">
             <div className="space-y-2 max-w-2xl">
               <span className="text-[10px] font-mono uppercase tracking-widest text-blue-200">
                 {currentService.partnerSection.tag}
               </span>
-              <h2 className="text-2xl sm:text-3xl font-black uppercase font-heading text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-black uppercase font-heading text-white">
                 {currentService.partnerSection.title}
               </h2>
               <p className="text-xs sm:text-sm text-white/85 leading-relaxed font-sans">
@@ -975,10 +1005,10 @@ export default function ServiceDetailPage({ params }) {
               </p>
             </div>
 
-            <div className="shrink-0">
+            <div className="shrink-0 w-full sm:w-auto">
               <Link
                 href={currentService.partnerSection.btnHref}
-                className="px-7 py-3 rounded-full bg-white text-[#030C54] hover:bg-slate-100 font-black text-xs uppercase tracking-wider transition-all shadow-md inline-block text-center"
+                className="w-full sm:w-auto px-7 py-3 rounded-full bg-white text-[#030C54] hover:bg-slate-100 font-black text-xs uppercase tracking-wider transition-all shadow-md inline-flex items-center justify-center text-center"
               >
                 {currentService.partnerSection.btnText}
               </Link>
@@ -988,11 +1018,11 @@ export default function ServiceDetailPage({ params }) {
       </section>
 
       {/* 9. Frequently Asked Questions (Service-Specific Accordion) */}
-      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
-        <div className="bg-white rounded-[28px] sm:rounded-[38px] p-6 sm:p-10 lg:p-12 border border-slate-200/80 shadow-sm text-slate-900">
+      <section className="py-2 sm:py-3.5 px-3 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
+        <div className="bg-white rounded-[24px] sm:rounded-[32px] md:rounded-[38px] p-5 sm:p-8 md:p-10 lg:p-12 border border-slate-200/80 shadow-sm text-slate-900">
           
-          <div className="text-center max-w-xl mx-auto mb-8">
-            <h2 className="text-2xl sm:text-3xl font-black uppercase font-heading text-slate-950 tracking-tight">
+          <div className="text-center max-w-xl mx-auto mb-6 sm:mb-8">
+            <h2 className="text-xl xs:text-2xl sm:text-3xl font-black uppercase font-heading text-slate-950 tracking-tight">
               Frequently Asked Questions
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 mt-1">
@@ -1000,19 +1030,19 @@ export default function ServiceDetailPage({ params }) {
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-3">
+          <div className="max-w-3xl mx-auto space-y-2.5 sm:space-y-3">
             {currentService.faqs.map((faq, idx) => {
               const isOpen = openFaqIndex === idx;
               return (
                 <div
                   key={idx}
-                  className="rounded-2xl border border-slate-200/80 overflow-hidden bg-slate-50/60 transition-all duration-200 text-left"
+                  className="rounded-xl sm:rounded-2xl border border-slate-200/80 overflow-hidden bg-slate-50/60 transition-all duration-200 text-left"
                 >
                   <button
                     onClick={() => toggleFaq(idx)}
-                    className="w-full p-4 sm:p-5 flex items-center justify-between gap-4 text-left hover:bg-slate-100/70 transition-colors cursor-pointer"
+                    className="w-full p-3.5 sm:p-4.5 md:p-5 flex items-center justify-between gap-3 sm:gap-4 text-left hover:bg-slate-100/70 transition-colors cursor-pointer"
                   >
-                    <span className="text-xs sm:text-sm font-black uppercase font-heading text-slate-950">
+                    <span className="text-xs sm:text-sm font-black uppercase font-heading text-slate-950 leading-snug">
                       {faq.q}
                     </span>
                     <div
@@ -1025,7 +1055,7 @@ export default function ServiceDetailPage({ params }) {
                   </button>
 
                   {isOpen && (
-                    <div className="px-4 sm:px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed font-sans border-t border-slate-200/60 animate-fadeIn">
+                    <div className="px-3.5 sm:px-4.5 md:px-5 pb-4 sm:pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed font-sans border-t border-slate-200/60">
                       <p>{faq.a}</p>
                     </div>
                   )}
@@ -1038,37 +1068,37 @@ export default function ServiceDetailPage({ params }) {
       </section>
 
       {/* 10. Final Call to Action */}
-      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
-        <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-8 sm:p-14 text-white text-center shadow-2xl relative overflow-hidden">
+      <section className="py-2 sm:py-3.5 px-3 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
+        <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[24px] sm:rounded-[32px] md:rounded-[38px] p-6 sm:p-10 md:p-14 text-white text-center shadow-2xl relative overflow-hidden">
           
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase font-heading text-white tracking-tight mb-3">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black uppercase font-heading text-white tracking-tight mb-2.5 sm:mb-3">
             {currentService.cta.h2}
           </h2>
 
-          <p className="text-xs sm:text-base text-white/85 max-w-xl mx-auto leading-relaxed font-sans mb-3">
+          <p className="text-xs sm:text-sm md:text-base text-white/85 max-w-xl mx-auto leading-relaxed font-sans mb-2.5 sm:mb-3">
             {currentService.cta.desc}
           </p>
 
-          <p className="text-xs sm:text-sm font-bold text-white/70 tracking-wider mb-8">
+          <p className="text-xs sm:text-sm font-bold text-white/70 tracking-wider mb-6 sm:mb-8">
             {currentService.cta.tag}
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-3.5 mb-6 sm:mb-8 w-full sm:w-auto">
             <a
               href="/#download"
-              className="px-7 py-3 rounded-full bg-white text-[#030C54] hover:bg-slate-100 font-black text-xs uppercase tracking-wider transition-all shadow-md hover:scale-105"
+              className="w-full sm:w-auto px-7 py-3 rounded-full bg-white text-[#030C54] hover:bg-slate-100 font-black text-xs uppercase tracking-wider transition-all shadow-md hover:scale-105 inline-flex items-center justify-center"
             >
               EXPLORE BETTERMEND
             </a>
             <Link
               href="/contact"
-              className="px-7 py-3 rounded-full border border-white/40 hover:bg-white/10 text-white font-black text-xs uppercase tracking-wider transition-all"
+              className="w-full sm:w-auto px-7 py-3 rounded-full border border-white/40 hover:bg-white/10 text-white font-black text-xs uppercase tracking-wider transition-all inline-flex items-center justify-center"
             >
               BECOME A PARTNER
             </Link>
           </div>
 
-          <div className="text-[10px] sm:text-xs text-white/60 font-medium tracking-wider uppercase flex flex-wrap items-center justify-center gap-4 sm:gap-6 border-t border-white/10 pt-6">
+          <div className="text-[10px] sm:text-xs text-white/60 font-medium tracking-wider uppercase flex flex-wrap items-center justify-center gap-4 sm:gap-6 border-t border-white/10 pt-5 sm:pt-6">
             <span>Created in Kerala. Built for the world.</span>
           </div>
 

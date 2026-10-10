@@ -4,13 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ArrowRight } from "lucide-react";
 import {
-  Car,
-  Wrench,
-  ShoppingBag,
-  ArrowRight,
-  Globe,
-} from "lucide-react";
+  FaCarSide,
+  GrUserWorker,
+  FaInternetExplorer,
+  TbTruckDelivery,
+} from "@/components/Icons";
 
 export default function ServicesPage() {
   const [activeServiceId, setActiveServiceId] = useState("transportation");
@@ -20,7 +20,7 @@ export default function ServicesPage() {
     {
       id: "transportation",
       num: "01",
-      icon: Car,
+      icon: FaCarSide,
       title: "Transport",
       image: "/trasport.jpeg",
       badge: "Instant Rides & Fleet",
@@ -43,7 +43,7 @@ export default function ServicesPage() {
     {
       id: "workers",
       num: "02",
-      icon: Wrench,
+      icon: GrUserWorker,
       title: "Workers",
       image: "/worker.jpeg",
       badge: "Background Verified",
@@ -66,7 +66,7 @@ export default function ServicesPage() {
     {
       id: "eservices",
       num: "03",
-      icon: Globe,
+      icon: FaInternetExplorer,
       title: "E-Services",
       image: "/e service.jpeg",
       badge: "Citizen Utility Hub",
@@ -89,7 +89,7 @@ export default function ServicesPage() {
     {
       id: "delivery",
       num: "04",
-      icon: ShoppingBag,
+      icon: TbTruckDelivery,
       title: "Delivery",
       image: "/delivery.jpeg",
       badge: "Multi-Shop Cart",
@@ -119,8 +119,8 @@ export default function ServicesPage() {
       <Navbar activePage="services" />
 
       {/* 2. Hero Header Banner (Large & Impactful) */}
-      <section className="pt-[105px] sm:pt-[125px] pb-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
-        <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-8 sm:p-14 lg:p-16 text-white shadow-2xl relative overflow-hidden">
+      <section className="pt-[80px] sm:pt-[105px] md:pt-[120px] pb-2 sm:pb-3 px-3 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
+        <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[24px] sm:rounded-[32px] md:rounded-[38px] p-6 sm:p-10 md:p-14 lg:p-16 text-white shadow-2xl relative overflow-hidden">
 
           {/* Faded Background Image */}
           <div className="absolute inset-0 z-0 pointer-events-none">
@@ -135,12 +135,12 @@ export default function ServicesPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#030C54] via-transparent to-transparent" />
           </div>
 
-          <div className="relative z-10 max-w-3xl text-left space-y-4">
-            <h1 className="text-4xl sm:text-6xl lg:text-[72px] font-black uppercase tracking-tight leading-[1.0] font-heading font-montserrat">
+          <div className="relative z-10 max-w-3xl text-left space-y-3 sm:space-y-4">
+            <h1 className="text-3xl xs:text-4xl sm:text-6xl lg:text-[72px] font-black uppercase tracking-tight leading-[1.0] font-heading font-montserrat">
               Our Urban <br /> Services
             </h1>
-            <p className="text-sm sm:text-lg lg:text-[19px] text-white/90 leading-relaxed font-roboto font-normal pt-1 max-w-2xl">
-              From instant intra-city rides to verified local technicians, digital public utilities, and multi-vendor delivery—explore all 4 core service tiers.
+            <p className="text-xs sm:text-base lg:text-[19px] text-white/90 leading-relaxed font-roboto font-normal pt-1 max-w-2xl">
+              From instant intra city rides to verified local technicians, digital public utilities, and multi vendor delivery explore all 4 core service tiers.
             </p>
           </div>
 
@@ -148,16 +148,16 @@ export default function ServicesPage() {
       </section>
 
       {/* 3. Interactive Split-Showcase Section (Clean Single-Screen Fit) */}
-      <section className="py-3 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
-        <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-6 sm:p-10 lg:p-12 shadow-2xl text-white relative overflow-hidden">
+      <section className="py-2.5 sm:py-3.5 px-3 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
+        <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[24px] sm:rounded-[32px] md:rounded-[38px] p-5 sm:p-8 md:p-10 lg:p-12 shadow-2xl text-white relative overflow-hidden">
 
           {/* Decorative ambient glow */}
           <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-blue-500/10 filter blur-3xl pointer-events-none" />
 
           {/* Section Header Bar */}
-          <div className="mb-6 pb-3 border-b border-white/15 relative z-10">
+          <div className="mb-5 sm:mb-6 pb-3 border-b border-white/15 relative z-10 text-left">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-black uppercase font-heading tracking-wide">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-black uppercase font-heading tracking-wide">
                 Available Service Offerings
               </h2>
               <p className="text-xs sm:text-sm text-white/75 mt-1">
@@ -167,10 +167,10 @@ export default function ServicesPage() {
           </div>
 
           {/* Interactive 2-Column Showcase (Equal Height Alignment) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-stretch relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-stretch relative z-10">
 
             {/* Left Column: 4 Service Selector Buttons (5 cols) */}
-            <div className="lg:col-span-5 flex flex-col justify-between gap-3">
+            <div className="lg:col-span-5 flex flex-col justify-between gap-2.5 sm:gap-3">
               {allServices.map((svc) => {
                 const IconComponent = svc.icon;
                 const isActive = activeService.id === svc.id;
@@ -179,17 +179,19 @@ export default function ServicesPage() {
                   <button
                     key={svc.id}
                     onClick={() => setActiveServiceId(svc.id)}
-                    className={`w-full p-4 sm:p-4.5 rounded-2xl text-left transition-all duration-200 cursor-pointer flex items-center justify-between gap-3 border ${isActive
+                    className={`w-full p-3.5 sm:p-4 rounded-2xl text-left transition-all duration-200 cursor-pointer flex items-center justify-between gap-3 border ${
+                      isActive
                         ? "bg-white text-slate-900 shadow-xl border-white translate-x-1"
                         : "bg-white/5 hover:bg-white/10 text-white/90 border-white/10 hover:border-white/20"
-                      }`}
+                    }`}
                   >
-                    <div className="flex items-center gap-3.5 min-w-0">
+                    <div className="flex items-center gap-3 min-w-0">
                       <div
-                        className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 transition-colors ${isActive
+                        className={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+                          isActive
                             ? "bg-[#030C54] text-white shadow-sm"
                             : "bg-white/10 text-white"
-                          }`}
+                        }`}
                       >
                         <IconComponent size={20} />
                       </div>
@@ -203,10 +205,11 @@ export default function ServicesPage() {
 
                     <div className="shrink-0 text-right">
                       <div
-                        className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${isActive
+                        className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center transition-all ${
+                          isActive
                             ? "bg-[#030C54] text-white"
                             : "text-white/40"
-                          }`}
+                        }`}
                       >
                         <ArrowRight size={15} />
                       </div>
@@ -217,21 +220,22 @@ export default function ServicesPage() {
             </div>
 
             {/* Right Column: Featured Spotlight Preview Card (7 cols) */}
-            <div className="lg:col-span-7 bg-white text-slate-900 rounded-[28px] overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-100 animate-fadeIn">
+            <div className="lg:col-span-7 bg-white text-slate-900 rounded-[24px] sm:rounded-[28px] overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-100 animate-fadeIn">
 
               {/* Spotlight Image Area */}
-              <div className="relative w-full h-44 sm:h-52 overflow-hidden bg-slate-100 shrink-0">
+              <div className="relative w-full h-44 sm:h-52 md:h-60 overflow-hidden bg-slate-100 shrink-0">
                 <Image
                   src={activeService.image}
                   alt={activeService.title}
                   fill
                   priority
                   className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 55vw"
                 />
               </div>
 
               {/* Spotlight Body */}
-              <div className="p-5 sm:p-6 flex flex-col justify-between flex-1">
+              <div className="p-4.5 sm:p-6 flex flex-col justify-between flex-1 text-left">
                 <div>
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-1.5">
                     <h3 className="text-lg sm:text-2xl font-black text-slate-950 font-heading">
@@ -239,16 +243,16 @@ export default function ServicesPage() {
                     </h3>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans mb-4 line-clamp-2">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans mb-3 sm:mb-4 line-clamp-2">
                     {activeService.shortDesc}
                   </p>
 
                   {/* Features 2x2 grid */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5 mb-3 sm:mb-4">
                     {activeService.features.map((feat, i) => (
                       <div
                         key={i}
-                        className="p-2.5 rounded-xl bg-slate-50 border border-slate-100 text-xs font-medium text-slate-800"
+                        className="p-2 sm:p-2.5 rounded-xl bg-slate-50 border border-slate-100 text-xs font-medium text-slate-800"
                       >
                         <span className="truncate block">{feat}</span>
                       </div>
@@ -257,10 +261,10 @@ export default function ServicesPage() {
                 </div>
 
                 {/* Spotlight Action Bar */}
-                <div className="pt-3.5 border-t border-slate-100 flex items-center justify-start">
+                <div className="pt-3 sm:pt-3.5 border-t border-slate-100 flex items-center justify-start">
                   <Link
                     href={`/services/${activeService.id}`}
-                    className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#030C54] hover:bg-[#02083a] text-white text-xs font-black uppercase tracking-wider transition-all shadow-md hover:scale-[1.02] cursor-pointer"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#030C54] hover:bg-[#02083a] text-white text-xs font-black uppercase tracking-wider transition-all shadow-md hover:scale-[1.02] cursor-pointer text-center"
                   >
                     <span>Full Specifications</span>
                     <ArrowRight size={14} />
@@ -277,22 +281,22 @@ export default function ServicesPage() {
       </section>
 
       {/* 4. How It Works 3-Step Process (White Rounded Card) */}
-      <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
-        <div className="bg-white rounded-[28px] sm:rounded-[38px] p-8 sm:p-12 border border-slate-200/80 shadow-sm text-slate-900">
+      <section className="py-2.5 sm:py-3.5 px-3 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
+        <div className="bg-white rounded-[24px] sm:rounded-[32px] md:rounded-[38px] p-6 sm:p-10 lg:p-12 border border-slate-200/80 shadow-sm text-slate-900">
 
-          <div className="text-center max-w-xl mx-auto mb-10">
-            <h3 className="text-2xl sm:text-3xl font-black uppercase font-heading text-slate-950">
+          <div className="text-center max-w-xl mx-auto mb-8 sm:mb-10">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-black uppercase font-heading text-slate-950">
               How BetterMend Works
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 text-center">
 
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full bg-[#030C54] text-white flex items-center justify-center font-black text-lg font-heading mb-4 shadow-md">
+            <div className="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col items-center">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#030C54] text-white flex items-center justify-center font-black text-base sm:text-lg font-heading mb-3 sm:mb-4 shadow-md">
                 1
               </div>
-              <h4 className="text-base font-black text-slate-950 mb-1.5 font-heading">
+              <h4 className="text-sm sm:text-base font-black text-slate-950 mb-1.5 font-heading">
                 Choose Service or Shop
               </h4>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -300,11 +304,11 @@ export default function ServicesPage() {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full bg-[#030C54] text-white flex items-center justify-center font-black text-lg font-heading mb-4 shadow-md">
+            <div className="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col items-center">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#030C54] text-white flex items-center justify-center font-black text-base sm:text-lg font-heading mb-3 sm:mb-4 shadow-md">
                 2
               </div>
-              <h4 className="text-base font-black text-slate-950 mb-1.5 font-heading">
+              <h4 className="text-sm sm:text-base font-black text-slate-950 mb-1.5 font-heading">
                 Instant Sector Dispatch
               </h4>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -312,11 +316,11 @@ export default function ServicesPage() {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full bg-[#030C54] text-white flex items-center justify-center font-black text-lg font-heading mb-4 shadow-md">
+            <div className="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col items-center">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#030C54] text-white flex items-center justify-center font-black text-base sm:text-lg font-heading mb-3 sm:mb-4 shadow-md">
                 3
               </div>
-              <h4 className="text-base font-black text-slate-950 mb-1.5 font-heading">
+              <h4 className="text-sm sm:text-base font-black text-slate-950 mb-1.5 font-heading">
                 Track Live & Pay Fair
               </h4>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -328,8 +332,6 @@ export default function ServicesPage() {
 
         </div>
       </section>
-
-
 
       {/* 7. Footer */}
       <Footer />

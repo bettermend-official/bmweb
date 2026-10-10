@@ -1,5 +1,5 @@
-"use client";
-import { ShoppingBag, Star, Clock, MapPin, CheckCircle, Navigation } from "lucide-react";
+import { Star, Clock, CheckCircle, Navigation } from "lucide-react";
+import { IoLocationOutline, IoBagOutline } from "@/components/Icons";
 
 export default function PhoneMockup() {
   return (
@@ -23,13 +23,13 @@ export default function PhoneMockup() {
                   DELIVERING TO
                 </span>
                 <div className="flex items-center gap-1 text-xs font-semibold text-white">
-                  <MapPin size={12} className="text-primary" />
+                  <IoLocationOutline size={14} className="text-primary shrink-0" />
                   <span>Green Park, Sector 4</span>
                   <span className="text-[10px] text-text-muted">▼</span>
                 </div>
               </div>
               <div className="relative p-2 rounded-xl bg-white/5 border border-white/10 text-white">
-                <ShoppingBag size={16} />
+                <IoBagOutline size={16} />
                 <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-primary text-black font-extrabold text-[10px] flex items-center justify-center">
                   3
                 </span>

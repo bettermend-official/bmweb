@@ -1,17 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { IoIosCall, MdEmail } from "@/components/Icons";
 
 export default function Footer() {
   return (
-    <footer className="px-4 sm:px-6 lg:px-8 pb-8 pt-4 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
-      <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[28px] sm:rounded-[38px] p-8 sm:p-12 lg:p-14 text-white shadow-2xl">
+    <footer className="px-3 sm:px-6 lg:px-8 pb-6 sm:pb-8 pt-2 sm:pt-4 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
+      <div className="bg-[#030C54] selection:bg-white selection:text-[#030C54] rounded-[24px] sm:rounded-[32px] md:rounded-[38px] p-6 sm:p-10 lg:p-14 text-white shadow-2xl">
         
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 pb-10 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 pb-8 sm:pb-10 border-b border-white/10">
           
           {/* 1. Left Brand Column */}
-          <div className="md:col-span-5 space-y-4">
+          <div className="md:col-span-5 space-y-4 text-left">
             <Link href="/" className="inline-flex items-center group">
               <div className="relative h-7 sm:h-8 w-40 sm:w-48 flex items-center">
                 <Image
@@ -28,7 +29,7 @@ export default function Footer() {
             </p>
 
             {/* Social Media Icons */}
-            <div className="flex items-center gap-3.5 pt-2 text-white/90">
+            <div className="flex items-center gap-3 pt-1 text-white/90">
               {/* TikTok Icon */}
               <a
                 href="#"
@@ -76,7 +77,7 @@ export default function Footer() {
           </div>
 
           {/* 2. Link Columns Grid */}
-          <div className="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8">
+          <div className="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 text-left">
             
             {/* Column 1: Product */}
             <div className="space-y-3">
@@ -148,11 +149,17 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="hover:text-white transition-colors">
-                    Contact Support
+                  <Link href="/contact" className="hover:text-white transition-colors flex items-center gap-1.5">
+                    <IoIosCall size={14} className="text-white/60 shrink-0" />
+                    <span>Contact Support</span>
                   </Link>
                 </li>
-              
+                <li>
+                  <a href="mailto:support@bettermend.com" className="hover:text-white transition-colors flex items-center gap-1.5">
+                    <MdEmail size={14} className="text-white/60 shrink-0" />
+                    <span>support@bettermend.com</span>
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -161,12 +168,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-bold text-white/70">
-          <div className="tracking-widest uppercase font-heading">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[10px] sm:text-[11px] font-bold text-white/70 text-center sm:text-left">
+          <div className="tracking-wider uppercase font-heading">
             © 2026 BETTERMEND PRIVATE LIMITED. ALL RIGHTS RESERVED.
           </div>
 
-          <div className="flex flex-wrap items-center gap-4 text-[10px] sm:text-[11px] uppercase tracking-wider">
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-3 sm:gap-4 uppercase tracking-wider">
             <Link href="/privacy" className="hover:text-white transition-colors">
               Privacy Directive
             </Link>

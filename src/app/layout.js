@@ -19,7 +19,14 @@ export const metadata = {
   description:
     "BetterMend - Hyper-local multi-vendor shopping and delivery platform. Order from up to 3 local shops in one cart with real-time tracking.",
   icons: {
-    icon: "/logo.png",
+    icon: [
+      { url: "/favicon_emblem_sq.png", type: "image/png" },
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png" },
+      { url: "/logo.png", type: "image/png" },
+    ],
+    shortcut: "/favicon_emblem_sq.png",
+    apple: "/apple-icon.png",
   },
 };
 

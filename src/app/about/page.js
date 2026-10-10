@@ -6,13 +6,21 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Toast from "@/components/Toast";
 import {
+  CiMobile3,
+  FaCarSide,
+  IoBagOutline,
+  VscWorkspaceTrusted,
+  GrUserWorker,
+  IoIosCall,
+  IoLocationOutline,
+} from "@/components/Icons";
+import {
   Users,
   Store,
   Wrench,
   Bike,
   ShieldCheck,
   CheckCircle2,
-  MapPin,
   Sparkles,
   ArrowRight,
   TrendingUp,
@@ -20,15 +28,11 @@ import {
   Target,
   Award,
   Layers,
-  ShoppingBag,
-  Car,
   Globe,
   AlertCircle,
   BarChart3,
   Cpu,
   Compass,
-  Smartphone,
-  ShieldAlert,
   HeartHandshake,
   LayoutGrid,
 } from "lucide-react";
@@ -40,35 +44,35 @@ export default function AboutPage() {
   const problems = [
     {
       id: "p1",
-      icon: Smartphone,
+      icon: CiMobile3,
       title: "Fragmented Consumer Experience",
       desc: "Multiple disjointed apps for everyday needs with zero unified hyperlocal platform.",
       image: "/userapp.jpeg",
     },
     {
       id: "p2",
-      icon: Car,
+      icon: FaCarSide,
       title: "Fragmented Mobility Ecosystem",
       desc: "Disconnected ride, rental, and premium transport services create inefficiencies and higher costs.",
       image: "/trasport.jpeg",
     },
     {
       id: "p3",
-      icon: ShoppingBag,
+      icon: IoBagOutline,
       title: "Inefficient Hyperlocal Delivery",
       desc: "Dark-store dominance reduces efficiency, increases costs, and hurts local neighborhood businesses.",
       image: "/deliverypartner.jpeg",
     },
     {
       id: "p4",
-      icon: ShieldAlert,
+      icon: VscWorkspaceTrusted,
       title: "Trust & Quality Gap in Services",
       desc: "Unverified providers and inconsistent service quality severely reduce customer trust.",
       image: "/vendorapp.jpeg",
     },
     {
       id: "p5",
-      icon: Users,
+      icon: GrUserWorker,
       title: "Limited Market Access for Workers",
       desc: "Skilled local workers struggle to access nearby demand directly and affordably.",
       image: "/worker.jpeg",
@@ -87,7 +91,7 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-[#eaedf2] text-slate-900 font-sans antialiased overflow-x-hidden">
-      
+
       {/* 1. Capsule Navbar */}
       <Navbar activePage="about" />
 
@@ -95,10 +99,10 @@ export default function AboutPage() {
       <section className="pt-[105px] sm:pt-[125px] pb-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-white rounded-[28px] sm:rounded-[38px] p-6 sm:p-12 lg:p-16 border border-slate-200/80 shadow-sm text-slate-900 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
-            
+
             {/* Left Content */}
             <div className="lg:col-span-6 space-y-5 text-left">
-             
+
               <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-black text-slate-950 uppercase tracking-tight leading-[1.05] font-heading font-montserrat">
                 BUILDING SMARTER <br />
                 <span className="text-[#030C54]">RURBAN SERVICES</span> <br />
@@ -143,7 +147,7 @@ export default function AboutPage() {
       <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-white rounded-[28px] sm:rounded-[38px] p-6 sm:p-12 lg:p-16 border border-slate-200/80 shadow-sm text-slate-900 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
-            
+
             {/* Left Image: Modern Connected Smart City Infrastructure */}
             <div className="lg:col-span-6 relative w-full h-[300px] sm:h-[380px] lg:h-[440px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg group order-2 lg:order-1">
               <Image
@@ -157,7 +161,7 @@ export default function AboutPage() {
 
             {/* Right Content */}
             <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
-              
+
               {/* Vision */}
               <div className="space-y-2">
                 <span className="inline-block text-[11px] font-extrabold text-[#030C54] uppercase tracking-widest font-mono">
@@ -193,11 +197,11 @@ export default function AboutPage() {
       {/* 4. Problem Statement vs. Our Solutions (Pitch Deck Slides 4 & 5) */}
       <section className="py-4 px-4 sm:px-6 lg:px-8 w-full max-w-[1536px] 2xl:max-w-[1720px] mx-auto">
         <div className="bg-white rounded-[28px] sm:rounded-[38px] p-6 sm:p-12 lg:p-14 border border-slate-200/80 shadow-sm text-slate-900">
-          
+
           {/* Section Header */}
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-10 border-b border-slate-100">
             <div className="space-y-2 max-w-2xl text-left">
-           
+
               <h2 className="text-2xl sm:text-4xl font-black uppercase font-heading text-slate-950 tracking-tight">
                 Solving the Fragmented Ecosystem
               </h2>
@@ -206,12 +210,12 @@ export default function AboutPage() {
               </p>
             </div>
 
-            
+
           </div>
 
           {/* 2-Column Comparative Bento Architecture */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8 items-stretch">
-            
+
             {/* Left Column: 5 Systemic Problems (Clean Muted Slate with Amber Accents) */}
             <div className="lg:col-span-6 flex flex-col justify-between p-6 sm:p-8 rounded-[24px] sm:rounded-[30px] bg-slate-50/70 border border-slate-200/70 space-y-6">
               <div className="space-y-1">
@@ -231,27 +235,24 @@ export default function AboutPage() {
                     <div
                       key={prob.id}
                       onClick={() => setActiveProblemId(prob.id)}
-                      className={`p-4 rounded-2xl border transition-all text-left group cursor-pointer ${
-                        isActive
+                      className={`p-4 rounded-2xl border transition-all text-left group cursor-pointer ${isActive
                           ? "bg-white border-[#030C54] shadow-md ring-2 ring-[#030C54]/15"
                           : "bg-white/80 border-slate-200/60 hover:bg-white hover:border-slate-300 hover:shadow-xs"
-                      }`}
+                        }`}
                     >
                       <div className="flex items-start gap-3.5">
                         <div
-                          className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
-                            isActive
+                          className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 transition-colors ${isActive
                               ? "bg-[#030C54] text-white shadow-xs"
                               : "bg-slate-100 text-slate-700 group-hover:bg-slate-200"
-                          }`}
+                            }`}
                         >
                           <Icon size={17} />
                         </div>
                         <div className="space-y-1 flex-1">
                           <h4
-                            className={`text-xs sm:text-sm font-black font-heading transition-colors ${
-                              isActive ? "text-[#030C54]" : "text-slate-900"
-                            }`}
+                            className={`text-xs sm:text-sm font-black font-heading transition-colors ${isActive ? "text-[#030C54]" : "text-slate-900"
+                              }`}
                           >
                             {prob.title}
                           </h4>
@@ -293,8 +294,9 @@ export default function AboutPage() {
               <h3 className="text-2xl sm:text-3xl font-black uppercase font-heading text-slate-950">
                 Join us in uplifting millions in India’s small cities
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                1st Floor, Chemilly Complex, Perumanna, Kottakkal - 676508, Kerala, India
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed flex items-center gap-1.5">
+                <IoLocationOutline size={16} className="text-[#030C54] shrink-0" />
+                <span>1st Floor, Chemilly Complex, Perumanna, Kottakkal - 676508, Kerala, India</span>
               </p>
             </div>
 
@@ -307,9 +309,10 @@ export default function AboutPage() {
               </Link>
               <a
                 href="tel:+919207050655"
-                className="px-6 py-3 rounded-full border border-slate-300 hover:border-slate-900 text-slate-800 font-bold text-xs uppercase tracking-wider transition-all"
+                className="px-6 py-3 rounded-full border border-slate-300 hover:border-slate-900 text-slate-800 font-bold text-xs uppercase tracking-wider transition-all inline-flex items-center gap-2"
               >
-                +91 9207050655
+                <IoIosCall size={15} className="text-[#030C54]" />
+                <span>+91 9207050655</span>
               </a>
             </div>
           </div>
