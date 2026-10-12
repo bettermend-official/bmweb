@@ -1,5 +1,3 @@
-export const runtime = 'edge';
-
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import ScrollToTop from "@/components/ScrollToTop";
